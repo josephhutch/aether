@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}/img/favicon.ico">
+  <!-- Recommended favicon format -->
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/img/favicon.png">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/xcode.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/latolatinfonts.css" />
+</head>

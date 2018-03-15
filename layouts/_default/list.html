@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+  {{ partial "head.html" . }}
+  <body>
+    {{.Content}}
+    <section id="content" role="main" class="article-list card-columns">
+      {{ range $index, $page := .Paginator.Pages }}
+      {{ .Render "li" }}
+      {{ end }}
+    </section>
+  </body>
+  {{ partial "scripts.html" . }}  
+</html>

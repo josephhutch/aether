@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+  {{ partial "head.html" . }}
+  <body>
+    <div class="content-container">
+      <section class="article-body" role="main">
+        <section>
+          <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        </section>
+        <article>
+          {{ .Content }}
+        </article>
+        <hr />
+        <!--
+        If you're going to use DISQUS comments, insert code here.
+        -->
+      </section>
+    </div>
+  </body>
+  {{ partial "scripts.html" . }}
+</html>
