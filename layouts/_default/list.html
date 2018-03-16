@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
   {{ partial "head.html" . }}
-  <body>
-    {{.Content}}
-    <section id="content" role="main" class="article-list card-columns">
-      {{ range $index, $page := .Paginator.Pages }}
-      {{ .Render "li" }}
-      {{ end }}
-    </section>
+  <body style="background-color: #f3f3f3;">
+    <div class="content-container">
+      <main class="card-container">
+        {{.Content}}
+        <section class="article-list card-columns">
+          {{ range $index, $page := .Paginator.Pages }}
+          {{ .Render "li" }}
+          {{ end }}
+        </section>
+      </main>
+    </div>
   </body>
   {{ partial "scripts.html" . }}  
 </html>
