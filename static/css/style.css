@@ -1,7 +1,7 @@
 body {
     font-family: 'LatoLatinWeb', Avenir, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #3A3B3C;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -74,8 +74,24 @@ tr:nth-child(even) td {
     background: #f3f3f3;
 }
 
-@media (max-width: 768px) {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
     body {
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
