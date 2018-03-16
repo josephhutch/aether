@@ -39,26 +39,23 @@ img {
 .content-container {
     display: flex;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 .content {
     max-width: 700px;
+    width: 100%;
 }
 .card-container {
-    max-width: 1000px;
+    width: 100%;
 }
 .card-columns {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
     justify-content: center;
-    align-items: stretch;
-    box-sizing: content-box;
 }
 .card {
     background-color: white;
-    width: 300px;
-    margin: 5px;
-    padding: 10px;
 }
 blockquote {
     border-left: 5px solid #D1D1D1;
@@ -120,11 +117,22 @@ tr:nth-child(even) td {
     body {
         font-size: 1.125rem;
     }
+    .card-container{
+        max-width: 700px;
+    }
+    .card-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+    .card-container{
+        max-width: 900px;
+    }
+    .card-columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

@@ -5,7 +5,7 @@
     <div class="content-container">
       <main class="card-container">
         {{.Content}}
-        <section class="article-list card-columns">
+        <section class="card-columns">
           {{ range $index, $page := .Paginator.Pages }}
           {{ .Render "li" }}
           {{ end }}
