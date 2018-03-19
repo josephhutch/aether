@@ -1,10 +1,8 @@
 <article class="card">
-  <div class="card-body">
-    <h2 class="post-title card-text">
-      <a href="{{ .Permalink }}" rel="bookmark" title="Link to {{ .Title }}">{{ .Title }}</a>
-    </h2>
-    <span class="post-date card-text">Published {{ .Date.Format "Jan 2, 2006" }}</span>
-    <p>{{ .Description }}</p>
-    {{ if .Truncated }}<a class="moretag card-text" href="{{ .Permalink }}">Continue reading</a>{{ end }}
-  </div>
+  <h2 class="card-title">
+    <a href="{{ .Permalink }}" rel="bookmark" title="Link to {{ .Title }}">{{ .Title }}</a>
+  </h2>
+  <span class="post-date">Published {{ .Date.Format "Jan 2, 2006" }}</span>
+  <p>{{ .Description }}</p>
+  {{ if .Truncated }}<a class="moretag" href="{{ .Permalink }}">Continue reading</a>{{ end }}
 </article>

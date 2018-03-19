@@ -2,7 +2,6 @@ body {
     font-family: 'LatoLatinWeb', Avenir, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #3A3B3C;
     font-size: 1rem;
-    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
@@ -51,11 +50,17 @@ img {
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 25px;
+    grid-gap: 30px;
     justify-content: center;
 }
 .card {
     background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.05);
+}
+.card-title {
+    margin: 5px 0;
 }
 blockquote {
     border-left: 5px solid #D1D1D1;
@@ -87,6 +92,9 @@ hr {
     border: 0;
     border-bottom: 1px solid #D1D1D1;
     margin-top: 3.125rem 0;
+}
+a {
+    text-decoration: none;
 }
 table {
     color: #3A3B3C;
