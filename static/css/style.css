@@ -6,6 +6,7 @@ body {
     padding: 0;
 }
 p {
+    line-height: 1.5rem;
     margin: 1.5rem 0;
 }
 b,
@@ -22,7 +23,7 @@ header > h1 {
     color: #7A7B7C;
     font-size: .8em
 }
-article > p:first-of-type::first-letter {
+.post > p:first-of-type::first-letter {
     font-family: 'LatoLatinWebHeavyItalic';
     float: left;
     font-size: 3em;
@@ -56,7 +57,7 @@ img {
 .card {
     background-color: white;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.05);
 }
 .card-title {
