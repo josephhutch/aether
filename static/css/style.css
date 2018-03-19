@@ -54,6 +54,9 @@ img {
     grid-gap: 30px;
     justify-content: center;
 }
+.card-link-wrapper {
+    display: block;
+}
 .card {
     background-color: white;
     padding: 15px;
