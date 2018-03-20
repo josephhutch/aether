@@ -1,8 +1,8 @@
 <a href="{{ .Permalink }}" class="card-link-wrapper" rel="bookmark" title="Link to {{ .Title }}" >
   <article class="card">
     <h2 class="card-title">{{ .Title }}</h2>
-    <span class="post-date">Published {{ .Date.Format "Jan 2, 2006" }}</span>
-    <p>{{ .Description }}</p>
+    <div class="post-date card-date">Posted <time datetime="{{ .PublishDate.Format "2006-01-02 12:00" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></div>
+    <p class="card-text">{{ .Description }}</p>
     <!-- {{ if .Truncated }}<a class="moretag" href="{{ .Permalink }}">Continue reading</a>{{ end }} -->
   </article>
 </a>

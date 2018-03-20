@@ -55,16 +55,30 @@ img {
     justify-content: center;
 }
 .card-link-wrapper {
+    color: #3A3B3C;
     display: block;
-}
-.card {
     background-color: white;
-    padding: 15px;
     border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.05);
 }
+.card-link-wrapper:active {
+    transform: scale(0.95);
+    box-shadow: 0 15px 22px 0px rgba(0, 0, 0, 0.08);
+}
+.card {
+    padding: 15px;
+}
 .card-title {
-    margin: 5px 0;
+    margin: 10px 0 5px 0;
+    text-align: center;
+}
+.card-date {
+    display: block;
+    text-align: center;
+}
+.card-text {
+    
 }
 blockquote {
     border-left: 5px solid #D1D1D1;
@@ -77,6 +91,7 @@ blockquote p {
 }
 ul,
 ol {
+    line-height: 1.5rem;
      padding-left: 35px 
 }
 li ul, li ol {
@@ -88,7 +103,7 @@ li > p {
 code {
     font-family: monospace;
     padding: .2em .5em;
-    font-size: 0.95em;
+    line-height: 1.5em;
     border-radius: 3px;
     background-color: #f3f3f3;
 }
