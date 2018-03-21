@@ -4,7 +4,7 @@
     {{ end }}
   <article class="card">
     <h2 class="card-title">{{ .Title }}</h2>
-    <p class="card-date post-date">Posted <time datetime="{{ .PublishDate.Format "2006-01-02 12:00" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></div>
+    <p class="card-date post-date">Posted <time datetime="{{ .PublishDate.Format "2006-01-02 12:00" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></p>
     <p class="card-text">{{ .Description }}</p>
     <!-- {{ if .Truncated }}<a class="moretag" href="{{ .Permalink }}">Continue reading</a>{{ end }} -->
   </article>
