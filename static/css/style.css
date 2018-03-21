@@ -1,27 +1,37 @@
 body {
     font-family: 'LatoLatinWeb', Avenir, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #3A3B3C;
-    font-size: 1rem;
+    font-size: 1.1em;
     margin: 0;
     padding: 0;
 }
 p {
-    line-height: 1.5rem;
-    margin: 1.5rem 0;
+    margin: 1em 0;
 }
 b,
 strong {
     font-family: 'LatoLatinWebHeavy';
     font-weight: normal
 }
-header > h1 {
+.post {
+    line-height: 1.5;
+}
+.post-header {
+    margin: 2em 0;
+}
+.post-title {
     font-size: 2em;
-    line-height: 1.2em;
-    margin-bottom: 0;
+    line-height: 1.2;
+    margin: 0;
 }
 .post-date {
+    display: block;
     color: #7A7B7C;
-    font-size: .8em
+    font-size: 0.8em;
+    margin: 0;
+}
+.post-figure {
+    margin: 1.5em 0;
 }
 .post > p:first-of-type::first-letter {
     font-family: 'LatoLatinWebHeavyItalic';
@@ -29,7 +39,6 @@ header > h1 {
     font-size: 3em;
     line-height: 1em;
     padding-right: 0.1em;
-    margin-bottom: -0.2em;
     /* initial-letter: 2; Maybe someday*/
 }
 img {
@@ -39,7 +48,7 @@ img {
 .content-container {
     display: flex;
     justify-content: center;
-    padding: 0 15px;
+    padding: 0 1em;
 }
 .content {
     max-width: 700px;
@@ -51,66 +60,72 @@ img {
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 30px;
+    grid-gap: 2em;
     justify-content: center;
 }
 .card-link-wrapper {
     color: #3A3B3C;
     display: block;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 0.4em;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 20px 25px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1em 1.6em 0 rgba(0, 0, 0, 0.06);
 }
 .card-link-wrapper:active {
     transform: scale(0.95);
-    box-shadow: 0 15px 22px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.8em 1.4em 0px rgba(0, 0, 0, 0.08);
 }
 .card {
-    padding: 15px;
+    padding: 1em;
+}
+.card-img {
+    border-radius: 0.4em 0.4em 0 0;
+    margin-bottom: -1.2em;
+    max-height: 10em;
+    object-fit: cover;
 }
 .card-title {
-    margin: 10px 0 5px 0;
-    text-align: center;
+    margin: 0.5em 0 0.2em 0;
+    /* text-align: center; */
 }
 .card-date {
     display: block;
-    text-align: center;
+    /* text-align: center; */
 }
 .card-text {
-    
+    line-height: 1.5;
+    margin: 0.8em 0 0.5em 0;
 }
 blockquote {
-    border-left: 5px solid #D1D1D1;
-    margin: 1.5em 20px;
-    padding: .5em 10px;
+    border-left: 0.3em solid #D1D1D1;
+    margin: 1.5em 0.8em;
+    padding: .5em 0.5em;
     font-style: italic;
 }
 blockquote p {
-    display: inline
+    display: inline;
 }
 ul,
 ol {
-    line-height: 1.5rem;
-     padding-left: 35px 
+    padding-left: 1.6em; 
 }
 li ul, li ol {
-    padding-left: 20px;
+    padding-left: 1em;
 }
 li > p {
-    margin: 0px;
+    margin: 0;
 }
 code {
     font-family: monospace;
     padding: .2em .5em;
-    line-height: 1.5em;
-    border-radius: 3px;
+    line-height: 1.5;
+    border-radius: 0.2em;
     background-color: #f3f3f3;
 }
 hr {
     border: 0;
     border-bottom: 1px solid #D1D1D1;
-    margin-top: 3.125rem 0;
+    margin-top: 3em 0;
 }
 a {
     text-decoration: none;
@@ -119,12 +134,12 @@ table {
     color: #3A3B3C;
     border-collapse: collapse;
     border-spacing: 0;
-    margin: 1.5rem 0;
+    margin: 1em 0;
 }
 td,
 th {
-    padding: 7px 15px;
-    border: 1px solid #D1D1D1
+    padding: 0.5em 1em;
+    border: thin solid #D1D1D1
 }
 th {
     font-family: 'LatoLatinWebHeavy';
@@ -154,6 +169,9 @@ tr:nth-child(even) td {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .post-title {
+        font-size: 2.5em;
+    }
     .card-container{
         max-width: 900px;
     }
