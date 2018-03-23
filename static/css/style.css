@@ -17,12 +17,12 @@ strong {
     line-height: 1.5;
 }
 .post-header {
-    margin: 2em 0;
+    margin: 1.5em 0;
 }
 .post-title {
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1.2;
-    margin: 0;
+    margin: 0.4em 0;
 }
 .post-date {
     display: block;
