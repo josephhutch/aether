@@ -4,7 +4,7 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 
 .hljs {
   display: block;
-  overflow-x: auto;
+  overflow-x: scroll;
   padding: 0.5em;
   background: #f3f3f3;
   color: black;
