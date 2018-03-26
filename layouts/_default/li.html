@@ -1,4 +1,4 @@
-<a onmousedown="this.classList.add('card-link-wrapper-active');" onmouseup="this.classList.remove('card-link-wrapper-active');" onmouseout="this.classList.remove('card-link-wrapper-active');" href="{{ .Permalink }}" class="card-link-wrapper" rel="bookmark" title="Link to {{ .Title }}" >
+<a ontouchstart="this.classList.add('card-link-wrapper-active');" ontouchend="this.classList.remove('card-link-wrapper-active');" href="{{ .Permalink }}" class="card-link-wrapper" rel="bookmark" title="Link to {{ .Title }}" >
     {{ if isset .Params "featuredimage" }}
       <img src="{{ .Site.BaseURL }}/{{.Params.featuredimage }}" class="card-img">
     {{ end }}
