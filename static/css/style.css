@@ -60,32 +60,32 @@ img {
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1em;
+    grid-gap: 3em;
     justify-content: center;
 }
 .card-link-wrapper {
     color: rgb(52, 58, 63);
     display: block;
     background-color: white;
-    border-radius: 0.5em;
+    border-radius: 0.7em;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 1em 1.6em 0 rgba(0, 0, 0, 0.06);
 }
 .card-link-wrapper-active {
     transform: scale(0.95);
-    box-shadow: 0 0.8em 1.4em 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.8em 1.4em 0 rgba(0, 0, 0, 0.10);
 }
 .card {
     padding: 1em;
 }
 .card-img {
-    border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.7em 0.7em 0 0;
     margin-bottom: -1.2em;
     max-height: 10em;
     object-fit: cover;
 }
 .card-title {
-    margin: 0.5em 0 0.2em 0;
+    margin: 0.5em 0 0.5em 0;
     /* text-align: center; */
 }
 .card-date {
