@@ -60,26 +60,26 @@ img {
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 3em;
+    grid-gap: 1.5em;
     justify-content: center;
 }
 .card-link-wrapper {
     color: rgb(52, 58, 63);
     display: block;
     background-color: white;
-    border-radius: 0.7em;
+    border-radius: 0.2em;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 1em 1.6em 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1em 1.6em 0 rgba(0, 0, 0, 0.12);
 }
 .card-link-wrapper-active {
     transform: scale(0.95);
-    box-shadow: 0 0.8em 1.4em 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0.8em 1.4em 0 rgba(0, 0, 0, 0.17);
 }
 .card {
     padding: 1em;
 }
 .card-img {
-    border-radius: 0.7em 0.7em 0 0;
+    border-radius: 0.2em 0.2em 0 0;
     margin-bottom: -1.2em;
     max-height: 10em;
     object-fit: cover;
@@ -94,7 +94,7 @@ img {
 }
 .card-text {
     line-height: 1.5;
-    margin: 0.8em 0 0.5em 0;
+    margin: 1em 0 0.5em 0;
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
