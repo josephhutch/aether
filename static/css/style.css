@@ -20,13 +20,12 @@ strong {
     width: 100%;
     padding: 0.45em 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(1.5em);
-    -webkit-backdrop-filter: blur(1.5em);
-    box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 0 0.35em 0 rgba(0, 0, 0, 0.07);
 }
 .nav-header {
     margin: 0 0;
+    font-family: 'LatoLatinWebHeavyItalic';
 }
 .post {
     line-height: 1.5;
