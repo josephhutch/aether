@@ -2,16 +2,18 @@
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
   {{ partial "head.html" . }}
   <body style="background-color: #f3f3f3;">
-    <div class="content-container">
+    {{ partial "header.html" . }}
+    <div class="card-content-container">
       <main class="card-container">
         {{.Content}}
         <section class="card-columns">
-          {{ range $index, $page := .Paginator.Pages }}
+          {{ range .Paginator.Pages }}
           {{ .Render "li" }}
           {{ end }}
         </section>
       </main>
     </div>
   </body>
+  {{ partial "footer.html" . }}
   {{ partial "scripts.html" . }}  
 </html>

@@ -3,7 +3,7 @@ body {
     color: #3A3B3C;
     font-size: 1.1em;
     margin: 0;
-    padding: 0;
+    padding: 4em 0 0 0;
 }
 p {
     margin: 1em 0;
@@ -12,6 +12,20 @@ b,
 strong {
     font-family: 'LatoLatinWebHeavy';
     font-weight: normal
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 3em;
+    transition: top 0.2s ease-in-out;
+    background-color: lightseagreen;
+    box-shadow: 0 0.3em 0.6em 0 rgba(0, 0, 0, 0.2), 0 0 0.2em 0 rgba(0, 0, 0, 0.1);
+}
+.nav-bar-up {
+    top: -3em;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 .post {
     line-height: 1.5;
@@ -50,6 +64,11 @@ img {
     justify-content: center;
     padding: 0 1em;
 }
+.card-content-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 0.5em;
+}
 .content {
     max-width: 700px;
     width: 100%;
@@ -60,7 +79,7 @@ img {
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1.5em;
+    grid-gap: 1.2em;
     justify-content: center;
 }
 .card-link-wrapper {
@@ -69,11 +88,11 @@ img {
     background-color: white;
     border-radius: 0.2em;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 1em 1.6em 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0.3em 0.6em 0 rgba(0, 0, 0, 0.2), 0 0 0.2em 0 rgba(0, 0, 0, 0.1);
 }
 .card-link-wrapper-active {
     transform: scale(0.95);
-    box-shadow: 0 0.8em 1.4em 0 rgba(0, 0, 0, 0.17);
+    box-shadow: 0 0.23em 0.5em 0 rgba(0, 0, 0, 0.3);
 }
 .card {
     padding: 1em;
@@ -85,16 +104,18 @@ img {
     object-fit: cover;
 }
 .card-title {
-    margin: 0.7em 0 0.7em 0;
+    margin: 0.5em 0 0.7em 0;
+    line-height: 1.2;
     /* text-align: center; */
 }
 .card-date {
+    margin: 0.7em 0 0 0;
     display: block;
     /* text-align: center; */
 }
 .card-text {
     line-height: 1.5;
-    margin: 1em 0 0.5em 0;
+    margin: 0.7em 0;
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
@@ -147,6 +168,9 @@ th {
 }
 tr:nth-child(even) td {
     background: #f3f3f3;
+}
+footer {
+    margin: 2em 0;
 }
 
 /* Medium devices (tablets, ~641px and up) */
