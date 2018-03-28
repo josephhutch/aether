@@ -20,10 +20,9 @@ strong {
     width: 100%;
     padding: 0.45em 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(1.5em);
-    -webkit-backdrop-filter: blur(1.5em);
-    box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.97);
+    -webkit-backdrop-filter: blur(0.5em);
+    box-shadow: 0 0.25em 0.55em 0 rgba(0, 0, 0, 0.1), 0 0 0.1em 0 rgba(0, 0, 0, 0.05);
 }
 .nav-header {
     margin: 0 0;
@@ -91,11 +90,11 @@ img {
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0.3em 0.6em 0 rgba(0, 0, 0, 0.1), 0 0 0.2em 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.2em 0.5em 0 rgba(0, 0, 0, 0.1), 0 0 0.1em 0 rgba(0, 0, 0, 0.05);
 }
 .card-link-wrapper-active {
     transform: scale(0.95);
-    box-shadow: 0 0.20em 0.5em 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.15em 0.5em 0 rgba(0, 0, 0, 0.15);
 }
 .card {
     padding: 1em;
