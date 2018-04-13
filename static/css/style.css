@@ -98,9 +98,11 @@ img {
     grid-gap: 1.2em;
     justify-content: center;
 }
-.card-link-wrapper {
+.card {
     color: rgb(52, 58, 63);
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     background-color: white;
     border-radius: 0.2em;
     text-decoration: none;
@@ -108,11 +110,11 @@ img {
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 0.2em 0.7em 0 rgba(0, 0, 0, 0.1), 0 0 0.2em 0 rgba(0, 0, 0, 0.05);
 }
-.card-link-wrapper-active {
+.card-active {
     transform: scale(0.95);
     box-shadow: 0 0.1em 0.5em 0 rgba(0, 0, 0, 0.15);
 }
-.card {
+.card-body {
     padding: 1em;
 }
 .card-img {
@@ -200,10 +202,21 @@ footer {
         font-size: 1.125rem;
     }
     .card-container{
-        max-width: 700px;
+        max-width: 42em;
     }
     .card-columns {
-        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em;
+    }
+    .card {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .card-img {
+        border-radius: 0.2em 0 0 0.2em;
+        margin: 0 0.5em 0 0;
+        max-height: unset;
+        height: 100%;
+        width: 15em;
     }
 }
 
@@ -212,11 +225,14 @@ footer {
     .post-title {
         font-size: 2.5em;
     }
+    .card-active {
+        transform: scale(0.97);
+    }
     .card-container{
-        max-width: 900px;
+        
     }
     .card-columns {
-        grid-template-columns: repeat(2, 1fr);
+
     }
 }
 

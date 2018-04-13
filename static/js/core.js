@@ -1,8 +1,8 @@
 
 function cardPressed() {
-    this.classList.add('card-link-wrapper-active');
+    this.classList.add('card-active');
 }
 
 function cardReleased() {
-    this.classList.remove('card-link-wrapper-active');
+    this.classList.remove('card-active');
 }
