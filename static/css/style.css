@@ -193,13 +193,15 @@ tr:nth-child(even) td {
 footer {
     padding: 2em 0;
     margin: 2em 0 0 0;
-    background-color: white;
 }
 
 /* Medium devices (tablets, ~641px and up) */
 @media only screen and (min-width: 40.063em) {
     body {
         font-size: 1.125rem;
+    }
+    .list-header {
+        margin: 5em 0;
     }
     .card-container{
         max-width: 42em;
@@ -211,12 +213,18 @@ footer {
         flex-direction: row;
         align-items: stretch;
     }
+    .card-active {
+        transform: scale(0.97);
+    }
     .card-img {
         border-radius: 0.2em 0 0 0.2em;
-        margin: 0 0.5em 0 0;
+        margin: 0;
         max-height: unset;
         height: 100%;
         width: 15em;
+    }
+    .card-body {
+        padding: 1em 1.5em;
     }
 }
 
@@ -224,9 +232,6 @@ footer {
 @media only screen and (min-width: 64.063em) {
     .post-title {
         font-size: 2.5em;
-    }
-    .card-active {
-        transform: scale(0.97);
     }
     .card-container{
         
