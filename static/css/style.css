@@ -95,7 +95,7 @@ img {
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1.2em;
+    grid-gap: 1.5em;
     justify-content: center;
 }
 .card {
@@ -107,12 +107,12 @@ img {
     border-radius: 0.2em;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0.2em 0.7em 0 rgba(0, 0, 0, 0.1), 0 0 0.2em 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 0.4em 0.8em rgba(0,0,0,0.16), 0 0.3em 0.3em rgba(0,0,0,0.23);
 }
 .card-active {
     transform: scale(0.95);
-    box-shadow: 0 0.1em 0.5em 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.16), 0 0.15em 0.3em rgba(0, 0, 0, 0.23);
 }
 .card-body {
     padding: 1em;
