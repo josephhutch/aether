@@ -137,6 +137,11 @@ img {
     line-height: 1.5;
     margin: 0.7em 0;
 }
+.pagination-nav {
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+}
 blockquote {
     border-left: 0.3em solid #D1D1D1;
     margin: 1.5em 0.8em;

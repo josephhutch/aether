@@ -16,6 +16,11 @@
           {{ end }}
         </section>
       </main>
+      <div class="pagination-nav">
+        <a href="#">&laquo; Older Posts</a>
+        <div>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</div>
+        <a href="#">Newer Posts &raquo;</a>
+      </div>
     </div>
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
