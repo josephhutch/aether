@@ -13,11 +13,12 @@
       {{ end }}
     </main>
     <div class="pagination-nav side-gutter">
-      <a href="#">&laquo; Older Posts</a>
-      <div>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</div>
-      <a href="#">Newer Posts &raquo;</a>
+      {{ if .Paginator.HasPrev }}
+      <a href="#" class="pagination-prev button">Newer Posts</a>
+      {{ end }}
+      <p class="pagination-pagenum muted-text">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</p>
+      <a href="#" class="pagination-next button">Older Posts</a>
     </div>
-    {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>
 </html>

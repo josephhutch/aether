@@ -126,7 +126,7 @@ img {
     object-fit: cover;
 }
 .card-body {
-    padding: 1.5em 1em;
+    padding: 1em;
 }
 .card-title {
     margin: 0;
@@ -140,21 +140,35 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    color: #7A7B7C;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 .pagination-nav {
-    margin: 3em 0;
+    margin: 4em 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     max-width: 42em;
 }
+.pagination-prev {
+}
+.pagination-next {
+}
+.pagination-pagenum {
+}
+.button {
+    padding: 0.5em 0.6em;
+    background-color: #FFF;
+    border-radius: 0.2em;
+    border: 1px solid #FFF;
+}
 .side-gutter {
     padding-left: 0.7em !important;
     padding-right: 0.7em !important;
     box-sizing: border-box !important;
+}
+.muted-text { 
+    color: #7A7B7C;
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
@@ -252,13 +266,13 @@ footer {
     .card-subtext {
         font-size: 0.7em;
     }
+    .post-title {
+        font-size: 2.5em;
+    }
 }
 
 /* Large devices (desktops, ~1025px and up) */
 @media only screen and (min-width: 64.063em) {
-    .post-title {
-        font-size: 2.5em;
-    }
 }
 
 /* Extra large devices (large desktops, ~1441px and up) */
