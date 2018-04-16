@@ -13,6 +13,17 @@ strong {
     font-family: 'LatoLatinWebHeavy';
     font-weight: normal
 }
+.list-body {
+    background-color: #f0f1f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.single-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .nav-bar {
     position: fixed;
     top: 0;
@@ -59,20 +70,8 @@ img {
     width: 100%;
     height: auto
 }
-.content-container {
-    display: flex;
-    justify-content: center;
-    padding: 0 1em;
-}
-.card-content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0.7em;
-}
 .content {
-    max-width: 700px;
-    width: 100%;
+    max-width: 40em;
 }
 .list-header {
     margin: 2.5em 0;
@@ -89,14 +88,12 @@ img {
     margin: 0.5em auto 0 auto;
     width: 12em;
 }
-.card-container {
-    width: 100%;
-}
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1.5em;
     justify-content: center;
+    max-width: 42em;
 }
 .card {
     color: rgb(52, 58, 63);
@@ -119,12 +116,12 @@ img {
 }
 .card-img {
     border-radius: 0.2em 0.2em 0 0;
-    margin-bottom: -1.2em;
+    margin-bottom: -0.8em;
     max-height: 10em;
     object-fit: cover;
 }
 .card-title {
-    margin: 0.5em 0 0.7em 0;
+    margin: 0.5em 0 0 0;
     line-height: 1.2;
     /* text-align: center; */
 }
@@ -135,12 +132,16 @@ img {
 }
 .card-text {
     line-height: 1.5;
-    margin: 0.7em 0;
+    margin: 1em 0;
 }
 .pagination-nav {
     margin: 2em;
     display: flex;
     flex-direction: row;
+}
+.side-gutter {
+    margin-left: 0.7em !important;
+    margin-right: 0.7em !important;
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
@@ -208,9 +209,6 @@ footer {
     .list-header {
         margin: 5em 0;
     }
-    .card-container{
-        max-width: 42em;
-    }
     .card-columns {
         grid-gap: 2em;
     }
@@ -237,9 +235,6 @@ footer {
 @media only screen and (min-width: 64.063em) {
     .post-title {
         font-size: 2.5em;
-    }
-    .card-container{
-        
     }
     .card-columns {
 

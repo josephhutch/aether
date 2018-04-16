@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
   {{ partial "head.html" . }}
-  <body>
-    {{ partial "header.html" . }}
-    <div class="content-container">
-      <main class="content">
-        <article class="post">
-          <header class="post-header">
-            <h1 class="post-title">{{ .Title }}</h1>
-            <p class="post-date">Posted <time datetime="{{ .PublishDate.Format "2006-01-02 12:00" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></p>
-          </header>
-          {{ if isset .Params "featuredimage" }}
-          <figure class="post-figure">
-            <img src="{{ .Site.BaseURL }}/{{.Params.featuredimage }}">
-          </figure>
-          {{ end }}
-          {{ .Content }}
-        </article>
-        <!--
-        If you're going to use DISQUS comments, insert code here.
-        -->
-      </main>
-    </div>
+  <body class="single-body">
+    {{ partial "nav-bar.html" . }}
+    <main class="content side-gutter">
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">{{ .Title }}</h1>
+          <p class="post-date">Posted <time datetime="{{ .PublishDate.Format "2006-01-02 12:00" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></p>
+        </header>
+        {{ if isset .Params "featuredimage" }}
+        <figure class="post-figure">
+          <img src="{{ .Site.BaseURL }}/{{.Params.featuredimage }}">
+        </figure>
+        {{ end }}
+        {{ .Content }}
+      </article>
+      <!--
+      If you're going to use DISQUS comments, insert code here.
+      -->
+    </main>
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>
