@@ -1,3 +1,11 @@
+/* colors :
+    blue -          1A3E6E
+    light blue -    025A6E
+    creme -         F0D493
+    light red -     F2594D
+    red -           BF2A2A */
+
+
 body {
     font-family: 'LatoLatinWeb', Avenir, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #3A3B3C;
@@ -75,7 +83,7 @@ img {
     width: 100%;
 }
 .list-header {
-    margin: 2.5em 0;
+    margin: 2em 0;
     text-align: center;
 }
 .list-header-title {
@@ -122,23 +130,32 @@ img {
     object-fit: cover;
 }
 .card-title {
+    font-size: 1.25em;
     margin: 0.5em 0 0 0;
     line-height: 1.2;
-    /* text-align: center; */
+    font-family: 'LatoLatinWebSemibold';
+    font-weight: normal
 }
-.card-date {
-    margin: 0.7em 0 0 0;
-    display: block;
-    /* text-align: center; */
+.card-subtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 2em 0 0 0em;
+    color: #7A7B7C;
+    font-size: 0.7em;
 }
 .card-text {
+    font-size: 0.95em;
     line-height: 1.5;
     margin: 1em 0;
 }
 .pagination-nav {
-    margin: 2em 0;
+    margin: 3em 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 42em;
 }
 .side-gutter {
     padding-left: 0.7em !important;
@@ -209,7 +226,7 @@ footer {
         font-size: 1.125rem;
     }
     .list-header {
-        margin: 5em 0;
+        margin: 3em 0;
     }
     .card-columns {
         grid-gap: 2em;
@@ -229,7 +246,7 @@ footer {
         width: 15em;
     }
     .card-body {
-        padding: 1em 1.5em;
+        padding: 1em 1.3em;
     }
 }
 

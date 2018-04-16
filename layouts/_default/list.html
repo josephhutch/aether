@@ -3,16 +3,16 @@
   {{ partial "head.html" . }}
   <body class="list-body">
     {{ partial "nav-bar.html" . }}
-    <header class="list-header side-gutter">
-      <h1 class="list-header-title">Sensors + Smarts</h1>
-      <h2 class="list-header-subtext">There is so much actionable data that goes to waste.  Let's put your data to work.</h2>
-    </header>
     <main class="card-columns side-gutter">
+      <header class="list-header">
+        <h1 class="list-header-title">Sensors + Smarts</h1>
+        <h2 class="list-header-subtext">There is so much actionable data that goes to waste.  Let's put your data to work.</h2>
+      </header>
       {{ range .Paginator.Pages }}
       {{ .Render "li" }}
       {{ end }}
     </main>
-    <div class="pagination-nav">
+    <div class="pagination-nav side-gutter">
       <a href="#">&laquo; Older Posts</a>
       <div>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</div>
       <a href="#">Newer Posts &raquo;</a>
