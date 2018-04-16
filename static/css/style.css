@@ -72,6 +72,7 @@ img {
 }
 .content {
     max-width: 40em;
+    width: 100%;
 }
 .list-header {
     margin: 2.5em 0;
@@ -135,13 +136,14 @@ img {
     margin: 1em 0;
 }
 .pagination-nav {
-    margin: 2em;
+    margin: 2em 0;
     display: flex;
     flex-direction: row;
 }
 .side-gutter {
-    margin-left: 0.7em !important;
-    margin-right: 0.7em !important;
+    padding-left: 0.7em !important;
+    padding-right: 0.7em !important;
+    box-sizing: border-box !important;
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
