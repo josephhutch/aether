@@ -7,11 +7,12 @@
 
 
 body {
-    font-family: 'LatoLatinWeb', Avenir, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'LatoLatinWeb', Avenir, HelveticaNeue-Light, "Helvetica Neue Light",
+                 "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #3A3B3C;
     font-size: 1.1em;
     margin: 0;
-    padding: 3em 0 0 0;
+    padding: 0;
 }
 p {
     margin: 1em 0;
@@ -33,9 +34,6 @@ strong {
     align-items: center;
 }
 .nav-bar {
-    position: fixed;
-    top: 0;
-    z-index: 999;
     width: 100%;
     padding: 0.45em 0;
     text-align: center;
@@ -74,28 +72,26 @@ strong {
     padding-right: 0.1em;
     /* initial-letter: 2; Maybe someday*/
 }
-img {
-    width: 100%;
-    height: auto
-}
 .content {
     max-width: 40em;
     width: 100%;
 }
 .list-header {
-    margin: 2em 0;
+    margin: 7em 0 3.5em 0;
     text-align: center;
 }
 .list-header-title {
-    margin: 0 0 0.2em 0;
+    font-weight: normal;
+    margin: 0.1em 0 0.2em 0;
+    font-size: 2.2em;
+    text-transform: uppercase;
 }
 .list-header-subtext {
-    color: #7A7B7C;
-    font-size: 1.2em;
-    line-height: 1.6;
     font-weight: normal;
-    margin: 0.5em auto 0 auto;
-    width: 12em;
+    color: #7A7B7C;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
 }
 .card-columns {
     display: grid;
@@ -113,11 +109,11 @@ img {
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    box-shadow: 0 0.4em 0.8em rgba(0,0,0,0.16), 0 0.3em 0.3em rgba(0,0,0,0.23);
+    box-shadow: 0 0.4em 0.8em 0 rgba(0,0,0,0.16), 0 0.3em 0.3em -0.1em rgba(0,0,0,0.23);
 }
 .card-active {
     transform: scale(0.95);
-    box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.16), 0 0.15em 0.3em rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
 }
 .card-img {
     border-radius: 0.2em 0.2em 0 0;
@@ -143,32 +139,51 @@ img {
     font-size: 0.8em;
 }
 .pagination-nav {
-    margin: 4em 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin: 3em 0 1em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "prev next";
+    align-items: center;
     width: 100%;
     max-width: 42em;
 }
 .pagination-prev {
+    grid-area: prev;
+    justify-self: start;
 }
 .pagination-next {
+    grid-area: next;
+    justify-self: end;
 }
 .pagination-pagenum {
+    display: none;
+    grid-area: pagenum;
+    justify-self: center;
 }
 .button {
     padding: 0.5em 0.6em;
     background-color: #FFF;
     border-radius: 0.2em;
-    border: 1px solid #FFF;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.button:active {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 .side-gutter {
     padding-left: 0.7em !important;
     padding-right: 0.7em !important;
     box-sizing: border-box !important;
 }
-.muted-text { 
+.muted-text {
     color: #7A7B7C;
+}
+img {
+    width: 100%;
+    height: auto
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
@@ -234,7 +249,10 @@ footer {
         font-size: 1.125rem;
     }
     .list-header {
-        margin: 3em 0;
+        margin: 8em 0 4em 0;
+    }
+    .list-header-title {
+        font-size: 4.2em;
     }
     .card-columns {
         grid-gap: 2em;
@@ -268,6 +286,9 @@ footer {
     }
     .post-title {
         font-size: 2.5em;
+    }
+    .pagination-nav {
+        margin: 4em 0 2em 0;
     }
 }
 
