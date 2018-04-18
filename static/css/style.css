@@ -81,7 +81,6 @@ strong {
     text-align: center;
 }
 .list-header-title {
-    font-weight: normal;
     margin: 0.1em 0 0.2em 0;
     font-size: 2.2em;
     text-transform: uppercase;
@@ -139,7 +138,7 @@ strong {
     font-size: 0.8em;
 }
 .pagination-nav {
-    margin: 3em 0 1em 0;
+    margin: 3em 0 2em 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "prev next";
@@ -252,6 +251,7 @@ footer {
         margin: 8em 0 4em 0;
     }
     .list-header-title {
+        font-weight: normal;
         font-size: 4.2em;
     }
     .card-columns {
