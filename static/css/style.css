@@ -37,9 +37,6 @@ strong {
     width: 100%;
     padding: 0.45em 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.97);
-    -webkit-backdrop-filter: blur(0.05em);
-    box-shadow: 0 0.1em 2em 0 rgba(0, 0, 0, 0.08);
 }
 .nav-header {
     margin: 0 0;
@@ -68,7 +65,8 @@ strong {
     font-family: 'LatoLatinWebHeavyItalic';
     float: left;
     font-size: 3em;
-    line-height: 1em;
+    line-height: 1;
+    margin-bottom: -0.5em;
     padding-right: 0.1em;
     /* initial-letter: 2; Maybe someday*/
 }
@@ -77,7 +75,7 @@ strong {
     width: 100%;
 }
 .list-header {
-    margin: 7em 0 3.5em 0;
+    margin: 9em 0 5em 0;
     text-align: center;
 }
 .list-header-title {
@@ -109,10 +107,6 @@ strong {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
     box-shadow: 0 0.4em 0.8em 0 rgba(0,0,0,0.16), 0 0.3em 0.3em -0.1em rgba(0,0,0,0.23);
-}
-.card:active {
-    border: 0.06em solid #7A7B7C;
-    margin: -0.06em;
 }
 .card-active {
     transform: scale(0.95);
@@ -169,12 +163,8 @@ strong {
     border-radius: 0.2em;
     box-shadow: 0 0.04em 0.12em rgba(0,0,0,0.12), 0 0.04em 0.08em rgba(0,0,0,0.24);
 }
-.button:hover {
-    transform: scale(0.97);
-}
 .button:active {
-    border: 0.06em solid #7A7B7C;
-    padding: 0.44em 0.6em 0.5em 0.54em;
+    transform: scale(0.97);
 }
 .side-gutter {
     padding-left: 0.7em !important;
@@ -216,7 +206,7 @@ code {
 }
 hr {
     border: 0;
-    border-bottom: 1px solid #D1D1D1;
+    border-bottom: thin solid #D1D1D1;
     margin-top: 3em 0;
 }
 a {
@@ -249,7 +239,7 @@ footer {
 /* Medium devices (tablets, ~641px and up) */
 @media only screen and (min-width: 40.063em) {
     body {
-        font-size: 1.125rem;
+        font-size: 1.2rem;
     }
     .list-header {
         margin: 8em 0 4em 0;

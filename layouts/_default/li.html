@@ -1,5 +1,5 @@
 <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  onmouseover="cardPressed.call(this)" onmouseout="cardReleased.call(this)" href="{{ .Permalink }}" class="card" rel="bookmark" title="Link to {{ .Title }}" >
+  onmousedown="cardPressed.call(this)" ondrag="cardReleased.call(this)" href="{{ .Permalink }}" class="card" rel="bookmark" >
     {{ if isset .Params "featuredimage" }}
     <div>
       <img src="{{ .Site.BaseURL }}/{{.Params.featuredimage }}" class="card-img">
@@ -11,7 +11,7 @@
     <div class="card-subtext muted-text">
       <p style="margin: 0 1em 0 0;">Posted <time datetime="{{ .PublishDate.Format "2006-01-02 12:00" }}">{{ .PublishDate.Format "Jan 2, 2006" }}</time></p>
       <p style="margin: 0 1em 0 0;">|</p>
-      <p style="margin: 0 1em 0 0;">#Category</p>
+      <p style="margin: 0 1em 0 0;">#{{ .Params.category}}</p>
     </div>
   </article>
 </a>
