@@ -20,6 +20,9 @@
       If you're going to use DISQUS comments, insert code here.
       -->
     </main>
+    {{ with .Next }}
+      {{ .Render "single-li" }}
+    {{ end }}
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>

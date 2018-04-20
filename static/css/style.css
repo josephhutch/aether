@@ -29,6 +29,7 @@ strong {
     align-items: center;
 }
 .single-body {
+    background-color: #f0f1f2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,13 +67,17 @@ strong {
     float: left;
     font-size: 3em;
     line-height: 1;
-    margin-bottom: -0.5em;
-    padding-right: 0.1em;
+    margin: 0 0.1em -0.1em 0;
     /* initial-letter: 2; Maybe someday*/
 }
 .content {
-    max-width: 40em;
+    background-color: white;
+    border-radius: 0.2em;
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 0.4em 0.8em 0 rgba(0,0,0,0.16), 0 0.3em 0.3em -0.1em rgba(0,0,0,0.23);
+    max-width: 42em;
     width: 100%;
+    margin: 1em 0 3em 0;
 }
 .list-header {
     margin: 9em 0 5em 0;
@@ -107,16 +112,38 @@ strong {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
     box-shadow: 0 0.4em 0.8em 0 rgba(0,0,0,0.16), 0 0.3em 0.3em -0.1em rgba(0,0,0,0.23);
+    max-width: 42em;
 }
 .card-active {
     transform: scale(0.95);
     box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
+}
+.card:active {
+    border: 0.05em solid #7A7B7C;
+    margin: -0.05em;
+}
+.card-img-container {
+    position: relative;
 }
 .card-img {
     border-radius: 0.2em 0.2em 0 0;
     margin-bottom: -0.28em;
     max-height: 10em;
     object-fit: cover;
+}
+.card-img-overlay {
+    border-top-left-radius: 0.3em;
+    position: absolute;
+    top: 0;
+    font-size: 1.27em;
+    text-align: center;
+    padding: 1.225em 0 0.5em 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
 }
 .card-body {
     padding: 1em;
@@ -163,8 +190,12 @@ strong {
     border-radius: 0.2em;
     box-shadow: 0 0.04em 0.12em rgba(0,0,0,0.12), 0 0.04em 0.08em rgba(0,0,0,0.24);
 }
-.button:active {
+.button:hover {
     transform: scale(0.97);
+}
+.button:active {
+    border: 0.05em solid #7A7B7C;
+    margin: -0.05em;
 }
 .side-gutter {
     padding-left: 0.7em !important;
@@ -239,7 +270,7 @@ footer {
 /* Medium devices (tablets, ~641px and up) */
 @media only screen and (min-width: 40.063em) {
     body {
-        font-size: 1.2rem;
+        font-size: 1.125rem;
     }
     .list-header {
         margin: 8em 0 4em 0;
@@ -277,6 +308,9 @@ footer {
     }
     .card-subtext {
         font-size: 0.7em;
+    }
+    .post {
+        margin: 2em 1em;
     }
     .post-title {
         font-size: 2.5em;
