@@ -1,8 +1,8 @@
 
 function cardPressed() {
-    this.classList.add('card-active');
+    this.classList.add('card-hover');
 }
 
 function cardReleased() {
-    this.classList.remove('card-active');
+    this.classList.remove('card-hover');
 }

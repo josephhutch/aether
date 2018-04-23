@@ -1,9 +1,9 @@
 <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  onmouseover="cardPressed.call(this)" onmouseout="cardReleased.call(this)" href="{{ .Permalink }}" class="card" rel="bookmark" >
+  href="{{ .Permalink }}" class="card card-top-spacing side-gutter" rel="bookmark" >
     {{ if isset .Params "featuredimage" }}
     <div class="card-img-container">
-      <img src="{{ .Site.BaseURL }}/{{.Params.featuredimage }}" class="card-img">
       <p class="card-img-overlay">Next Article</p>
+      <img src="{{ .Site.BaseURL }}/{{.Params.featuredimage }}" class="card-img">
     </div>
     {{ end }}
   <article class="card-body">

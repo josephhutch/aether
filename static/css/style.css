@@ -33,16 +33,18 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2em;
 }
 .nav-bar {
     width: 100%;
-    padding: 0.45em 0;
+    padding: 0.7em 0;
     text-align: center;
 }
 .nav-header {
     margin: 0 0;
 }
 .post {
+    margin: 2em 0 3em 0;
     line-height: 1.5;
 }
 .post-header {
@@ -74,10 +76,10 @@ strong {
     background-color: white;
     border-radius: 0.2em;
     transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
-    box-shadow: 0 0.4em 0.8em 0 rgba(0,0,0,0.16), 0 0.3em 0.3em -0.1em rgba(0,0,0,0.23);
+    box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
     max-width: 42em;
     width: 100%;
-    margin: 1em 0 3em 0;
+    margin: 0em 0 2em 0;
 }
 .list-header {
     margin: 9em 0 5em 0;
@@ -98,7 +100,7 @@ strong {
 .card-columns {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1.5em;
+    grid-gap: 2em;
     justify-content: center;
     max-width: 42em;
 }
@@ -107,26 +109,18 @@ strong {
     flex-direction: column;
     align-items: stretch;
     background-color: white;
-    border-radius: 0.2em;
+    border-radius: 0.3em;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
     box-shadow: 0 0.4em 0.8em 0 rgba(0,0,0,0.16), 0 0.3em 0.3em -0.1em rgba(0,0,0,0.23);
     max-width: 42em;
 }
-.card-active {
-    transform: scale(0.95);
-    box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
-}
-.card:active {
-    border: 0.05em solid #7A7B7C;
-    margin: -0.05em;
-}
 .card-img-container {
     position: relative;
 }
 .card-img {
-    border-radius: 0.2em 0.2em 0 0;
+    border-radius: 0.3em 0.3em 0 0;
     margin-bottom: -0.28em;
     max-height: 10em;
     object-fit: cover;
@@ -137,7 +131,7 @@ strong {
     top: 0;
     font-size: 1.27em;
     text-align: center;
-    padding: 1.225em 0 0.5em 0;
+    padding: 1.18em 0 0.5em 0;
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -161,6 +155,9 @@ strong {
     flex-direction: row;
     justify-content: flex-start;
     font-size: 0.8em;
+}
+.card-top-spacing {
+    margin-top: 2em;
 }
 .pagination-nav {
     margin: 3em 0 2em 0;
@@ -198,6 +195,11 @@ strong {
     margin: -0.05em;
 }
 .side-gutter {
+    margin-left: 0.7em !important;
+    margin-right: 0.7em !important;
+    box-sizing: border-box !important;
+}
+.side-padding {
     padding-left: 0.7em !important;
     padding-right: 0.7em !important;
     box-sizing: border-box !important;
@@ -266,7 +268,30 @@ footer {
     padding: 2em 0;
     margin: 2em 0 0 0;
 }
-
+@media screen and (pointer: coarse) {
+ .card-hover {
+    transform: scale(0.95);
+    box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
+    }
+}
+@media not screen and (pointer: coarse) {
+    .card:hover {
+        transform: scale(0.97);
+        box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
+    }
+    .card:active {
+        transform: scale(1) !important;
+    }
+}
+@media not screen and (pointer: coarse) {
+    .card:hover {
+        transform: scale(0.97);
+        box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
+    }
+    .card:active {
+        transform: scale(1) !important;
+    }
+}
 /* Medium devices (tablets, ~641px and up) */
 @media only screen and (min-width: 40.063em) {
     body {
@@ -285,9 +310,7 @@ footer {
     .card {
         flex-direction: row;
         align-items: stretch;
-    }
-    .card-active {
-        transform: scale(0.97);
+        border-radius: 0.2em;
     }
     .card-img {
         border-radius: 0.2em 0 0 0.2em;
@@ -310,7 +333,7 @@ footer {
         font-size: 0.7em;
     }
     .post {
-        margin: 2em 1em;
+        margin: 3em 1em;
     }
     .post-title {
         font-size: 2.5em;
@@ -322,6 +345,7 @@ footer {
 
 /* Large devices (desktops, ~1025px and up) */
 @media only screen and (min-width: 64.063em) {
+
 }
 
 /* Extra large devices (large desktops, ~1441px and up) */
