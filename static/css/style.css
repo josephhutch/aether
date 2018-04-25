@@ -27,24 +27,26 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .single-body {
     background-color: #f0f1f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 2em;
 }
 .nav-bar {
+    grid-column: 2;
     width: 100%;
     padding: 0.7em 0;
     text-align: center;
 }
 .nav-header {
-    margin: 0 0;
+    margin: 0;
+}
+.nav-text {
+    text-decoration: none;
 }
 .post {
-    margin: 2em 0 3em 0;
+    margin: 0 0 1em 0;
     line-height: 1.5;
 }
 .post-header {
@@ -73,13 +75,14 @@ strong {
     /* initial-letter: 2; Maybe someday*/
 }
 .content {
+    grid-column: 2;
     background-color: white;
     border-radius: 0.2em;
     transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
     box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
     max-width: 42em;
-    width: 100%;
-    margin: 0em 0 2em 0;
+    margin: 0 0 2em 0;
+    padding: 2em 0;
 }
 .list-header {
     margin: 9em 0 5em 0;
@@ -105,28 +108,28 @@ strong {
     max-width: 42em;
 }
 .card {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     background-color: white;
-    border-radius: 0.3em;
+    border-radius: 0.3rem;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
-    box-shadow: 0 0.4em 0.8em 0 rgba(0,0,0,0.16), 0 0.3em 0.3em -0.1em rgba(0,0,0,0.23);
-    max-width: 42em;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0,0,0,0.16), 0 0.3rem 0.3rem -0.1em rgba(0,0,0,0.23);
 }
 .card-img-container {
     position: relative;
 }
 .card-img {
-    border-radius: 0.3em 0.3em 0 0;
+    border-radius: 0.3rem 0.3rem 0 0;
     margin-bottom: -0.28em;
     max-height: 10em;
     object-fit: cover;
 }
 .card-img-overlay {
-    border-top-left-radius: 0.3em;
+    border-radius: 0.3em 0.3em 0 0;
     position: absolute;
     top: 0;
     font-size: 1.27em;
@@ -143,6 +146,7 @@ strong {
     padding: 1em;
 }
 .card-title {
+    width: 100%;
     margin: 0;
     line-height: 1.2;
 }
@@ -158,6 +162,12 @@ strong {
 }
 .card-top-spacing {
     margin-top: 2em;
+}
+.home-card {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em 0;
 }
 .pagination-nav {
     margin: 3em 0 2em 0;
@@ -195,17 +205,19 @@ strong {
     margin: -0.05em;
 }
 .side-gutter {
-    margin-left: 0.7em !important;
-    margin-right: 0.7em !important;
-    box-sizing: border-box !important;
+    margin-left: 0.7rem !important;
+    margin-right: 0.7rem !important;
 }
 .side-padding {
-    padding-left: 0.7em !important;
-    padding-right: 0.7em !important;
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
     box-sizing: border-box !important;
 }
 .muted-text {
     color: #7A7B7C;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0 0.7em 0;
 }
 img {
     width: 100%;
@@ -240,10 +252,9 @@ code {
 hr {
     border: 0;
     border-bottom: thin solid #D1D1D1;
-    margin-top: 3em 0;
+    margin: 3em 0;
 }
 a {
-    text-decoration: none;
     color: #3A3B3C;
 }
 table {
@@ -271,13 +282,13 @@ footer {
 @media screen and (pointer: coarse) {
  .card-hover {
     transform: scale(0.95);
-    box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0.15rem 0.3rem 0 rgba(0, 0, 0, 0.16), 0 0.15rem 0.3rem -0.04rem rgba(0, 0, 0, 0.23);
     }
 }
 @media not screen and (pointer: coarse) {
     .card:hover {
         transform: scale(0.97);
-        box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
+        box-shadow: 0 0.15rem 0.3rem 0 rgba(0, 0, 0, 0.16), 0 0.15rem 0.3rem -0.04rem rgba(0, 0, 0, 0.23);
     }
     .card:active {
         transform: scale(1) !important;
@@ -286,7 +297,7 @@ footer {
 @media not screen and (pointer: coarse) {
     .card:hover {
         transform: scale(0.97);
-        box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
+        box-shadow: 0 0.15rem 0.3rem 0 rgba(0, 0, 0, 0.16), 0 0.15rem 0.3rem -0.04rem rgba(0, 0, 0, 0.23);
     }
     .card:active {
         transform: scale(1) !important;
@@ -296,6 +307,10 @@ footer {
 @media only screen and (min-width: 40.063em) {
     body {
         font-size: 1.125rem;
+    }
+    .single-body {
+        display: grid;
+        grid-template-columns: auto 42em auto;
     }
     .list-header {
         margin: 8em 0 4em 0;
@@ -318,6 +333,9 @@ footer {
         max-height: unset;
         height: 100%;
         width: 15em;
+    }
+    .card-img-overlay {
+        border-radius: 0.2em 0 0 0;
     }
     .card-body {
         padding: 1.5em 1.3em;

@@ -23,6 +23,7 @@
     {{ with .Next }}
     {{ .Render "single-li" }}
     {{ end }}
+    {{ partial "home-card.html" . }}
     {{ partial "scripts.html" . }}
   </body>
 </html>
