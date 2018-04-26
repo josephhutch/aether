@@ -2,7 +2,7 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 description: "" 
-category: ""
+categories: []
 featuredImage: ""
 draft: true
 ---

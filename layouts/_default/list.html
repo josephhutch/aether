@@ -2,20 +2,21 @@
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
   {{ partial "head.html" . }}
   <body class="list-body">
-    <main class="card-columns side-gutter">
+    <main class="card-container side-gutter">
       <header class="list-header">
-        <h2 class="list-header-subtext">Code It, Break It, Quick, Rewrite It</h2>
+        <p class="list-header-subtext">Code It, Break It, Quick, Rewrite It</p>
         <h1 class="list-header-title">Technologic</h1>
       </header>
       {{ range .Paginator.Pages }}
       {{ .Render "li" }}
       {{ end }}
     </main>
-    <div class="pagination-nav side-gutter">
-      {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}" class="pagination-prev button">Newer Posts</a>{{ end }}
-      <p class="pagination-pagenum muted-text">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</p>
-      {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}" class="pagination-next button">Older Posts</a>{{ end }}
-    </div>
+    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    <nav class="pagination-nav side-padding">
+      {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}" class="button">Newer Posts</a>{{ end }}
+      {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}" class="button">Older Posts</a>{{ end }}
+    </nav>
+    {{ end }}
     {{ partial "scripts.html" . }}
   </body>
 </html>

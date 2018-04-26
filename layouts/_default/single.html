@@ -20,10 +20,12 @@
       If you're going to use DISQUS comments, insert code here.
       -->
     </main>
-    {{ with .Next }}
-    {{ .Render "single-li" }}
-    {{ end }}
-    {{ partial "home-card.html" . }}
+    <nav class="end-nav side-padding">
+      {{ with .Next }}
+      {{ .Render "single-li" }}
+      {{ end }}
+      {{ partial "home-card.html" . }}
+    </nav>
     {{ partial "scripts.html" . }}
   </body>
 </html>
