@@ -1,3 +1,13 @@
-<nav class="nav-bar">
-    <h1 class="nav-header"><a href="/" class="nav-text">mdd</a></h1>
+<nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">mdd</a></h1>
+  <div class="hamburger-menu">
+		<input type="checkbox" />
+		<span></span>
+		<span></span>
+    <ul class="hamburger-menu-view">
+      {{ range $key, $value := .Site.Taxonomies.categories }}
+			<li><a href="{{ $.Site.BaseURL }}categories/{{ $key | urlize  }}">{{ $key | humanize }}</a></li>
+			{{ end }}
+    </ul>
+  </div>
 </nav>

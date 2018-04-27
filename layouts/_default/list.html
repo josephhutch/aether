@@ -2,10 +2,11 @@
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
   {{ partial "head.html" . }}
   <body class="list-body">
+    {{ partial "nav-bar.html" . }}
     <main class="card-container side-gutter">
       <header class="list-header">
-        <p class="list-header-subtext">Code It, Break It, Quick, Rewrite It</p>
-        <h1 class="list-header-title">Technologic</h1>
+        <p class="list-header-subtext">{{ .Description }}</p>
+        <h1 class="list-header-title">{{ .Title }}</h1>
       </header>
       {{ range .Paginator.Pages }}
       {{ .Render "li" }}
