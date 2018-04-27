@@ -3,7 +3,7 @@ body {
                  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #3A3B3C;
     font-size: 1.1em;
-    background-color: #f0f1f2;
+    background-color: #ecedef;
     margin: 0;
     padding: 0;
     display: flex;
@@ -68,7 +68,7 @@ strong {
     box-shadow: 0 0.15em 0.3em 0 rgba(0, 0, 0, 0.16), 0 0.15em 0.3em -0.04em rgba(0, 0, 0, 0.23);
 }
 .list-header {
-    margin: 9em 0;
+    margin: 8em 0 6em 0;
     text-align: center;
 }
 .list-header-title {
@@ -84,11 +84,11 @@ strong {
     margin: 0;
 }
 .card-container {
-    max-width: 46rem;
+    max-width: 47rem;
 }
 .card {
     display: block;
-    margin: 2rem 0;
+    margin: 2.2rem 0;
     box-sizing: border-box;
     background-color: white;
     text-decoration: none;
@@ -103,7 +103,7 @@ strong {
     font-weight: bold;
     text-align: center;
     color: white;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(../img/antony-xia-522597-unsplash.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/city.jpg) center center no-repeat;
     object-fit: cover;
 }
 .blog-card {
@@ -161,7 +161,7 @@ strong {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 46rem;
+    max-width: 47rem;
 }
 .button {
     padding: 0.5em 0.6em;
@@ -271,14 +271,11 @@ footer {
         font-size: 1.125rem;
     }
     .list-header {
-        margin: 8em 0;
+        margin: 8em 0 6em 0;
     }
     .list-header-title {
         font-weight: normal;
         font-size: 4.2em;
-    }
-    .card-columns {
-        grid-gap: 2em;
     }
     .card {
         border-radius: 0.2rem;
