@@ -4,10 +4,10 @@
 		<input type="checkbox" onclick="hamburgerMenuPressed()"/>
 		<span></span>
 		<span></span>
-    <ul class="hamburger-menu-view">
-			<li><a href="/">Home</a></li>
+    <ul class="hamburger-menu-overlay">
+			<li><a href="/" class="hamburger-menu-overlay-link">Home</a></li>
       {{ range $key, $value := .Site.Taxonomies.categories }}
-			<li><a href="/categories/{{ $key | urlize  }}">{{ $key | humanize }}</a></li>
+			<li><a href="/categories/{{ $key | urlize  }}" class="hamburger-menu-overlay-link">{{ $key | humanize }}</a></li>
 			{{ end }}
     </ul>
   </div>

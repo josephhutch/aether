@@ -58,61 +58,52 @@ strong {
   width: 33px;
   height: 4px;
   position: relative;
-  background: #3A3B3C;
+  background-color: #3A3B3C;
   border-radius: 3px;
   z-index: 105;
   transform-origin: center;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+              background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 .hamburger-menu span:first-of-type {
   margin-bottom: 5px;
 }
 .hamburger-menu input:checked ~ span {
-    opacity: 1;
-    background: white;
+    background-color: white;
     transform: rotate(45deg) translate(3.2px , 3.2px);
 }
 .hamburger-menu input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(3.2px , -3.2px);
 }
-.hamburger-menu input ~ ul {
+.hamburger-menu-overlay {
     display: block;
     position: fixed;
     box-sizing: border-box;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     z-index: 100;
     text-align: center;
     visibility: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     margin: 0;
     padding: 3em 0 0 0;
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
     opacity: 0;
     transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
 }
-.hamburger-menu input:checked ~ ul {
+input:checked ~ .hamburger-menu-overlay {
     visibility: visible;
     opacity: 0.9;
-    overflow-y: scroll;
 }
-.hamburger-menu > ul > li > a {
+.hamburger-menu-overlay-link {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 2em;
     line-height: 1.7;
     color: white;
-    transition: all 0.5s ease-out;
-    /* opacity: 0; */
 }
-/* .hamburger-menu input:checked ~ ul li a {
-    font-size: 1.8em;
-    opacity: 1;
-} */
 .post {
     margin: 0 0 1em 0;
     line-height: 1.5;
