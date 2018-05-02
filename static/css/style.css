@@ -23,7 +23,7 @@ strong {
 .nav-bar {
     max-width: 48rem;
     width: 100%;
-    padding: 0.8em 0;
+    padding: 0.4em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -366,6 +366,9 @@ footer {
 @media only screen and (min-width: 40.063em) {
     body {
         font-size: 1.125rem;
+    }
+    .nav-bar {
+        padding: 0.8em 0;
     }
     .list-header-title {
         font-weight: normal;
