@@ -34,6 +34,7 @@ strong {
 .nav-text {
     text-decoration: none;
     z-index: 105;
+    font-size: 0.8em;
 }
 .hamburger-menu {
     display: block;
@@ -290,6 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 img {
     width: 100%;
     height: auto;
+    margin: 1em 0;
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
