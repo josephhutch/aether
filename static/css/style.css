@@ -180,7 +180,7 @@ input:checked ~ .hamburger-menu-overlay {
     font-weight: bold;
     text-align: center;
     color: white;
-    background: url(../img/grey-cloud.jpg) center center;
+    background-position: center center;
     object-fit: cover;
 }
 .blog-card {
@@ -193,7 +193,7 @@ input:checked ~ .hamburger-menu-overlay {
 }
 .card-img {
     border-radius: 0.3rem 0.3rem 0 0;
-    margin-bottom: -0.28em;
+    margin: 0 0 -0.28em 0;
     max-height: 10em;
     object-fit: cover;
 }
@@ -265,12 +265,12 @@ input:checked ~ .hamburger-menu-overlay {
     transform: scale(1);
 }
 .side-gutter {
-    margin-left: 1rem !important;
-    margin-right: 1rem !important;
+    margin-left: 1.2rem !important;
+    margin-right: 1.2rem !important;
 }
 .side-padding {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
     box-sizing: border-box !important;
 }
 .side-text-padding {
