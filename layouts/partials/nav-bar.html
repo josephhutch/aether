@@ -5,7 +5,10 @@
 		<span></span>
 		<span></span>
     <ul class="hamburger-menu-overlay">
-			<li><a href="/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="/" class="hamburger-menu-overlay-link">Home</a></li>
+      {{ range where .Site.Pages "Params.menu" true }}
+			<li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
+			{{ end }}
       {{ range $key, $value := .Site.Taxonomies.categories }}
 			<li><a href="/categories/{{ $key | urlize  }}" class="hamburger-menu-overlay-link">{{ $key | humanize }}</a></li>
 			{{ end }}

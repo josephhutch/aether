@@ -126,7 +126,7 @@ input:checked ~ .hamburger-menu-overlay {
 .post-figure {
     margin: 1.5em 0;
 }
-.post > p:first-of-type::first-letter {
+.dropcase > p:first-of-type::first-letter {
     font-family: 'LatoLatinWebHeavyItalic';
     float: left;
     font-size: 3em;
