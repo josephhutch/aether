@@ -139,7 +139,7 @@ input:checked ~ .hamburger-menu-overlay {
     padding: 2em 0;
     margin-bottom: 2em;
     width: 100%;
-    max-width: 48rem;
+    max-width: 50rem;
     border-radius: 0.3rem;
     transition: transform 0.3s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.3s cubic-bezier(0.25,0.8,0.25,1);
     box-shadow: 0 0.7rem 1.4rem 0 rgba(0,0,0,0.25), 0 0.5rem 0.5rem 0 rgba(0,0,0,0.22);
