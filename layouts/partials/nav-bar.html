@@ -1,5 +1,11 @@
 <nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="/" class="nav-text">{{ $.Site.Title }}</a></h1>
+  <h1 class="nav-header"><a href="/" class="nav-text">
+    {{ if isset $.Site.Params "brand"}}
+      {{- $.Site.Params.brand -}}
+    {{ else }}
+      {{- $.Site.Title -}}
+    {{ end }}
+  </a></h1>
   <div class="hamburger-menu">
 		<input type="checkbox" onclick="hamburgerMenuPressed()"/>
 		<span></span>
