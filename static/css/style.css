@@ -3,7 +3,7 @@ body {
                  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #3A3B3C;
     font-size: 1.1em;
-    background-color: #ecedef;
+    background: #ecedef url("/img/ignasi_pattern_s.png") repeat;
     margin: 0;
     padding: 0;
     display: flex;
