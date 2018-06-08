@@ -63,8 +63,8 @@ strong {
   border-radius: 3px;
   z-index: 105;
   transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+              background-color 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 .hamburger-menu span:first-of-type {
     margin-bottom: 5px;
@@ -92,7 +92,7 @@ strong {
     padding: 3.5em 0 0 0;
     background-color: #000;
     opacity: 0;
-    transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
+    transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
 }
 input:checked ~ .hamburger-menu-overlay {
     visibility: visible;
@@ -141,7 +141,7 @@ input:checked ~ .hamburger-menu-overlay {
     width: 100%;
     max-width: 50rem;
     border-radius: 0.3rem;
-    transition: transform 0.3s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.3s cubic-bezier(0.25,0.8,0.25,1);
+    transition: transform 0.2s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.2s cubic-bezier(0.25,0.8,0.25,1);
     box-shadow: 0 0.7rem 1.4rem 0 rgba(0,0,0,0.25), 0 0.5rem 0.5rem 0 rgba(0,0,0,0.22);
 }
 .list-header {
@@ -171,7 +171,7 @@ input:checked ~ .hamburger-menu-overlay {
     text-decoration: none;
     border-radius: 0.3rem;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    transition: transform 0.3s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.3s cubic-bezier(0.25,0.8,0.25,1);
+    transition: transform 0.2s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.2s cubic-bezier(0.25,0.8,0.25,1);
     box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.19), 0 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.23);
 }
 .home-card {
