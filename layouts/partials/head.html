@@ -12,4 +12,11 @@
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/xcode.css" />
   <link rel="stylesheet" href="/css/latolatinfonts.css" />
+  {{ if isset $.Site.Params "bgimg" }}
+  <style>
+    body {
+      background: #ecedef url("{{ $.Site.Params.bgimg }}") repeat;
+    }
+  </style>
+  {{ end }}
 </head>
