@@ -243,11 +243,14 @@ input:checked ~ .hamburger-menu-overlay {
 }
 .pagination-nav {
     margin: 2em 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     max-width: 47rem;
+}
+.pagination-newer {
+    float:left;
+}
+.pagination-older {
+    float: right;
 }
 .button {
     padding: 0.5em 0.6em;

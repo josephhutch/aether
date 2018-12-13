@@ -14,8 +14,8 @@
     </main>
     {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
     <nav class="pagination-nav side-padding">
-      {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}" class="button">Newer Posts</a>{{ end }}
-      {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}" class="button">Older Posts</a>{{ end }}
+      {{ if .Paginator.HasPrev }}<a href="{{ .Paginator.Prev.URL }}" class="pagination-newer">&lt; Newer Posts</a>{{ end }}
+      {{ if .Paginator.HasNext }}<a href="{{ .Paginator.Next.URL }}" class="pagination-older">Older Posts &gt;</a>{{ end }}
     </nav>
     {{ end }}
     {{ partial "scripts.html" . }}
