@@ -4,6 +4,7 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
 ## Features
  - Content is displayed in cards that use movement and depth
  - Category pages that group similar articles are automatically generated and added to the menu
+ - Customizable website background image and home button image
  - Looks good on any screen using responsive web design
 
 ## Installation
@@ -17,6 +18,7 @@ Set the theme to aether in the config file.
 
 ## Usage
 ### Website Configuration
+The config.toml file allows you to change the look and feel of your blog.
 ```toml
 baseURL = "https://yourwebsitenamegoeshere.com/"
 languageCode = "Your language code"
@@ -31,16 +33,18 @@ bgimg = "URL to the image used for the page background - optional"
 ```
 
 ### Creating content
+Make a new post by executing `hugo new posts/postnamehere.md` in your shell.  Open the new file, update the front matter, and you're on your way.
 ```
-title: "Aether: A Clean Theme for Hugo Websites"
-date: 2018-05-02T14:33:42-04:00
-description: "Aether is new theme for Hugo that emphasizes motion, depth, and material as design elements. Distracting styling and page elements are forgone to focus on the content."
-categories: ["Web-Dev"]
-featuredImage: "/img/mdd-macbook.jpg"
-menu: false
-list: true
-draft: false
+title: "The title of your post"
+date: date the post was generated
+description: "Description of the post (displayed in the post's list card)"
+categories: ["Add comma seperated categories here", "another category"]
+featuredImage: "URL to the page's featured image"
+menu: whether you would like the post to show up in the navigation menu
+list: whether you would like the post to show up on list pages
+draft: if the page is a draft
 ```
+
 ## Helpful Links
 [Hugo Documentation](https://gohugo.io/documentation/)
 
