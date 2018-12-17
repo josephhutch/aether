@@ -7,7 +7,7 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
  - Customizable website background image and home button image
  - Looks good on any screen using responsive web design
 
-![Aether on mobile](https://www.joehutch.com/img/mdd-iphone.jpg)
+![Aether Hugo theme on a laptop](https://www.joehutch.com/img/mdd-macbook.jpg)
 
 ## Installation
 In your Hugo project's theme directory, clone the Aether repo.
