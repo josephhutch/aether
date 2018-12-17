@@ -1,6 +1,8 @@
 # aether
 Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as design elements.  Aether presents your content in a clean interface that highlights good photography and writing.
 
+![Aether on mobile](https://www.joehutch.com/img/mdd-iphone.jpg)
+
 ## Features
  - Content is displayed in cards that use movement and depth
  - Category pages that group similar articles are automatically generated and added to the menu
@@ -26,7 +28,7 @@ title = "Your Website Title"
 theme = "aether"
 
 [params]
-brand = "joehutch"
+brand = "The name that shows up in the top left of the website"
 description = "Your website's description."
 homeimg = "URL to the image used for the home button"
 bgimg = "URL to the image used for the page background - optional"
@@ -40,9 +42,9 @@ date: date the post was generated
 description: "Description of the post (displayed in the post's list card)"
 categories: ["Add comma seperated categories here", "another category"]
 featuredImage: "URL to the page's featured image"
-menu: whether you would like the post to show up in the navigation menu
-list: whether you would like the post to show up on list pages
-draft: if the page is a draft
+menu: whether you would like the post to show up in the navigation menu (true, false)
+list: whether you would like the post to show up on list pages (true, false)
+draft: if the page is a draft (true, false)
 ```
 
 ## Helpful Links
