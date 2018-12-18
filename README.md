@@ -38,6 +38,7 @@ bgimg = "URL to the image used for the page background - optional"
 ### Creating content
 Make a new post by executing `hugo new post/postnamehere.md` in your shell. Open the new file, update the front matter, and start writing! Below you can find what the front matter should contain for a new post and what each of the parameters mean.
 ```yaml
+---
 title: "The title of your post"
 date: date the post was generated
 description: "Description of the post (displayed in the post's card)"
@@ -46,6 +47,7 @@ featuredImage: "URL to the page's featured image, used as the card image and the
 displayInMenu: whether you would like the post to show up in the navigation menu (true, false)
 displayInList: whether you would like the post to be listed on the home page and category pages (true, false)
 draft: if the page is a draft (true, false)
+---
 ```
 
 Posts typically would have displayInMenu set to false so that the post is not a menu option, and displayInList set to true so it shows up on the homepage's list of posts and in category page lists. An About Me page or a Contact page, on the other hand, would want displayInMenu set to true and displayInList set to false.  That will allow the About Me page or Contact page to be accessable from the menu but not displayed in the homepage's list of posts.
