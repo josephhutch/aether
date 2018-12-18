@@ -12,7 +12,7 @@
 		<span></span>
     <ul class="hamburger-menu-overlay">
       <li><a href="/" class="hamburger-menu-overlay-link">Home</a></li>
-      {{ range where .Site.Pages "Params.menu" true }}
+      {{ range where .Site.Pages "Params.displayinmenu" true }}
 			<li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
 			{{ end }}
       {{ range $key, $value := .Site.Taxonomies.categories }}

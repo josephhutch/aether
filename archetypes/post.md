@@ -4,7 +4,7 @@ date: {{ .Date }}
 description: ""
 categories: []
 featuredImage: ""
-menu: false
-list: true
+displayInMenu: false
+displayInList: true
 draft: true
 ---
