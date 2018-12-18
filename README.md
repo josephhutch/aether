@@ -8,7 +8,7 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
  - Looks good on any screen using responsive web design
  - Highlight.js integration provides beautiful syntax highlighting for most programming languages and file formats
 
-![Aether Hugo theme screenshot](images/tn.png)
+![Aether Hugo theme screenshot](images/screenshot.png)
 
 ## Installation
 In your Hugo project's theme directory, clone the Aether repo.
