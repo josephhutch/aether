@@ -37,7 +37,7 @@ bgimg = "URL to the image used for the page background - optional"
 
 ### Creating content
 Make a new post by executing `hugo new post/postnamehere.md` in your shell. Open the new file, update the front matter, and start writing! Below you can find what the front matter should contain for a new post and what each of the parameters mean.
-```
+```yaml
 title: "The title of your post"
 date: date the post was generated
 description: "Description of the post (displayed in the post's card)"
@@ -51,6 +51,16 @@ draft: if the page is a draft (true, false)
 Posts typically would have displayInMenu set to false so that the post is not a menu option, and displayInList set to true so it shows up on the homepage's list of posts and in category page lists. An About Me page or a Contact page, on the other hand, would want displayInMenu set to true and displayInList set to false.  That will allow the About Me page or Contact page to be accessable from the menu but not displayed in the homepage's list of posts.
 
 Adding an interesting description and a good image to each post is a great way to get the most value out of this theme.
+
+### Further Customization
+To change the heading and subtext at the top of list pages just add a \_index.md file in the folder that the list page is generated from.  For example to change the heading at the top of the homepage, add an \_index.md file to the content folder with the following parameters.
+```yaml
+---
+title: "This is the main heading text in big letters"
+date: the date
+description: "This is the subtext above the main heading in small letters"
+---
+```
 
 ## Helpful Links
 [Hugo Documentation](https://gohugo.io/documentation/) - Learn how to use Hugo and format content files
