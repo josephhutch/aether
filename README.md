@@ -8,7 +8,7 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
  - Looks good on any screen using responsive web design
  - Highlight.js integration provides beautiful syntax highlighting for most programming languages and file formats
 
-![Aether Hugo theme screenshot](images/tn.png)
+![Aether Hugo theme screenshot](images/screenshot.png)
 
 ## Installation
 In your Hugo project's theme directory, clone the Aether repo.
@@ -37,7 +37,7 @@ bgimg = "URL to the image used for the page background - optional"
 
 ### Creating content
 Make a new post by executing `hugo new post/postnamehere.md` in your shell. Open the new file, update the front matter, and start writing! Below you can find what the front matter should contain for a new post and what each of the parameters mean.
-```toml
+```
 title: "The title of your post"
 date: date the post was generated
 description: "Description of the post (displayed in the post's card)"
