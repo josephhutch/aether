@@ -1,0 +1,12 @@
+baseurl = "https://gohugo.io/"
+title = "Hugo Themes - aether"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+canonifyurls = true
+paginate = 3
+theme = "aether"
+
+[params]
+brand = "aether"
+description = "aether Hugo theme for blogs"
+bgimg = "/img/ignasi_pattern_s.png"
