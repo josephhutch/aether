@@ -4,19 +4,26 @@
   <body class="single-body">
     {{ partial "nav-bar.html" . }}
     <main class="content side-text-padding">
-      <article class="post">
+      <article class="post dropcase">
         <header class="post-header">
         	<h1 class="post-title">{{ .Title }}</h1>
+          <p class="post-date">Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
         </header>
         {{ if isset .Params "featuredimage" }}
         <figure class="post-figure">
-          <img src="{{ .Site.BaseURL }}/{{.Params.featuredimage }}">
+          <img src="{{.Params.featuredimage }}">
         </figure>
         {{ end }}
         {{ .Content }}
       </article>
+      <!--
+      If you're going to use DISQUS comments, insert code here.
+      -->
     </main>
     <nav class="end-nav side-padding">
+      {{ with .PrevPage }}
+      {{ .Render "li-next" }}
+      {{ end }}
       {{ partial "home-card.html" . }}
     </nav>
     {{ partial "scripts.html" . }}
