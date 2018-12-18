@@ -7,6 +7,7 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
  - Customizable website background image and home button image
  - Looks good on any screen using responsive web design
  - Highlight.js integration provides beautiful syntax highlighting for most programming languages and file formats
+ - Add math symbols and equations to your blog posts using KaTeX 
 
 ![Aether Hugo theme screenshot](https://raw.githubusercontent.com/josephhutch/aether/master/images/screenshot.png?_sm_au_=iVVVRRW7D405F0fN)
 
@@ -66,6 +67,7 @@ description: "This is the subtext above the main heading in small letters"
 
 ## Helpful Links
 [Hugo Documentation](https://gohugo.io/documentation/) - Learn how to use Hugo and format content files
+[KaTeX](https://katex.org/) - Math typesetting to add math equations and symbols to your blog posts
 
 ## License
 MIT © Joe Hutchinson
