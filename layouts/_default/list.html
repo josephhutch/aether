@@ -8,7 +8,7 @@
         <p class="list-header-subtext">{{ .Description }}</p>
         <h1 class="list-header-title">{{ .Title }}</h1>
       </header>
-      {{ range where .Paginator.Pages "Params.list" true }}
+      {{ range where .Paginator.Pages "Params.list"  "!=" false }}
       {{ .Render "li" }}
       {{ end }}
     </main>
