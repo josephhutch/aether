@@ -37,7 +37,7 @@ bgimg = "URL to the image used for the page background - optional"
 
 ### Creating content
 Make a new post by executing `hugo new post/postnamehere.md` in your shell. Open the new file, update the front matter, and start writing! Below you can find what the front matter should contain for a new post and what each of the parameters mean.
-```toml
+```
 title: "The title of your post"
 date: date the post was generated
 description: "Description of the post (displayed in the post's card)"
