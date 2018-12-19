@@ -4,7 +4,7 @@ licenselink = "https://github.com/josephhutch/aether/blob/master/LICENSE.md"
 description = "aether is a blog theme that emphasizes motion, material, and depth as design elements to highlight the content of your site"
 homepage = "https://github.com/josephhutch/aether"
 tags = ["Blog", "Personal", "Responsive", "Minimal", "Simple", "Clean", "Material Design"]
-features = ["Responsive", "Highlight.js"]
+features = ["Responsive", "Highlight.js", "KaTeX"]
 min_version = "0.26"
 
 [author]
