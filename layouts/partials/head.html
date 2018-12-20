@@ -16,7 +16,7 @@
   {{ if isset $.Site.Params "bgimg" }}
   <style>
     body {
-      background: #ecedef url("{{ $.Site.Params.bgimg }}") repeat;
+      background: #ecedef url("{{ $.Site.Params.bgimg | safeCSS }}") repeat;
     }
   </style>
   {{ end }}
