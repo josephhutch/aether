@@ -21,7 +21,7 @@
       -->
     </main>
     <nav class="end-nav side-padding">
-      {{ with .PrevPage }}
+      {{ with .PrevInSection }}
       {{ .Render "li-next" }}
       {{ end }}
       {{ partial "home-card.html" . }}
