@@ -20,12 +20,14 @@
       If you're going to use DISQUS comments, insert code here.
       -->
     </main>
+    {{ if ne $.Site.Params.siteFooter "false" }}
     <nav class="end-nav side-padding">
       {{ with .PrevInSection }}
       {{ .Render "li-next" }}
       {{ end }}
       {{ partial "home-card.html" . }}
     </nav>
+    {{ end }}
     {{ partial "scripts.html" . }}
   </body>
 </html>
