@@ -43,37 +43,37 @@ strong {
     -webkit-user-select: none;
     user-select: none;
 }
-.hamburger-menu input {
-  display: block;
-  width: 33px;
-  height: 33px;
-  position: absolute;
-  top: -9px;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 500; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
+.hamburger-menu button {
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 33px;
+    padding: 0px;
+    border: 0px;
+    outline: none;
+    background-color: transparent;
+    z-index: 500; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
 }
-.hamburger-menu span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  position: relative;
-  background-color: #3A3B3C;
-  border-radius: 3px;
-  z-index: 105;
-  transform-origin: center;
-  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
-              background-color 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+.hamburger-menu button span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    position: relative;
+    background-color: #3A3B3C;
+    border-radius: 3px;
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+                background-color 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
-.hamburger-menu span:first-of-type {
+.hamburger-menu button span:first-of-type {
     margin-bottom: 5px;
 }
-.hamburger-menu input:checked ~ span {
+.hamburger-menu-open button span {
     background-color: white;
     transform: rotate(45deg) translate(3.2px , 3.2px);
 }
-.hamburger-menu input:checked ~ span:nth-last-child(2) {
+.hamburger-menu-open button span:last-of-type {
     transform: rotate(-45deg) translate(3.2px , -3.2px);
 }
 .hamburger-menu-overlay {
@@ -94,7 +94,7 @@ strong {
     opacity: 0;
     transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
 }
-input:checked ~ .hamburger-menu-overlay {
+.hamburger-menu-open .hamburger-menu-overlay {
     visibility: visible;
     opacity: 0.9;
 }
