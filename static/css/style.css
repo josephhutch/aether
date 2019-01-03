@@ -54,6 +54,7 @@ strong {
     background-color: transparent;
     z-index: 500; /* and place it over the hamburger */
     -webkit-touch-callout: none;
+    cursor: pointer;
 }
 .hamburger-menu button span {
     display: block;
