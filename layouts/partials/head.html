@@ -5,9 +5,13 @@
   <title>{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
   <!-- Standard favicon -->
+  {{ if (fileExists "static/img/favicon.ico") -}}
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  {{- end }}
   <!-- Recommended favicon format -->
+  {{ if (fileExists "static/img/favicon.png") -}}
   <link rel="icon" type="image/png" href="/img/favicon.png">
+  {{- end }}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/xcode.css" />
