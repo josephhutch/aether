@@ -1,4 +1,4 @@
 <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="/" class="card home-card" style="background-image: url({{if isset .Site.Params "homeimg"}} {{ .Site.Params.homeimg | safeCSS }} {{ else }} /img/grey-cloud.jpg {{ end }})" rel="bookmark" >
+  href="/" class="card home-card" style="background-image: url({{if isset .Site.Params "homeimg"}} {{ .Site.Params.homeimg | absURL | safeCSS }} {{ else }} /img/grey-cloud.jpg | absURL {{ end }} )" rel="bookmark" >
   Home
 </a>

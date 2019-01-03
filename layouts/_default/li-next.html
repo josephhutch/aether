@@ -3,7 +3,7 @@
     {{ if isset .Params "featuredimage" }}
     <div class="card-img-container">
       <p class="card-img-overlay">Next Article</p>
-      <img src="{{.Params.featuredimage }}" class="card-img">
+      <img src="{{.Params.featuredimage | absURL }}" class="card-img">
     </div>
     {{ end }}
   <article class="card-body">

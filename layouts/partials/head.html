@@ -6,21 +6,21 @@
   <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
   <!-- Standard favicon -->
   {{ if (fileExists "static/img/favicon.ico") -}}
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="{{ "/img/favicon.ico" | absURL}}">
   {{- end }}
   <!-- Recommended favicon format -->
   {{ if (fileExists "static/img/favicon.png") -}}
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absURL}}">
   {{- end }}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/xcode.css" />
+  <link rel="stylesheet" href="{{ "/css/style.css" | absURL}}" />
+  <link rel="stylesheet" href="{{ "/css/xcode.css" | absURL}}" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/latolatinfonts.css" />
+  <link rel="stylesheet" href="{{ "/css/latolatinfonts.css" | absURL}}" />
   {{ if isset $.Site.Params "bgimg" }}
   <style>
     body {
-      background: #ecedef url("{{ $.Site.Params.bgimg | safeCSS }}") repeat;
+      background: #ecedef url("{{ $.Site.Params.bgimg | absURL | safeCSS }}") repeat;
     }
   </style>
   {{ end }}

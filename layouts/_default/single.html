@@ -11,7 +11,7 @@
         </header>
         {{ if isset .Params "featuredimage" }}
         <figure class="post-figure">
-          <img src="{{.Params.featuredimage }}">
+          <img src="{{.Params.featuredimage | absURL }}">
         </figure>
         {{ end }}
         {{ .Content }}
