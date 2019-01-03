@@ -27,6 +27,7 @@ baseURL = "https://yourwebsitenamegoeshere.com/"
 languageCode = "The language code for the language the website is written in"
 title = "The website title that is used in each page title, displayed in the browser tab and search results"
 theme = "aether"
+googleAnalytics = "Your google analytics tracking ID"
 
 [params]
 brand = "The name that is displayed in the top left of the website, consider it the website name"
@@ -51,6 +52,7 @@ date: date the post was generated
 description: "Description of the post (displayed in the post's card)"
 categories: ["Add comma seperated categories here", "another category"]
 featuredImage: "URL to the page's featured image, used as the card image and the image at the top of the article"
+featuredImageDescription: "Description for the featured image, used as the alt text"
 displayInMenu: whether you would like the post to show up in the navigation menu (true, false)
 displayInList: whether you would like the post to be listed on the home page and category pages (true, false)
 draft: if the page is a draft (true, false)
