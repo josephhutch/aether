@@ -17,10 +17,14 @@ For each feature below, the first line is the markdown and the second line is th
 ## LaTeX style math typsetting with KaTeX
 
 ```md
-\\[\frac{n!}{k!(n-k)!} = \binom{n}{k}\\]
+{{</* raw */>}}
+\[u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt} \]
+{{</* /raw */>}}
 ```
 
-\\[\frac{n!}{k!(n-k)!} = \binom{n}{k}\\]
+{{< raw >}}
+\[u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt} \]
+{{< /raw >}}
 
 ## Code (Supports many programming languages and formats)
 
