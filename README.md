@@ -27,7 +27,7 @@ baseURL = "https://yourwebsitenamegoeshere.com/"
 languageCode = "The language code for the language the website is written in"
 title = "The website title that is used in each page title, displayed in the browser tab and search results"
 theme = "aether"
-googleAnalytics = "Your google analytics tracking ID"
+googleAnalytics = "Your google analytics tracking ID - optional"
 
 [params]
 brand = "The name that is displayed in the top left of the website, consider it the website name"
