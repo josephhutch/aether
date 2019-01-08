@@ -1,5 +1,5 @@
 <nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="/" class="nav-text">
+  <h1 class="nav-header"><a href="{{ .Site.BaseURL }}" class="nav-text">
     {{ if isset $.Site.Params "brand"}}
       {{- $.Site.Params.brand -}}
     {{ else }}
@@ -17,7 +17,7 @@
       <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
       {{ end }}
       {{ range $key, $value := .Site.Taxonomies.categories }}
-      <li><a href="{{ (printf "%s%s" "/categories/" ($key | urlize)) | absURL }}" class="hamburger-menu-overlay-link">{{ $key | humanize }}</a></li>
+      <li><a href="{{ (printf "%s%s" "categories/" ($key | urlize)) | absURL }}" class="hamburger-menu-overlay-link">{{ $key | humanize }}</a></li>
       {{ end }}
     </ul>
   </div>
