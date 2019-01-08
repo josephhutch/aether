@@ -1,6 +1,6 @@
 +++
 title = "(Hu)go Template Primer"
-featuredImage = "/img/lucas-benjamin-565254-unsplash.jpg"
+featuredImage = "img/lucas-benjamin-565254-unsplash.jpg"
 displayInMenu = false
 displayInList = true
 draft = false

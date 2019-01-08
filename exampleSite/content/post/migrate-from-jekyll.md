@@ -1,6 +1,6 @@
 ---
 date: 2014-03-10
-featuredImage: "/img/yan-ots-257617-unsplash.jpg"
+featuredImage: "img/yan-ots-257617-unsplash.jpg"
 displayInMenu: false
 displayInList: true
 draft: false
