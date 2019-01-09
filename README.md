@@ -83,7 +83,7 @@ description: "This is the subtext above the main heading in small letters"
 ## Helpful Links
 [Hugo Documentation](https://gohugo.io/documentation/) - Learn how to use Hugo and format content files
 
-[Aether Blog Post](https://www.joehutch.com/posts/aether-theme/) - See aether in action and learn more about the theme
+[Aether Blog Post](https://www.joehutch.com/post/aether-theme/) - See aether in action and learn more about the theme
 
 [KaTeX](https://katex.org/) - Math typesetting to add math equations and symbols to your blog posts
 
