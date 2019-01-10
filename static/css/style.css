@@ -285,6 +285,10 @@ strong {
 .muted-text {
     color: #7A7B7C;
 }
+.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
 .no-scroll {
     overflow: hidden;
     position: fixed;
