@@ -1,0 +1,11 @@
+<img src="{{ index .Params "src" }}" 
+    {{- if isset .Params "alt" }} alt="{{ index .Params "alt"}}" {{ end -}}
+    class="small-img {{ if isset .Params "smartfloat" -}}
+        {{- if eq .Params.smartfloat "left" -}}
+            smartfloat-left
+        {{- else if eq .Params.smartfloat "right" -}}
+            smartfloat-right
+        {{- end -}}
+    {{- end }}"
+    {{- if isset .Params "width" }} style="width: {{ index .Params "width" }};" {{- end -}}
+/>

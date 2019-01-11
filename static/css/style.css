@@ -282,6 +282,12 @@ strong {
     padding-right: 1.2rem !important;
     box-sizing: border-box !important;
 }
+.small-img {
+    width: unset;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
 .muted-text {
     color: #7A7B7C;
 }
@@ -297,9 +303,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1.5em 0 0.7em 0;
 }
 img {
+    display: block;
     width: 100%;
     height: auto;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 blockquote {
     border-left: 0.3em solid #D1D1D1;
@@ -426,6 +433,14 @@ footer {
     }
     .button {
         border-radius: 0.2rem;
+    }
+    .smartfloat-right {
+        float: right;
+        margin-left: 1em;
+    }
+    .smartfloat-left {
+        float: left;
+        margin-right: 1em;
     }
     code {
         border-radius: 0.2rem;
