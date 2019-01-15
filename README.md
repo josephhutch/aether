@@ -69,6 +69,16 @@ Add an interesting description and a good image to each post to get the most val
 
 Posts are written in markdown and LaTeX (for math symbols and equations). You can find tons of information on how to format your posts with markdown and LaTeX on the web.
 
+Aether provides two shortcodes to make writing content more flexible. `Raw` allows for adding content that Hugo will pass through unmodified. Raw is useful for adding html to your content or adding math equations in LaTeX. The other shortcode aether provides is `smallimg`. Smallimg allows you to add images to your post without stretching them to be as wide as the content area.  Smallimg takes the parameters src, alt (optional), smartfloat (optional), and width (optional). The smartfloat parameter can be set to right or left, and it floats the image to the right or left on big enough screens.
+
+```
+{{< raw >}}
+\[ S(x) = \frac{1}{1+e^{-x}} \]
+{{< /raw >}}
+
+{{<smallimg src="/img/smile.png" alt="A big beautiful smile" smartfloat="left" width="100px">}}
+```
+
 ### Further Customization
 To change the heading and subtext at the top of list pages just add a \_index.md file in the folder that the list page is generated from.  For example to change the heading at the top of the homepage, add an \_index.md file to the content folder with the following parameters.
 
