@@ -285,8 +285,7 @@ strong {
 .small-img {
     width: unset;
     max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 1.5em auto;
 }
 .muted-text {
     color: #7A7B7C;
@@ -301,6 +300,7 @@ strong {
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 1.5em 0 0.7em 0;
+    clear: both;
 }
 img {
     display: block;
@@ -338,6 +338,7 @@ hr {
     border: 0;
     border-bottom: thin solid #D1D1D1;
     margin: 3em 0;
+    clear: both;
 }
 a {
     color: #3A3B3C;
@@ -436,11 +437,11 @@ footer {
     }
     .smartfloat-right {
         float: right;
-        margin-left: 1em;
+        margin: 0em 0em 1em 1em;
     }
     .smartfloat-left {
         float: left;
-        margin-right: 1em;
+        margin: 0em 1em 1em 0em;
     }
     code {
         border-radius: 0.2rem;
