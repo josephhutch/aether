@@ -7,6 +7,7 @@
          url('../font/LatoLatin-Black.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -19,6 +20,7 @@
          url('../font/LatoLatin-BlackItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -31,6 +33,7 @@
          url('../font/LatoLatin-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: bold;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -43,6 +46,7 @@
          url('../font/LatoLatin-BoldItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: bold;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -55,6 +59,7 @@
          url('../font/LatoLatin-Hairline.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -67,6 +72,7 @@
          url('../font/LatoLatin-HairlineItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -79,6 +85,7 @@
          url('../font/LatoLatin-Heavy.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -91,6 +98,7 @@
          url('../font/LatoLatin-HeavyItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -103,6 +111,7 @@
          url('../font/LatoLatin-Italic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -115,6 +124,7 @@
          url('../font/LatoLatin-Light.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -127,6 +137,7 @@
          url('../font/LatoLatin-LightItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -139,6 +150,7 @@
          url('../font/LatoLatin-Medium.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -151,6 +163,7 @@
          url('../font/LatoLatin-MediumItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -163,6 +176,7 @@
          url('../font/LatoLatin-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -175,6 +189,7 @@
          url('../font/LatoLatin-Semibold.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -187,6 +202,7 @@
          url('../font/LatoLatin-SemiboldItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -199,6 +215,7 @@
          url('../font/LatoLatin-Thin.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
@@ -211,6 +228,7 @@
          url('../font/LatoLatin-ThinItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     text-rendering: optimizeLegibility;
 }
 
