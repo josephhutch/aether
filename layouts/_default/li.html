@@ -16,7 +16,7 @@
     <p class="card-text">{{ if (isset .Params "description") }}{{ index .Params "description" }}{{ else }}{{ .Summary }}{{ end }}</p>
     <div class="card-subtext muted-text">
       <p>Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
-      <p>{{ range .Params.categories }}#{{ . }} {{ end }}</p>
+      {{ if (isset .Params "categories") }}<p>{{ range .Params.categories }}#{{ . }} {{ end }}</p>{{ end }}
     </div>
   </article>
 </a>
