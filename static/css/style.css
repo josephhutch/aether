@@ -11,6 +11,7 @@ body {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    word-break: break-word;
 }
 p {
     margin: 1em 0;
