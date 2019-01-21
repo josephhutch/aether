@@ -1,11 +1,17 @@
-<img src="{{ index .Params "src" }}" 
-    {{- if isset .Params "alt" }} alt="{{ index .Params "alt"}}" {{ end -}}
-    class="small-img {{ if isset .Params "smartfloat" -}}
-        {{- if eq .Params.smartfloat "left" -}}
-            smartfloat-left
-        {{- else if eq .Params.smartfloat "right" -}}
-            smartfloat-right
-        {{- end -}}
-    {{- end }}"
-    {{- if isset .Params "width" }} style="width: {{ index .Params "width" }};" {{- end -}}
-/>
+<picture>
+    {{ if (fileExists (printf "%s/%s" "static" (replace (index .Params "src") (path.Ext (index .Params "src")) ".webp"))) -}}
+        <source srcset="{{ replace (index .Params "src") (path.Ext (index .Params "src")) ".webp" | absURL }}" type="image/webp">
+    {{- end }}
+    <source srcset="{{ index .Params "src" | absURL }}">
+    <img src="{{ index .Params "src" | absURL }}"
+        {{- if isset .Params "alt" }} alt="{{ index .Params "alt"}}" {{ end -}}
+        class="small-img {{ if isset .Params "smartfloat" -}}
+            {{- if eq .Params.smartfloat "left" -}}
+                smartfloat-left
+            {{- else if eq .Params.smartfloat "right" -}}
+                smartfloat-right
+            {{- end -}}
+        {{- end }}"
+        {{- if isset .Params "width" }} style="width: {{ index .Params "width" }};" {{- end -}}
+    />
+</picture>
