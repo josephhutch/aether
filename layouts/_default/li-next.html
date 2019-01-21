@@ -3,7 +3,13 @@
     {{ if isset .Params "featuredimage" }}
     <div class="card-img-container">
       <p class="card-img-overlay">Next Article</p>
-      <img src="{{.Params.featuredimage | absURL }}" class="card-img">
+      <picture>
+        {{ if (fileExists (printf "%s/%s" "static" (replace (.Params.featuredimage) (path.Ext .Params.featuredimage) ".webp"))) -}}
+          <source srcset="{{ replace (.Params.featuredimage) (path.Ext (.Params.featuredimage)) ".webp" | absURL }}" type="image/webp">
+        {{- end }}
+        <source srcset="{{ .Params.featuredimage | absURL }}">
+        <img src="{{.Params.featuredimage | absURL }}" class="card-img" {{ if isset .Params "featuredimagedescription" }}alt="{{.Params.featuredimagedescription}}"{{end}}>
+      </picture>
     </div>
     {{ end }}
   <article class="card-body">
