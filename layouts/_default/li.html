@@ -1,6 +1,6 @@
 <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
   href="{{ .Permalink }}" class="card blog-card" rel="bookmark" >
-    {{ if isset .Params "featuredimage" }}
+    {{ if isset .Params "featuredimage" -}}
     <div class="card-img-container">
       <picture>
         {{ if (fileExists (printf "%s/%s" "static" (replace (.Params.featuredimage) (path.Ext .Params.featuredimage) ".webp"))) -}}
@@ -10,7 +10,7 @@
         <img src="{{.Params.featuredimage | absURL }}" class="card-img" {{ if isset .Params "featuredimagedescription" }}alt="{{.Params.featuredimagedescription}}"{{end}}>
       </picture>
     </div>
-    {{ end }}
+    {{- end }}
   <article class="card-body">
     <h2 class="card-title">{{ .Title }}</h2>
     <p class="card-text">{{ if (isset .Params "description") }}{{ index .Params "description" }}{{ else }}{{ .Summary }}{{ end }}</p>
