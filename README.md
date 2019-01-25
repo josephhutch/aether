@@ -9,7 +9,8 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
  - Category pages that group similar articles are automatically generated and added to the menu
  - Customizable website background image and home button image
  - Highlight.js integration provides **beautiful syntax highlighting** for most programming languages and file formats
- - Add **math symbols and equations** to your blog posts using LaTeX 
+ - Add **math symbols and equations** to your blog posts using LaTeX
+ - **Google Analytics** and **Disqus** integration
 
 ![Aether Hugo theme screenshot](https://raw.githubusercontent.com/josephhutch/aether/master/images/screenshot.png?_sm_au_=iVVVRRW7D405F0fN)
 
@@ -30,6 +31,7 @@ languageCode = "The language code for the language the website is written in"
 title = "The website title that is used in each page title, displayed in the browser tab and search results"
 theme = "aether"
 googleAnalytics = "Your google analytics tracking ID - optional"
+disqusShortname = "Your shortname for Disqus - optional"
 
 [params]
 brand = "The name that is displayed in the top left of the website, consider it the website name"
