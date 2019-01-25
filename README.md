@@ -2,14 +2,14 @@
 Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as design elements.  Aether presents your content in a clean interface that highlights good photography and writing.
 
 ## Features
- - It's Fast! PageSpeed scores consistently between 94-99
+ - It's **Fast**! PageSpeed scores consistently between 94-99
  - Fully **Responsive Design** allowing your site to look good on any size screen
  - Supports next-gen image format WebP with custom shortcodes
  - **Accessibility** is a priority, making your site easily navigated by screen readers
  - Category pages that group similar articles are automatically generated and added to the menu
  - Customizable website background image and home button image
- - Highlight.js integration provides beautiful syntax highlighting for most programming languages and file formats
- - Add math symbols and equations to your blog posts using KaTeX 
+ - Highlight.js integration provides **beautiful syntax highlighting** for most programming languages and file formats
+ - Add **math symbols and equations** to your blog posts using LaTeX 
 
 ![Aether Hugo theme screenshot](https://raw.githubusercontent.com/josephhutch/aether/master/images/screenshot.png?_sm_au_=iVVVRRW7D405F0fN)
 
