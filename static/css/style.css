@@ -295,7 +295,7 @@ strong {
     overflow-x: auto;
     overflow-y: hidden;
 }
-.disqus_thread {
+#disqus_thread {
     margin-top: 5em;
 }
 .no-scroll {
