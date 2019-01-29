@@ -340,7 +340,7 @@ code {
 }
 pre > code {
     display: block;
-    margin: 0.5em;
+    padding: 0.5em;
     word-break: normal;
     overflow-x: auto;
     color: black;
