@@ -10,3 +10,4 @@ brand = "aether"
 description = "aether Hugo theme for blogs"
 bgimg = "img/ignasi_pattern_s.png"
 hljsCSS = "" # default using build-in xcode.css
+hljs = "" # default using highlight.min.js of cloudflare CDN, you can use a custom version.
