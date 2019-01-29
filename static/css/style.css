@@ -338,6 +338,13 @@ code {
     border-radius: 0.3rem;
     background-color: #f3f3f3;
 }
+pre > code {
+    display: block;
+    margin: 0.5em;
+    word-break: normal;
+    overflow-x: auto;
+    color: black;
+}
 hr {
     border: 0;
     border-bottom: thin solid #D1D1D1;
