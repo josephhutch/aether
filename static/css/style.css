@@ -1,7 +1,7 @@
 body {
     font-family: 'LatoLatinWeb', Avenir, HelveticaNeue-Light, "Helvetica Neue Light",
                  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    color: #3A3B3C;
+    color: #141823;
     font-size: 1.1em;
     background-color: #ecedef;
     margin: 0;
@@ -62,7 +62,7 @@ strong {
     width: 33px;
     height: 4px;
     position: relative;
-    background-color: #3A3B3C;
+    background-color: #141823;
     border-radius: 3px;
     transform-origin: center;
     transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -121,7 +121,7 @@ strong {
 }
 .post-date {
     display: block;
-    color: #7A7B7C;
+    color: #6A6B6C;
     font-size: 0.8em;
     margin: 0;
 }
@@ -129,11 +129,10 @@ strong {
     margin: 1.5em 0;
 }
 .dropcase > p:first-of-type::first-letter {
-    font-family: 'LatoLatinWebHeavyItalic';
     float: left;
     font-size: 3em;
     line-height: 1;
-    margin: 0 0.1em -0.1em 0;
+    margin: 0.05em 0.15em -0.1em 0;
     /* initial-letter: 2; Maybe someday*/
 }
 .content {
@@ -157,7 +156,7 @@ strong {
 }
 .list-header-subtext {
     font-weight: normal;
-    color: #7A7B7C;
+    color: #6A6B6C;
     font-size: 1em;
     line-height: 1.6;
     margin: 0;
@@ -237,7 +236,7 @@ strong {
     margin-left: 1em;
     padding-left: 1em;
     word-spacing: 0.5em;
-    border-left: thin solid #7A7B7C;
+    border-left: thin solid #6A6B6C;
 }
 .end-nav {
     width: 100%;
@@ -289,7 +288,7 @@ strong {
     margin: 1.5em auto;
 }
 .muted-text {
-    color: #7A7B7C;
+    color: #6A6B6C;
 }
 .katex-display {
     overflow-x: auto;
@@ -336,7 +335,7 @@ code {
     padding: .2em .5em;
     line-height: 1.5;
     border-radius: 0.3rem;
-    background-color: #f3f3f3;
+    background-color: #f5f6f7;
 }
 pre > code {
     display: block;
@@ -352,10 +351,10 @@ hr {
     clear: both;
 }
 a {
-    color: #3A3B3C;
+    color: #141823;
 }
 table {
-    color: #3A3B3C;
+    color: #141823;
     border-collapse: collapse;
     border-spacing: 0;
     margin: 1em 0;
@@ -370,7 +369,7 @@ th {
     font-weight: normal
 }
 tr:nth-child(even) td {
-    background: #f3f3f3;
+    background: #f5f6f7;
 }
 footer {
     padding: 2em 0;

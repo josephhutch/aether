@@ -2,14 +2,6 @@
 XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 */
 
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #f3f3f3;
-  color: black;
-}
-
 .hljs-comment,
 .hljs-quote {
   color: #006a00;
