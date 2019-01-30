@@ -12,7 +12,8 @@
     {{ with .OutputFormats.Get "RSS" }}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ range .Pages }}
+    {{ $paginator := .Paginate (where .Pages "Params.displayinlist" "!=" false) -}}
+    {{- range $paginator.Pages -}}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
@@ -21,6 +22,6 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ if (isset .Params "description") }}{{ index .Params "description" | html }}{{ else }}{{ .Summary | html }}{{ end }}</description>
     </item>
-    {{ end }}
+    {{- end }}
   </channel>
 </rss>
