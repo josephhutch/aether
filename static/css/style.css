@@ -14,7 +14,7 @@ body {
     word-break: break-word;
 }
 p {
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 b,
 strong {
@@ -22,7 +22,7 @@ strong {
     font-weight: normal;
 }
 .nav-bar {
-    max-width: 48rem;
+    max-width: 50rem;
     width: 100%;
     padding: 0.4em 0;
     display: flex;
@@ -109,7 +109,7 @@ strong {
 }
 .post {
     margin: 0 0 1em 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 .post-header {
     margin: 0 0 1.5em 0;
@@ -121,7 +121,7 @@ strong {
 }
 .post-date {
     display: block;
-    color: #6A6B6C;
+    color: #7a7b7c;
     font-size: 0.8em;
     margin: 0;
 }
@@ -140,7 +140,7 @@ strong {
     padding: 2em 0;
     margin-bottom: 2em;
     width: 100%;
-    max-width: 50rem;
+    max-width: 52rem;
     border-radius: 0.3rem;
     transition: transform 0.2s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.2s cubic-bezier(0.25,0.8,0.25,1);
     box-shadow: 0 0.7rem 1.4rem 0 rgba(0,0,0,0.25), 0 0.5rem 0.5rem 0 rgba(0,0,0,0.22);
@@ -156,13 +156,13 @@ strong {
 }
 .list-header-subtext {
     font-weight: normal;
-    color: #6A6B6C;
+    color: #7a7b7c;
     font-size: 1em;
     line-height: 1.6;
     margin: 0;
 }
 .card-container {
-    max-width: 47rem;
+    max-width: 49rem;
 }
 .card {
     display: block;
@@ -236,7 +236,7 @@ strong {
     margin-left: 1em;
     padding-left: 1em;
     word-spacing: 0.5em;
-    border-left: thin solid #6A6B6C;
+    border-left: thin solid #7a7b7c;
 }
 .end-nav {
     width: 100%;
@@ -288,9 +288,10 @@ strong {
     margin: 1.5em auto;
 }
 .muted-text {
-    color: #6A6B6C;
+    color: #7a7b7c;
 }
 .katex-display {
+    margin: 1.5em 0;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -302,7 +303,7 @@ strong {
     position: fixed;
 }
 h1, h2, h3, h4, h5, h6 {
-    margin: 1.5em 0 0.7em 0;
+    margin: 1.5em 0 -1em 0;
     clear: both;
 }
 img {
@@ -338,6 +339,7 @@ code {
     background-color: #f5f6f7;
 }
 pre > code {
+    margin: 1.5em 0;
     display: block;
     padding: 0.5em;
     word-break: normal;
@@ -357,7 +359,7 @@ table {
     color: #141823;
     border-collapse: collapse;
     border-spacing: 0;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 td,
 th {
@@ -393,7 +395,7 @@ footer {
 /* Medium devices (tablets, ~641px and up) */
 @media only screen and (min-width: 40.063em) {
     body {
-        font-size: 1.125rem;
+        font-size: 1.15rem;
     }
     .nav-bar {
         padding: 0.8em 0;
