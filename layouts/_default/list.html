@@ -19,6 +19,7 @@
       {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}" class="pagination-older">Older Posts &gt;</a>{{ end }}
     </nav>
     {{ end -}}
+    {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>
 </html>
