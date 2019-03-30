@@ -323,7 +323,7 @@ blockquote p {
 }
 ul,
 ol {
-    padding-left: 1.6em; 
+    padding-left: 1.6em;
 }
 li ul, li ol {
     padding-left: 1em;
@@ -372,6 +372,12 @@ th {
 }
 tr:nth-child(even) td {
     background: #f5f6f7;
+}
+a.share img {
+    display: inline;
+    width: 2em;
+    clear: right;
+    margin-right: 0.5em;
 }
 footer {
     padding: 2em 0;

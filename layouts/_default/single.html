@@ -19,6 +19,7 @@
         </picture>
         {{ end }}
         {{ .Content }}
+        {{ partial "sharing.html" . }}
       </article>
       {{ template "_internal/disqus.html" . }}
     </main>
