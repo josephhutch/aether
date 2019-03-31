@@ -19,6 +19,7 @@
         </picture>
         {{ end }}
         {{ .Content }}
+        {{ partial "sharing.html" . }}
       </article>
       {{ template "_internal/disqus.html" . }}
     </main>
@@ -28,6 +29,7 @@
       {{ end }}
       {{ partial "home-card.html" . }}
     </nav>
+    {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>
 </html>
