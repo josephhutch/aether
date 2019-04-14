@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"
+      integrity="sha256-uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=" crossorigin="anonymous">
+<div id="aplayer"></div>
+{{if and (isset .Params `hls_src`) (eq `hls_src` true)}}
+<script src="https://cdn.jsdelivr.net/npm/hls.js@0.12.4/dist/hls.min.js"
+        integrity="sha256-ApDw1hprlKyje9h0ZA7hcthuw3Q/PAphEGMDYmEHT5I=" crossorigin="anonymous"></script>{{else}}{{end}}
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"
+        integrity="sha256-6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=" crossorigin="anonymous"></script>
+<script>
+    var ap_new_id = "aplayer-" + Math.random().toString(36).substring(2, 10);
+    document.getElementById("aplayer").setAttribute("id", ap_new_id);
+    var ap = new APlayer({
+        container: document.getElementById(ap_new_id),{{if and (eq (.Get `fixed`) "true") (ne (.Get `mini`) "true")}}
+        fixed: true,{{else}}{{end}}{{if and (eq (.Get `mini`) "true") (ne (.Get `fixed`) "true")}}
+        mini: true,{{else}}{{end}}{{if (isset .Params `lrcfile`)}}
+        lrcType: 3,{{else}}{{end}}
+        audio: [{
+            name: {{.Get `title`}},
+            artist: {{.Get `author`}},
+            url: {{.Get `musicurl`}},
+            mutex: true{{if (eq (.Get `hls_src`) "true")}},
+            type: "hls"{{else}}{{end}}{{if (isset .Params `coverimg`)}},
+            cover: {{.Get `coverimg`}}{{else}}{{end}}{{if (isset .Params `themecolor`)}},
+            theme: {{.Get `themecolor`}}{{else}}{{end}}{{if (isset .Params `lrcfile`)}},
+            lrc: {{.Get `lrcfile`}}{{else}}{{end}}
+        }]
+    });
+    window.aplayers || (window.aplayers = []);
+    window.aplayers.push(ap);
+</script>

@@ -15,6 +15,7 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
 ![Aether Hugo theme screenshot](https://raw.githubusercontent.com/josephhutch/aether/master/images/screenshot.png?_sm_au_=iVVVRRW7D405F0fN)
 
 ## Installation
+
 In the root directory of your Hugo Project, clone the aether repo into the themes directory.
 
 ```shell session
@@ -22,6 +23,7 @@ git clone https://github.com/josephhutch/aether.git themes/aether
 ```
 
 ## Usage
+
 ### Website Configuration
 Customize the look and feel of aether through the config.toml file. See how to fill in the config file below.
 
@@ -63,6 +65,7 @@ Aether supports a large array of favicon formats. Simply add your favicons with 
  - site.webmanifest
 
 ### Creating content
+
 Make a new blog post by executing `hugo new post/postnamehere.md` in your shell. At the top of the new markdown file, is what's called the front matter. The front matter is the page's metadata that determines how Hugo and aether generate the HTML for your post. Below you can find what the front matter that aether uses and what each of the parameters mean.
 
 ```yaml
@@ -90,7 +93,10 @@ Add an interesting description and a good image to each post to get the most val
 Posts are written in markdown. You can find how to write in markdown from this [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 #### Shortcodes
+
 Shortcodes extend markdown to make writing easier and more powerful.
+
+##### raw
 
 `raw` allows for adding content that Hugo will pass through unmodified. Raw is useful for adding html to your content or **adding math equations in LaTeX**.
 
@@ -100,12 +106,16 @@ Shortcodes extend markdown to make writing easier and more powerful.
 {{< /raw >}}
 ```
 
+##### image
+
 `image` is how you add WebP images to your posts with a fallback in case WebP is not supported. Image just needs the src and alt parameters. WebP is a next-gen image format that was created to make the web fast. To use the image shortcode simply store a WebP image with the same name in the same directory as your normal image.
 
 ```html
 <!--- Will display a WebP image on supported browsers if img/awesome.webp exists -->
 {{<image src="img/awesome.jpg" alt="An awesome image that will use webp when possible. Much faster!" >}}
 ```
+
+##### smallimg
 
 `smallimg` allows you to add images to your posts without stretching them to be as wide as the content area.  Smallimg takes the parameters src, alt, smartfloat (optional), and width (optional). The smartfloat parameter can be set to right or left, and it floats the image to the right or left on big enough screens.
 
@@ -114,7 +124,40 @@ Shortcodes extend markdown to make writing easier and more powerful.
 {{<smallimg src="/img/smile.png" alt="A big beautiful smile" smartfloat="left" width="100px">}}
 ```
 
+
+##### APlayer support
+
+Note: **If you use the player at the beginning of the post, please set the description by yourself. Or you will get an ugly preview of your post.**
+
+```html
+<!-- This enables you to use audio in your post -->
+{{<aplayer title="music-name" author="music-author" musicurl="path/to/music.mp3">}}
+<!-- More advanced example -->
+{{<aplayer title="music-name" author="music-author" musicurl="path/to/music.mp3" lrcfile="path/to/lrcfile.lrc" coverimg="path/to/music-cover.jpg" hls_src="false" mini="true" fixed="false" themecolor="#b89a66">}}
+```
+
+This is a port of [hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer) which uses a elegant audio HTML5 [Aplayer] to play audio on your page.
+
+Params for configuration:
+
+|Name|Type|Required|Notes|
+|:----:|:----:|:----:|:----:|
+|`title`|string|true| Music title |
+|`author`|string|true| Music artist |
+|`musicurl`|string|true| Music file URL |
+|`coverimg`|string|false| Music cover image URL |
+|`lrcfile`|string|false| Lyric URL in LRC format |
+|`themecolor`|string|false| According to cover, change the player main color of the theme to an RGB hexed color, example: '#b7daff' |
+|`fixed`|boolean in string|false| Show player at the left bottom |
+|`mini`|boolean in string|false| Show player in a small square |
+|`hls_src`|boolean|false| `musicurl` is a HLS source | 
+
+`fixed` and `mini` are conflicted, please do not set both to true.
+
+If you want to know more about this player, go to [here](https://aplayer.js.org) for details.
+
 ### Further Customization
+
 To change the heading and subtext at the top of list pages just add a \_index.md file in the folder that the list page is generated from.  For example, to change the heading at the top of the homepage, add an \_index.md file to the content folder with the following parameters.
 
 ```yaml
@@ -126,6 +169,7 @@ description: "This is the subtext above the main heading in small letters"
 ```
 
 ## Helpful Links
+
 [Aether Blog Post](https://www.joehutch.com/post/aether-theme/) - See aether in action and learn more about the theme
 
 [Hugo Documentation](https://gohugo.io/documentation/) - Learn how to use Hugo
@@ -135,7 +179,9 @@ description: "This is the subtext above the main heading in small letters"
 [Latex Math Documentation](https://en.wikibooks.org/wiki/LaTeX/Mathematics) - Learn math typesetting with LaTeX (powered by KaTeX)
 
 ## Contributing
+
 Aether is actively maintained and I welcome you to help make it better! Contributions in the way of new features, documentation improvements, bug fixes, and feature requests are appreciated. Please make an individual pull-request/issue for each suggestion.
 
 ## License
-MIT © Joe Hutchinson
+
+MIT © Joe Hutchinson & kmahyyg
