@@ -71,11 +71,14 @@ title: "The title of your post"
 date: date the post was generated (automatically generated)
 description: "Description of the post (displayed in the post's card)"
 categories: ["Add comma s categories here", "another category"]
-featuredImage: "URL to the page's featured image, used as the card image and the image at the top of the article"
-featuredImageDescription: "Description for the featured image, used as the alt text"
 displayInMenu: whether you would like the post to show up in the navigation menu (true, false)
 displayInList: whether you would like the post to be listed on the home page and category pages (true, false)
 draft: if the page is a draft (true, false)
+resources:
+- name: featuredImage
+  src: "URL to the page's featured image, used as the card image and the image at the top of the article"
+  params:
+    description: "Description for the featured image, used as the alt text"
 ---
 ```
 
@@ -104,14 +107,14 @@ Shortcodes extend markdown to make writing easier and more powerful.
 
 ```html
 <!--- Will display a WebP image on supported browsers if img/awesome.webp exists -->
-{{<image src="img/awesome.jpg" alt="An awesome image that will use webp when possible. Much faster!" >}}
+{{<image src="post/awesome-post/awesome.jpg" alt="An awesome image that will use webp when possible. Much faster!" >}}
 ```
 
 `smallimg` allows you to add images to your posts without stretching them to be as wide as the content area.  Smallimg takes the parameters src, alt, smartfloat (optional), and width (optional). The smartfloat parameter can be set to right or left, and it floats the image to the right or left on big enough screens.
 
 ```html
 <!--- smallimg will also display a WebP image on supported browsers if img/smile.webp exists -->
-{{<smallimg src="/img/smile.png" alt="A big beautiful smile" smartfloat="left" width="100px">}}
+{{<smallimg src="post/smile-post/smile.png" alt="A big beautiful smile" smartfloat="left" width="100px">}}
 ```
 
 ### Further Customization
