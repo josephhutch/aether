@@ -9,13 +9,13 @@
         	<h1 class="post-title">{{ .Title }}</h1>
           <p class="post-date">Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
         </header>
-        {{ if isset .Params "featuredimage" }}
+        {{ with .Resources.GetMatch "featuredImage" }}
         <picture class="post-figure">
-            {{ if (fileExists (printf "%s/%s" "static" (replace (.Params.featuredimage) (path.Ext (.Params.featuredimage)) ".webp"))) -}}
-            <source srcset="{{ replace (.Params.featuredimage) (path.Ext (.Params.featuredimage)) ".webp" | absURL }}" type="image/webp">
-            {{- end }}
-            <source srcset="{{.Params.featuredimage | absURL }}">
-          <img src="{{.Params.featuredimage | absURL }}" {{ if isset .Params "featuredimagedescription" }}alt="{{.Params.featuredimagedescription}}"{{end}}>
+          {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
+          <source srcset="{{ .Permalink }}" type="image/webp">
+          {{- end }}
+          <source srcset="{{ .Permalink }}">
+          <img src="{{ .Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
         </picture>
         {{ end }}
         {{ .Content }}

@@ -1,17 +1,17 @@
 <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
   href="{{ .Permalink }}" class="card blog-card" rel="bookmark" >
-    {{ if isset .Params "featuredimage" }}
-    <div class="card-img-container">
-      <p class="card-img-overlay">Next Article</p>
-      <picture>
-        {{ if (fileExists (printf "%s/%s" "static" (replace (.Params.featuredimage) (path.Ext .Params.featuredimage) ".webp"))) -}}
-          <source srcset="{{ replace (.Params.featuredimage) (path.Ext (.Params.featuredimage)) ".webp" | absURL }}" type="image/webp">
-        {{- end }}
-        <source srcset="{{ .Params.featuredimage | absURL }}">
-        <img src="{{.Params.featuredimage | absURL }}" class="card-img" {{ if isset .Params "featuredimagedescription" }}alt="{{.Params.featuredimagedescription}}"{{end}}>
-      </picture>
-    </div>
-    {{ end }}
+  {{ with .Resources.GetMatch "featuredImage" }}
+  <div class="card-img-container">
+    <p class="card-img-overlay">Next Article</p>
+    <picture>
+      {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
+      <source srcset="{{ .Permalink }}" type="image/webp">
+      {{- end }}
+      <source srcset="{{ .Permalink }}">
+      <img src="{{ .Permalink }}" class="card-img" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
+    </picture>
+  </div>
+  {{ end }}
   <article class="card-body">
     <h2 class="card-title">{{ .Title }}</h2>
     <p class="card-text">{{ if (isset .Params "description") }}{{ index .Params "description" }}{{ else }}{{ .Summary }}{{ end }}</p>
