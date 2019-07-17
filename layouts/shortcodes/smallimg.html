@@ -1,5 +1,5 @@
 <picture>
-    {{ if (fileExists (printf "%s/%s" "static" (replace (index .Params "src") (path.Ext (index .Params "src")) ".webp"))) -}}
+    {{ if (fileExists (printf "%s/%s" "content" (replace (index .Params "src") (path.Ext (index .Params "src")) ".webp"))) -}}
         <source srcset="{{ replace (index .Params "src") (path.Ext (index .Params "src")) ".webp" | absURL }}" type="image/webp">
     {{- end }}
     <source srcset="{{ index .Params "src" | absURL }}">
