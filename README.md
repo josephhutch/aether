@@ -77,7 +77,7 @@ displayInList: whether you would like the post to be listed on the home page and
 draft: if the page is a draft (true, false)
 resources:
 - name: featuredImage
-  src: "URL to the page's featured image, used as the card image and the image at the top of the article"
+  src: "Filename of the page's featured image, used as the card image and the image at the top of the article"
   params:
     description: "Description for the featured image, used as the alt text"
 ---
