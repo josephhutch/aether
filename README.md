@@ -38,6 +38,7 @@ brand = "The name that is displayed in the top left of the website, consider it 
 description = "The website's description"
 homeimg = "URL to the image used for the home button at the bottom of each post - optional"
 bgimg = "URL to the image used for the page background - optional"
+rssinmenu = whether you would like a RSS feed link to appear in the navigation menu (true, false) - optional
 ```
 
 The `title` parameter is used for each page title, the title that search engines display in search results. If you would like the title shown in the top left of the page to be different from the page title, use the `brand` parameter. For instance, the title parameter for my site is `Joe Hutchinson` but the brand parameter is set to `joehutch`.
