@@ -25,7 +25,7 @@ git clone https://github.com/josephhutch/aether.git themes/aether
 ### Website Configuration
 Customize the look and feel of aether through the config.toml file. See how to fill in the config file below.
 
-```toml
+```
 baseURL = "https://yourwebsitenamegoeshere.com/"
 languageCode = "The language code for the language the website is written in"
 title = "The website title that is used in each page title, displayed in the browser tab and search results"
