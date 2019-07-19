@@ -4,10 +4,12 @@
   <body class="list-body">
     {{ partial "nav-bar.html" . }}
     <main class="card-container side-gutter">
+      {{ if or (isset .Params "description") (isset .Params "title") -}}
       <header class="list-header">
-        <p class="list-header-subtext">{{ .Description }}</p>
-        <h1 class="list-header-title">{{ .Title }}</h1>
+        {{ with .Description }}<p class="list-header-subtext">{{ . }}</p>{{ end }}
+        {{ with .Title }}<h1 class="list-header-title">{{ . }}</h1>{{ end }}
       </header>
+      {{- end }}
       {{ with .Content -}}
       <section class="list-header-content">
         {{ . }}
