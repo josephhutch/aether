@@ -8,7 +8,11 @@
         <p class="list-header-subtext">{{ .Description }}</p>
         <h1 class="list-header-title">{{ .Title }}</h1>
       </header>
-      {{ .Content }}
+      {{ with .Content -}}
+      <section class="list-header-content">
+        {{ . }}
+      </section>
+      {{- end }}
       {{ $paginator := .Paginate (where .Pages "Params.displayinlist" "!=" false) -}}
       {{- range $paginator.Pages -}}
         {{ .Render "li" }}
@@ -19,7 +23,7 @@
       {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}" class="pagination-newer">&lt; Newer Posts</a>{{ end }}
       {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}" class="pagination-older">Older Posts &gt;</a>{{ end }}
     </nav>
-    {{ end -}}
+    {{- end }}
     {{ partial "scripts.html" . }}
   </body>
 </html>
