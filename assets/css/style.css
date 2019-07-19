@@ -168,6 +168,9 @@ strong {
 .card-container {
     max-width: 49rem;
 }
+.card-container > a:first-of-type {
+    margin-top: 5em;
+}
 .card {
     display: block;
     margin: 2.2rem 0;
