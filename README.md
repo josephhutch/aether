@@ -2,7 +2,7 @@
 Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as design elements.  Aether presents your content in a clean interface that highlights good photography and writing.
 
 ## Features
- - It's **Fast**! PageSpeed scores consistently between 94-99
+ - It's **Fast**! PageSpeed scores consistently between 94-100
  - Fully **Responsive Design** allowing your site to look good on any size screen
  - Supports next-gen image format WebP with custom shortcodes
  - **Accessibility** is a priority, making your site easily navigated by screen readers
@@ -64,7 +64,7 @@ Aether supports a large array of favicon formats. Simply add your favicons with 
  - site.webmanifest
 
 ### Creating content
-Make a new blog post by executing `hugo new post/postnamehere.md` in your shell. At the top of the new markdown file, is what's called the front matter. The front matter is the page's metadata that determines how Hugo and aether generate the HTML for your post. Below you can find what the front matter that aether uses and what each of the parameters mean.
+Make a new blog post by executing `hugo new post/postnamehere/index.md` in your shell. At the top of the new markdown file, is what's called the front matter. The front matter is the page's metadata that determines how Hugo and aether generate the HTML for your post. Below you can find what the front matter that aether uses and what each of the parameters mean.
 
 ```yaml
 ---
