@@ -6,8 +6,9 @@
       {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
       <source srcset="{{ .Permalink }}" type="image/webp">
       {{- end }}
-      <source srcset="{{ .Permalink }}">
-      <img src="{{ .Permalink }}" class="card-img" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
+      {{ $thumbnail := .Fit "400x300 Lanczos" }}
+      <source srcset="{{ $thumbnail.Permalink }}">
+      <img src="{{ $thumbnail.Permalink }}" class="card-img" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
     </picture>
   </div>
   {{- end }}
