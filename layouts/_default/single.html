@@ -14,8 +14,9 @@
           {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
           <source srcset="{{ .Permalink }}" type="image/webp">
           {{- end }}
-          <source srcset="{{ .Permalink }}">
-          <img src="{{ .Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
+          {{ $featured := .Resize "800x Lanczos" }}
+          <source srcset="{{ $featured.Permalink }}">
+          <img src="{{ $featured.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
         </picture>
         {{ end }}
         {{ .Content }}
