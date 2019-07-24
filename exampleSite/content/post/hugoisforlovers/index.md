@@ -15,6 +15,9 @@ categories = [
     "Development",
     "golang",
 ]
+[[resources]]
+  name = "featuredImage"
+  src = "andrew-neel-609846-unsplash.jpg"
 +++
 
 ## Step 1. Install Hugo
