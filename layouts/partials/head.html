@@ -24,7 +24,8 @@
   {{ $mainStyle := resources.Get "css/style.css" }}
   {{ $xcodeStyle := resources.Get "css/xcode.css" }}
   {{ $fontStyle := resources.Get "css/latolatinfonts.css" }}
-  {{ $style := slice $xcodeStyle $fontStyle $mainStyle | resources.Concat "css/concated.css" | minify }}
+  {{ $overrideStyle := resources.Get "css/override.css" }}
+  {{ $style := slice $xcodeStyle $fontStyle $mainStyle $overrideStyle | resources.Concat "css/concated.css" | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet">
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
