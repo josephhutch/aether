@@ -1,3 +1,37 @@
 <footer>
-    
+    {{ if isset $.Site.Social "github" -}}
+    <a aria-label="Github" href="https://github.com/{{ $.Site.Social.github  }}"><i class="svg-icon github"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "email" -}}
+    <a aria-label="Email" href="mailto:{{ $.Site.Social.email }}"><i class="svg-icon email"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "facebook" -}}
+    <a aria-label="Facebook" href="https://www.facebook.com/{{ $.Site.Social.facebook }}"><i class="svg-icon facebook"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "instagram" -}}
+    <a aria-label="Instagram" href="https://instagram.com/{{ $.Site.Social.instagram }}"><i class="svg-icon instagram"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "linkedin" -}}
+    <a aria-label="Linkedin" href="https://www.linkedin.com/in/{{ $.Site.Social.linkedin }}"><i class="svg-icon linkedin"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "pinterest" -}}
+    <a aria-label="Pinterest" href="https://www.pinterest.com/{{ $.Site.Social.pinterest }}"><i class="svg-icon pinterest"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "twitter" -}}
+    <a aria-label="Twitter" href="https://www.twitter.com/{{ $.Site.Social.twitter }}"><i class="svg-icon twitter"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "stackoverflow" -}}
+    <a aria-label="Stackoverflow" href="http://stackoverflow.com/{{ $.Site.Social.stackoverflow }}"><i class="svg-icon stackoverflow"></i></a>
+    {{- end }}
+
+    {{ if isset $.Site.Social "youtube" -}}
+    <a aria-label="Youtube" href="https://youtube.com/{{ $.Site.Social.youtube }}"><i class="svg-icon youtube"></i></a>
+    {{- end }}
 </footer>
