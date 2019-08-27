@@ -1,0 +1,142 @@
+stackbitVersion: ~0.2.0
+ssgName: custom
+publishDir: exampleSite/public
+buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
+uploadDir: img
+staticDir: exampleSite/static
+pagesDir: exampleSite/content
+dataDir: exampleSite
+models:
+  config:
+    type: data
+    label: Config
+    file: config.toml
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: baseURL
+        label: Base baseURL
+        description: Hostname (and path)  to the root
+      - type: string
+        name: theme
+        label: Theme Name
+      - type: string
+        name: themesDir
+        label: Themes Folder Path
+      - type: string
+        name: author
+        label: Author
+      - type: boolean
+        name: canonifyurls
+        label: Canonify URLs
+      - type: number
+        name: paginate
+        label: Paginate Number
+      - type: object
+        name: params
+        label: Params
+        description: Site parameters
+        fields: 
+          - type: string
+            name: brand
+            label: Brand Name
+          - type: string
+            name: descriptiong
+            label: Description
+          - type: image
+            name: bgimg
+            label: Background Image
+  home: 
+    type: page
+    label: Home
+    file: _index.md
+    singleInstance: true
+    fields: 
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: description
+        label: Description
+  about:
+    type: page
+    label: About
+    file: about/index.md
+    singleInstance: true
+    fields: 
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: boolean
+        name: displayInMenu
+        label: Display in Menu?
+      - type: boolean
+        name: displayInList
+        label: Display in List?
+      - type: boolean
+        name: dropCap
+        label: Drop Cap
+  post:
+    type: page
+    label: Blog Post
+    folder: posts
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: date
+        label: Date
+      - type: string
+        name: description
+        label: Description
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: boolean
+        name: dropCap
+        label: Drop Cap
+      - type: boolean
+        name: displayInMenu
+        label: Display in Menu?
+      - type: boolean
+        name: displayInList
+        label: Display in List?
+      - type: boolean
+        name: draft
+        label: Draft
+      - type: list
+        name: resources
+        label: Resources
+        items:
+          type: object
+          fields: 
+            - type: string
+              name: name
+              label: Name
+            - type: image
+              name: src
+              label: Resource Image
+
+
+
+
+
+
+
+
+
+
+
+
