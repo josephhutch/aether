@@ -17,7 +17,7 @@ models:
         label: Title
         required: true
       - type: string
-        name: baseURL
+        name: baseurl
         label: Base baseURL
         description: Hostname (and path)  to the root
       - type: string
@@ -44,7 +44,7 @@ models:
             name: brand
             label: Brand Name
           - type: string
-            name: descriptiong
+            name: description
             label: Description
           - type: image
             name: bgimg
@@ -88,7 +88,8 @@ models:
   post:
     type: page
     label: Blog Post
-    folder: posts
+    folder: post
+    match: "**/index.md"
     fields:
       - type: string
         name: title
