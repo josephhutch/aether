@@ -95,6 +95,12 @@ models:
         name: title
         label: Title
       - type: string
+        name: author
+        label: Author
+      - type: image
+        name: featuredImage
+        label: Featured Image
+      - type: string
         name: date
         label: Date
       - type: string
@@ -102,7 +108,12 @@ models:
         label: Description
       - type: list
         name: categories
-        label: Categories
+        label: Post Categories
+        items:
+          type: string
+      - type: list
+        name: tags
+        label: Post tags
         items:
           type: string
       - type: boolean
@@ -129,6 +140,15 @@ models:
             - type: image
               name: src
               label: Resource Image
+            - type: object
+              name: params
+              label: Params
+              fields:
+                type: string
+                name: description
+                label: Description
+
+
 
 
 
