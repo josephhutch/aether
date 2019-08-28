@@ -143,3 +143,10 @@ Aether is actively maintained and I welcome you to help make it better! Contribu
 
 ## License
 MIT © Joe Hutchinson
+
+
+# Stackbit Deploy
+
+This theme is ready to import into Stackbit. This theme can be deployed to Netlify and you can connect any headless CMS including Forestry, NetlifyCMS, DatoCMS or Contentful. 
+
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/josephhutch/aether)
