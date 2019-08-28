@@ -144,9 +144,9 @@ models:
               name: params
               label: Params
               fields:
-                type: string
-                name: description
-                label: Description
+                - type: string
+                  name: description
+                  label: Description
 
 
 
