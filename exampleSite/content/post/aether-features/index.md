@@ -3,11 +3,13 @@ title: "Aether Features"
 date: 2018-12-19T10:35:35-05:00
 description: "Hugo combined with the Aether theme turns easy to write markdown into powerful web pages.  KaTeX, Highlight.js, and Hugo provides the ability to create mathmatical symobols, equations, highlighted code, tables, lists, and much more."
 categories: ["Features"]
-featuredImage: "img/mdd-iphone.jpg"
 dropCap: true
 displayInMenu: false
 displayInList: true
 draft: false
+resources:
+- name: featuredImage
+  src: "mdd-iphone.jpg"
 ---
 
 Hugo combined with the Aether theme turns easy to write markdown into powerful web pages.  KaTeX, Highlight.js, and Hugo provides the ability to create mathmatical symobols, equations, highlighted code, tables, lists, and much more.
@@ -109,18 +111,18 @@ Here is `var s = "Hello World"` inline code
 ## Images
 
 ```md
-![NYC Skyline](/img/nyc.jpg)
+![NYC Skyline](/post/aether-features/mdd-iphone.jpg)
 ```
 
-![NYC Skyline](/img/nyc.jpg)
+![NYC Skyline](/post/aether-features/mdd-iphone.jpg)
 
 ## Small Images
 
 ```md
-{{</* smallimg src="/img/nyc.jpg" alt="NYC Skyline" smartfloat="left" width="250px" */>}}
+{{</* smallimg src="featuredImage" alt="NYC Skyline" smartfloat="left" width="250px" */>}}
 ```
 
-{{<smallimg src="/img/nyc.jpg" alt="NYC Skyline" smartfloat="left" width="250px">}}
+{{<smallimg src="featuredImage" alt="aether theme displayed on an iPhone" smartfloat="left" width="250px">}}
 
 This image floats to the left of this paragraph and is 250px wide. Its aspect ratio is maintained so it will not stretch. The picture shows the New York skyline. You can see how the design is responsive and how the cards intelligently fit to the display. With flexbox and css grid, heavy frameworks such as bootstrap aren't necessary to create beautiful responsive designs. The cards in aether use flexbox to change the image from the right side on desktops to the top on mobile.
 

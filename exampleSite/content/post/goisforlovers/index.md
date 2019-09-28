@@ -1,6 +1,5 @@
 +++
 title = "(Hu)go Template Primer"
-featuredImage = "img/lucas-benjamin-565254-unsplash.jpg"
 displayInMenu = false
 displayInList = true
 draft = false
@@ -16,6 +15,11 @@ categories = [
     "Development",
     "golang",
 ]
+[[resources]]
+  name = "featuredImage"
+  src = "lucas-benjamin-565254-unsplash.jpg"
+  [resources.params]
+    description = "Alt description for the featured image"
 +++
 
 Hugo uses the excellent [Go][] [html/template][gohtmltemplate] library for

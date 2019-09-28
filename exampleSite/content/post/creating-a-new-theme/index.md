@@ -2,11 +2,13 @@
 author: "Michael Henderson"
 date: 2014-09-28
 title: Creating a New Theme
-featuredImage: "img/nyc.jpg"
 dropCap: true
 displayInMenu: false
 displayInList: true
 draft: false
+resources:
+- name: featuredImage
+  src: "nyc.jpg"
 ---
 
 
