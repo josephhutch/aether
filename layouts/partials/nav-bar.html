@@ -17,7 +17,9 @@
         <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
       {{ end -}}
       {{ range $key, $value := .Site.Taxonomies.categories -}}
-      <li><a href="{{ (printf "%s%s" "categories/" ($key | urlize)) | absURL }}" class="hamburger-menu-overlay-link">{{ $key | humanize }}</a></li>
+      {{ with $.Site.GetPage (printf "%s%s" "categories/" ($key | urlize)) }}
+      <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
+      {{ end }}
       {{- end }}
       {{ if eq .Site.Params.rssinmenu true -}}
       <li><a href="{{ "/index.xml" | absURL }}" class="hamburger-menu-overlay-link">rss</a></li>
