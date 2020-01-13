@@ -128,6 +128,8 @@ date: the date
 description: "This is the subtext above the main heading in small letters"
 ---
 ```
+#### Overriding CSS
+To override CSS, you should create file `project_root/assets/css/override.css` and place all your CSS inside it. This file will be merged with standard CSS when the site is generated.
 
 ## Helpful Links
 [Aether Blog Post](https://www.joehutch.com/post/aether-theme/) - See aether in action and learn more about the theme
