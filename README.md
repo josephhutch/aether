@@ -91,6 +91,8 @@ The `dropCap` parameter is used to determine if the first letter of a post shoul
 
 Add an interesting description and a good image to each post to get the most value from this theme.
 
+Aether takes advantage of [page bundles](https://gohugo.io/content-management/page-bundles/) to optimize your images for your site.  This may require you to update the way your content is structured, also see [content organization](https://gohugo.io/content-management/organization/).  Use the `image` and `smallimg` shortcodes to take full advantage of image optimization.
+
 Posts are written in markdown. You can find how to write in markdown from this [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 #### Shortcodes
