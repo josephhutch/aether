@@ -106,18 +106,18 @@ Shortcodes extend markdown to make writing easier and more powerful.
 {{< /raw >}}
 ```
 
-`image` is how you add WebP images to your posts with a fallback in case WebP is not supported. Image just needs the src and alt parameters. WebP is a next-gen image format that was created to make the web fast. To use the image shortcode simply store a WebP image with the same name in the same directory as your normal image.
+`image` is how you add WebP images to your posts with a fallback in case WebP is not supported. Image just needs the src and alt parameters. WebP is a next-gen image format that was created to make the web fast. To use the image shortcode simply store a WebP image with the same name in the same directory as your normal image.  Keep in mind that the Hugo image processing pipeline does not support resizing webp.
 
 ```html
 <!--- Will display a WebP image on supported browsers if awesome.webp exists -->
 {{<image src="awesome.jpg" alt="An awesome image that will use webp when possible. Much faster!" >}}
 ```
 
-`smallimg` allows you to add images to your posts without stretching them to be as wide as the content area.  Smallimg takes the parameters src, alt, smartfloat (optional), and width (optional). The smartfloat parameter can be set to right or left, and it floats the image to the right or left on big enough screens.
+`smallimg` allows you to add smaller images to your posts that aren't stretched to be as wide as the content area.  Smallimg takes the parameters src, alt, smartfloat (optional), width (optional, in pixels only), and clear (optional). The smartfloat parameter can be set to right or left, and it floats the image to the right or left on big enough screens. The clear parameter allows you to clear a previous float which is helpful if you are using multiple smallimgs close to each other.
 
 ```html
 <!--- smallimg will also display a WebP image on supported browsers if smile.webp exists -->
-{{<smallimg src="smile.png" alt="A big beautiful smile" smartfloat="left" width="100px">}}
+{{<smallimg src="smile.png" alt="A big beautiful smile" smartfloat="left" width="100px" clear="true" >}}
 ```
 
 ### Further Customization

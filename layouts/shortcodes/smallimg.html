@@ -1,38 +1,36 @@
-<picture>
+<picture class="small-pic {{ if eq .Params.clear "true" -}} clear {{- end }}">
     {{ if (fileExists (printf "%s/%s" "content" (replace (.Get "src") (path.Ext (.Get "src")) ".webp"))) -}}
         <source srcset="{{ replace (.Get "src") (path.Ext (.Get "src")) ".webp" | absURL }}" type="image/webp">
     {{- end }}
     {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
     {{ if or (gt $image.Width 800) (and (isset .Params "width") (gt $image.Width (.Get "width"))) -}}
-        {{ $.Scratch.Set "imgwidth" 800 }}
-        {{ if lt (.Get "width") 800 -}}
+        {{ $.Scratch.Set "imgwidth" "800" }}
+        {{ if and (isset .Params "width") (lt (.Get "width") 800) -}}
             {{ $.Scratch.Set "imgwidth" (trim (.Get "width") "px") }}
         {{- end }}
         {{ $resized := $image.Resize (printf "%sx Lanczos" ($.Scratch.Get "imgwidth")) }}
         <source srcset="{{ $resized.Permalink }}">
-        <img src="{{ $resized.Permalink }}"
-            {{- if isset .Params "alt" }} alt="{{ .Get "alt"}}" {{ end -}}
-            class="small-img {{ if isset .Params "smartfloat" -}}
+        <img src="{{ $resized.Permalink }}" class="small-img {{ if isset .Params "smartfloat" -}}
                 {{- if eq .Params.smartfloat "left" -}}
                     smartfloat-left
                 {{- else if eq .Params.smartfloat "right" -}}
                     smartfloat-right
                 {{- end -}}
             {{- end }}"
-            {{- if isset .Params "width" }} style="width: {{ .Get "width" }};" {{- end -}}
+            {{- with .Get "alt" }} alt="{{ . }}" {{ end -}}
+            {{- with .Get "width" }} style="width: {{ . }};" {{- end -}}
         />
     {{ else }}
         <source srcset="{{ $image.Permalink }}">
-        <img src="{{ $image.Permalink }}"
-            {{- if isset .Params "alt" }} alt="{{ .Get "alt"}}" {{ end -}}
-            class="small-img {{ if isset .Params "smartfloat" -}}
+        <img src="{{ $image.Permalink }}" class="small-img {{ if isset .Params "smartfloat" -}}
                 {{- if eq .Params.smartfloat "left" -}}
                     smartfloat-left
                 {{- else if eq .Params.smartfloat "right" -}}
                     smartfloat-right
                 {{- end -}}
             {{- end }}"
-            {{- if isset .Params "width" }} style="width: {{ .Get "width" }};" {{- end -}}
+            {{- with .Get "alt" }} alt="{{ . }}" {{ end -}}
+            {{- with .Get "width" }} style="width: {{ . }};" {{- end -}}
         />
     {{- end }}
 </picture>
