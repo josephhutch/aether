@@ -6,8 +6,8 @@
     <main class="card-container side-gutter">
       {{ if or (not (eq .Description "")) (not (eq .Title "")) -}}
       <header class="list-header">
-        {{ with .Description }}<p class="list-header-subtext">{{ . }}</p>{{ end }}
         {{ with .Title }}<h1 class="list-header-title">{{ . }}</h1>{{ end }}
+        {{ with .Description }}<p class="list-header-subtext">{{ . }}</p>{{ end }}
       </header>
       {{- end }}
       {{ with .Content -}}
