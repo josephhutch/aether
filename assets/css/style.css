@@ -253,6 +253,9 @@ strong {
     width: 100%;
     max-width: 47rem;
 }
+.pagination-text {
+    font-family: 'latolatinwebmedium';
+}
 .pagination-newer {
     float:left;
 }
