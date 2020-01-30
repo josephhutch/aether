@@ -9,7 +9,7 @@
         	<h1 class="post-title">{{ .Title }}</h1>
           {{ if isset .Params "date" }}<p class="post-date">Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>{{ end }}
         </header>
-        {{ with .Resources.GetMatch "featuredImage" }}
+        {{ with .Resources.GetMatch "featuredImage" -}}
         <picture class="post-figure">
           {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
           <source srcset="{{ .Permalink }}" type="image/webp">
@@ -18,7 +18,11 @@
           <source srcset="{{ $featured.Permalink }}">
           <img src="{{ $featured.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
         </picture>
-        {{ end }}
+        {{- end }}
+        {{ if .Params.toc -}}
+          <h2>Contents</h2>
+          {{ .TableOfContents }}
+        {{- end }}
         {{ .Content }}
       </article>
       {{ template "_internal/disqus.html" . }}
