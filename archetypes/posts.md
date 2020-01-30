@@ -3,6 +3,7 @@ title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 description: ""
 categories: []
+toc: false
 dropCap: true
 displayInMenu: false
 displayInList: true
