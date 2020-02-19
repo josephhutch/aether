@@ -68,16 +68,17 @@ Make a new blog post by executing `hugo new post/postnamehere/index.md` in your 
 
 ```yaml
 ---
-title: "The title of your post"
+title: "The title of the post"
 date: date the post was generated (automatically generated)
 description: "Description of the post (displayed in the post's card)"
-categories: ["Add comma s categories here", "another category"]
-displayInMenu: whether you would like the post to show up in the navigation menu (true, false)
-displayInList: whether you would like the post to be listed on the home page and category pages (true, false)
-draft: if the page is a draft (true, false)
+categories: ["Add comma separated categories here", "another category"]
+toc: if the post should include a table of contents (true, false)
+displayInMenu: if the post should show up in the navigation menu (true, false)
+displayInList: if the post should be listed on the home page and category pages (true, false)
+draft: if the post is a draft (true, false)
 resources:
 - name: featuredImage
-  src: "Filename of the page's featured image, used as the card image and the image at the top of the article"
+  src: "Filename of the post's featured image, used as the card image and the image at the top of the article"
   params:
     description: "Description for the featured image, used as the alt text"
 ---
@@ -91,7 +92,7 @@ The `dropCap` parameter is used to determine if the first letter of a post shoul
 
 Add an interesting description and a good image to each post to get the most value from this theme.
 
-Aether takes advantage of [page bundles](https://gohugo.io/content-management/page-bundles/) to optimize your images for your site.  This may require you to update the way your content is structured, also see [content organization](https://gohugo.io/content-management/organization/).  Use the `image` and `smallimg` shortcodes to take full advantage of image optimization.
+Aether takes advantage of [page bundles](https://gohugo.io/content-management/page-bundles/) to optimize your images for your site.  This may require you to update the way your content is structured, also see [content organization](https://gohugo.io/content-management/organization/).  Use the `image` and `smallimg` shortcodes to take full advantage of image optimization.  Also, the `featuredImage` resource must exist in the post's page bundle.
 
 Posts are written in markdown. You can find how to write in markdown from this [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
