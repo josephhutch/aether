@@ -6,7 +6,7 @@
     <main class="content side-text-padding">
       <article class="post {{ if ne .Params.dropcap false }}dropcase{{ end }}">
         <header class="post-header">
-        	<h1 class="post-title">{{ .Title }}</h1>
+          <h1 class="post-title">{{ .Title }}</h1>
           {{ if isset .Params "date" }}<p class="post-date">Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>{{ end }}
         </header>
         {{ with .Resources.GetMatch "featuredImage" -}}
