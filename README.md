@@ -134,6 +134,11 @@ description: "This is the subtext above the main heading in small letters"
 #### Overriding CSS
 To override CSS, you should create file `project_root/assets/css/override.css` and place all your CSS inside it. This file will be merged with standard CSS when the site is generated.
 
+### Custom Meta Tags
+
+You can add optional Open Graph and Twitter meta tags by adding `project_root/layouts/partials/ogp.html` and `project_root/layouts/partials/twitter.html`.
+Refer to [/exampleSite/layouts/partials](/exampleSite/layouts/partials) for sample meta configs.
+
 ## Helpful Links
 [Aether Blog Post](https://www.joehutch.com/post/aether-theme/) - See aether in action and learn more about the theme
 

@@ -1,0 +1,7 @@
+<meta property="og:locale" content="{{ .Site.Language.Lang }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:title" content="{{ .Site.Params.Brand }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Params.Brand }}">
+<meta property="og:image" content="{{ .Site.Params.metaImage | absURL }}">
