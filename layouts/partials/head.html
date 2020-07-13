@@ -19,6 +19,12 @@
   {{ if (fileExists "static/safari-pinned-tab.svg") -}}
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   {{ end -}}
+  {{ if (fileExists "layouts/partials/twitter.html") -}}
+    {{ partial "twitter.html" . }}
+  {{ end -}}
+  {{ if (fileExists "layouts/partials/ogp.html") -}}
+    {{ partial "ogp.html" . }}
+  {{ end -}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   {{ $mainStyle := resources.Get "css/style.css" }}
