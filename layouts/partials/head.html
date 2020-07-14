@@ -5,19 +5,19 @@
   <title>{{ if not .IsHome }}{{with .Title }}{{ . }} &middot; {{ end }}{{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
   {{ if (fileExists "static/apple-touch-icon.png") -}}
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | absURL }}">
   {{ end -}}
   {{ if (fileExists "static/favicon-32x32.png") -}}
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | absURL }}">
   {{ end -}}
   {{ if (fileExists "static/favicon-16x16.png") -}}
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | absURL }}">
   {{ end -}}
   {{ if (fileExists "static/site.webmanifest") -}}
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="{{ "/site.webmanifest" | absURL }}">
   {{ end -}}
   {{ if (fileExists "static/safari-pinned-tab.svg") -}}
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | absURL }}" color="#5bbad5">
   {{ end -}}
   {{ if (fileExists "layouts/partials/twitter.html") -}}
     {{ partial "twitter.html" . }}
