@@ -19,11 +19,8 @@
   {{ if (fileExists "static/safari-pinned-tab.svg") -}}
     <link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | absURL }}" color="#5bbad5">
   {{ end -}}
-  {{ if (fileExists "layouts/partials/twitter.html") -}}
-    {{ partial "twitter.html" . }}
-  {{ end -}}
-  {{ if (fileExists "layouts/partials/ogp.html") -}}
-    {{ partial "ogp.html" . }}
+  {{ if (fileExists "layouts/partials/meta-tags.html") -}}
+    {{ partial "meta-tags.html" . }}
   {{ end -}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
@@ -33,10 +30,10 @@
   {{ $style := slice $fontStyle $mainStyle $overrideStyle | resources.Concat "css/concated.css" | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet">
   {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
   {{ end -}}
   {{ template "_internal/google_analytics.html" . }}
-  {{ with resources.Get $.Site.Params.bgimg -}}
+  {{ with resources.Get .Site.Params.bgimg -}}
   <style>
     body {
       background: #ecedef url("{{ .Permalink | safeCSS }}") repeat;

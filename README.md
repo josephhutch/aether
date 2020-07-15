@@ -128,7 +128,7 @@ To change the heading and subtext at the top of list pages just add a \_index.md
 ---
 title: "This is the main heading text in big letters"
 date: the date
-description: "This is the subtext above the main heading in small letters"
+description: "This is the subtext below the main heading in smaller letters"
 ---
 ```
 #### Overriding CSS
@@ -136,7 +136,7 @@ To override CSS, you should create file `project_root/assets/css/override.css` a
 
 ### Custom Meta Tags
 
-You can add optional Open Graph and Twitter meta tags by adding `project_root/layouts/partials/ogp.html` and `project_root/layouts/partials/twitter.html`.
+You can add optional Open Graph, Twitter, or other meta tags by adding `project_root/layouts/partials/meta-tags.html`
 Refer to [/exampleSite/layouts/partials](/exampleSite/layouts/partials) for sample meta configs.
 
 ## Helpful Links
