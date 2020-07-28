@@ -348,6 +348,7 @@ li > p {
     margin: 0;
 }
 code {
+    font-size: 1.1rem;
     font-family: monospace;
     padding: .2em .5em;
     line-height: 1.5;
