@@ -363,6 +363,9 @@ pre > code {
     overflow-x: auto;
     color: black;
 }
+.highlight > pre {
+    background-color: unset !important;
+}
 hr {
     border: 0;
     border-bottom: thin solid #D1D1D1;

@@ -39,6 +39,10 @@ disqusShortname = "Your shortname for Disqus - optional"
 	homeimg = "Path, within the 'assets' folder, of the image used for the home button at the bottom of each post - optional"
 	bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
 	rssinmenu = whether you would like a RSS feed link to appear in the navigation menu (true, false) - optional
+
+[markup]
+  [markup.highlight]
+    style = "igor"
 ```
 
 The `title` parameter is used for each page title, the title that search engines display in search results. If you would like the title shown in the top left of the page to be different from the page title, use the `brand` parameter. For instance, the title parameter for my site is `Joe Hutchinson` but the brand parameter is set to `joehutch`.
@@ -46,6 +50,8 @@ The `title` parameter is used for each page title, the title that search engines
 Find your `language code` [here](https://www.metamodpro.com/browser-language-codes).
 
 The `homeimg` and `bgimg` parameters give you the ability to customize the look of your site further. Both the homeimg and the bgimg should reside in the assets folder of your site. The homeimg parameter is the image used for the home button at the bottom of every page. Since the text used on the home button is white, a darker background image is preferred. If the homeimg parameter is not specified, a fallback image is used. Similarly, the bgimg parameter is used for the background of each webpage. Aether is designed to look best with a subtle tiling image for the background. If no background image is specified, the background will be a solid gray color.
+
+The default syntax highlighter `style` does not look great with aether so I recommend using igor. If you want to change the highlighter theme you can specify a different one from [this list](https://xyproto.github.io/splash/docs/all.html). To configure the syntax highlighter further, such as adding line numbers, check out [this Hugo doc section](https://gohugo.io/getting-started/configuration-markup#highlight).
 
 That is the only configuration required at the site level! You can now begin writing content for your site.
 
