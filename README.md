@@ -140,7 +140,7 @@ description: "This is the subtext below the main heading in smaller letters"
 #### Overriding CSS
 To override CSS, you should create file `project_root/assets/css/override.css` and place all your CSS inside it. This file will be merged with standard CSS when the site is generated.
 
-### Custom Meta Tags
+#### Custom Meta Tags
 
 You can add optional Open Graph, Twitter, or other meta tags by adding `project_root/layouts/partials/meta-tags.html`
 Refer to [/exampleSite/layouts/partials](/exampleSite/layouts/partials) for sample meta configs.

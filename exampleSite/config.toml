@@ -7,8 +7,10 @@ theme = "aether"
 themesDir = "../../" 
 
 [params]
-brand = "aether"
-description = "aether Hugo theme for blogs"
-bgimg = "img/ignasi_pattern_s.png"
-metaCreator = "Joe Hutchinson"
-metaImage = "img/ogimage.jpg"
+    brand = "aether"
+    description = "aether Hugo theme for blogs"
+    bgimg = "img/ignasi_pattern_s.png"
+
+[markup]
+  [markup.highlight]
+    style = "igor"
