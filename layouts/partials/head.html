@@ -22,12 +22,14 @@
   {{ if (fileExists "layouts/partials/meta-tags.html") -}}
     {{ partial "meta-tags.html" . }}
   {{ end -}}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  {{ with resources.Get "css/katex.css" -}}
+  <link href="{{ .Permalink }}" rel="stylesheet">
+  {{ end -}}
+  {{ $normalizeStyle := resources.Get "css/normalize.css" }}
   {{ $mainStyle := resources.Get "css/style.css" }}
   {{ $fontStyle := resources.Get "css/latolatinfonts.css" }}
   {{ $overrideStyle := resources.Get "css/override.css" }}
-  {{ $style := slice $fontStyle $mainStyle $overrideStyle | resources.Concat "css/concated.css" | minify }}
+  {{ $style := slice $normalizeStyle $fontStyle $mainStyle $overrideStyle | resources.Concat "css/concated.css" | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet">
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
