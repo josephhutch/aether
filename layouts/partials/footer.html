@@ -1,3 +1,21 @@
-<footer>
-    
+<footer class="side-padding">
+    <a href="{{ $.Site.BaseURL }}" class="footer-link">
+    {{ with resources.Get "icons/home-page.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}">
+    {{ end }}
+    </a>
+    {{ if isset $.Site.Params "github"}}
+    <a href="{{ $.Site.Params.github }}" class="footer-link">
+    {{ with resources.Get "icons/github.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" />
+    {{ end }}
+    </a>
+    {{ end }}
+    {{ if isset $.Site.Params "linkedin"}}
+    <a href="{{ $.Site.Params.linkedin }}" class="footer-link">
+    {{ with resources.Get "icons/linkedin.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" />
+    {{ end }}
+    </a>
+    {{ end }}
 </footer>
