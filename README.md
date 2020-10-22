@@ -36,7 +36,8 @@ disqusShortname = "Your shortname for Disqus - optional"
 [params]
 	brand = "The name that is displayed in the top left of the website, consider it the website name"
 	description = "The website's description"
-	homeimg = "Path, within the 'assets' folder, of the image used for the home button at the bottom of each post - optional"
+  github = "URL to your Github account - link will be included in the footer"
+  linkedin = "URL to your Linkedin account - link will be included in the footer"
 	bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
 	rssinmenu = whether you would like a RSS feed link to appear in the navigation menu (true, false) - optional
 
@@ -49,7 +50,7 @@ The `title` parameter is used for each page title, the title that search engines
 
 Find your `language code` [here](https://www.metamodpro.com/browser-language-codes).
 
-The `homeimg` and `bgimg` parameters give you the ability to customize the look of your site further. Both the homeimg and the bgimg should reside in the assets folder of your site. The homeimg parameter is the image used for the home button at the bottom of every page. Since the text used on the home button is white, a darker background image is preferred. If the homeimg parameter is not specified, a fallback image is used. Similarly, the bgimg parameter is used for the background of each webpage. Aether is designed to look best with a subtle tiling image for the background. If no background image is specified, the background will be a solid gray color.
+The `bgimg` parameters give you the ability to customize the look of your site further. The homeimg should reside in the assets folder of your site. The homeimg parameter is the image used for the home button at the bottom of every page. Since the text used on the home button is white, a darker background image is preferred. If the homeimg parameter is not specified, a fallback image is used. Aether is designed to look best with a subtle tiling image for the background. If no background image is specified, the background will be a solid gray color.
 
 The default syntax highlighter `style` does not look great with aether so I recommend using igor. If you want to change the highlighter theme you can specify a different one from [this list](https://xyproto.github.io/splash/docs/all.html). To configure the syntax highlighter further, such as adding line numbers, check out [this Hugo doc section](https://gohugo.io/getting-started/configuration-markup#highlight).
 
