@@ -24,7 +24,6 @@ p {
     flex-direction: column;
     z-index: -1;
     color: white;
-    background-image: url('/img/home-blob.svg');
     background-position: center;
     background-size: cover;
 }
@@ -449,7 +448,6 @@ footer {
     justify-content: space-evenly;
     align-items: flex-end;
     color: white;
-    background-image: url('/img/home-blob-flip.svg');
     background-position: 40% 0%;
     background-size: 50rem;
 }
