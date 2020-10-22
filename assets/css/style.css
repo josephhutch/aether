@@ -44,6 +44,7 @@ p {
 }
 .home-blob-text-container {
     margin: 2em 0;
+    max-width: 30rem;
     line-height: 1.5;
 }
 .home-blob-title{
@@ -456,7 +457,7 @@ footer {
     margin: 1rem 0;
 }
 .footer-icon {
-    max-width: 4rem;
+    max-width: 3.2rem;
     margin: 0;
 }
 @media screen and (pointer: coarse) {
