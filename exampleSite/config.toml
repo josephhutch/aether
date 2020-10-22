@@ -1,4 +1,4 @@
-baseurl = "http://example.org"
+baseurl = "https://example.com"
 title = "Hugo Themes - aether"
 author = "Joe Hutchinson"
 canonifyurls = true
