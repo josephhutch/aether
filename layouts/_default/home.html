@@ -10,7 +10,7 @@
         {{ with .Title }}<h1 class="home-blob-title">{{ . }}</h1>{{ end }}
         {{ with .Description }}<p class="home-blob-text">{{ . }}</p>{{ end }}
         </div>
-        {{ with resources.Get "img/faceshot.png" -}}
+        {{ with resources.GetMatch .Site.Params.headshotimg -}}
         <div class="home-faceshot-card">
           <img class="home-faceshot" src="{{ .Permalink }}" >
         </div>
