@@ -3,12 +3,12 @@
         <source srcset="{{ replace (.Get "src") (path.Ext (.Get "src")) ".webp" | absURL }}" type="image/webp">
     {{- end }}
     {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
-    {{ if or (gt $image.Width 800) (and (isset .Params "width") (gt $image.Width (.Get "width"))) -}}
-        {{ $.Scratch.Set "imgwidth" "800" }}
-        {{ if and (isset .Params "width") (lt (.Get "width") 800) -}}
-            {{ $.Scratch.Set "imgwidth" (trim (.Get "width") "px") }}
+    {{ if or (gt $image.Width 1600) (and (isset .Params "width") (gt $image.Width (.Get "width"))) -}}
+        {{ $.Scratch.Set "imgwidth" "1600" }}
+        {{ if and (isset .Params "width") (lt (.Get "width") 1600) -}}
+            {{ $.Scratch.Set "imgwidth" (mul (int (trim (.Get "width") "px")) 2) }}
         {{- end }}
-        {{ $resized := $image.Resize (printf "%sx Lanczos" ($.Scratch.Get "imgwidth")) }}
+        {{ $resized := $image.Resize (printf "%dx Lanczos" ($.Scratch.Get "imgwidth")) }}
         <source srcset="{{ $resized.Permalink }}">
         <img src="{{ $resized.Permalink }}" class="small-img {{ if isset .Params "smartfloat" -}}
                 {{- if eq .Params.smartfloat "left" -}}

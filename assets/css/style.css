@@ -23,7 +23,6 @@ p {
     display: flex;
     flex-direction: column;
     z-index: -1;
-    color: white;
     background-position: center;
     background-size: cover;
 }
@@ -455,7 +454,7 @@ footer {
     margin: 1rem 0;
 }
 .footer-icon {
-    max-width: 3.2rem;
+    max-width: 3rem;
     margin: 0;
 }
 @media screen and (pointer: coarse) {
