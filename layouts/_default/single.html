@@ -18,6 +18,13 @@
           <source srcset="{{ $featured.Permalink }}">
           <img src="{{ $featured.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
         </picture>
+        {{ with .Params.attribution -}}
+          <small>Picture by&nbsp;
+            {{- with .link }}<a href="{{ . }}" target="_blank" rel="noreferrer noopener">{{ end -}}
+            {{- .name -}}
+            {{- with .link }}</a>{{ end -}}
+          </small>
+        {{- end }}
         {{- end }}
         {{ if .Params.toc -}}
           <h2>Contents</h2>

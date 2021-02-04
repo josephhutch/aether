@@ -13,4 +13,7 @@ resources:
   src: ""
   params:
     description: ""
+    attribution:
+      name: ""
+      link: ""
 ---
