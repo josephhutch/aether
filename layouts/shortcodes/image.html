@@ -1,11 +1,10 @@
 <picture>
-    {{ if (fileExists (printf "%s/%s" "content" (replace (.Get "src") (path.Ext (.Get "src")) ".webp"))) -}}
-        <source srcset="{{ replace (.Get "src") (path.Ext (.Get "src")) ".webp" | absURL }}" type="image/webp">
-    {{- end }}
     {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
-    {{ if gt $image.Width 800 -}}
-        {{ $resized := $image.Resize "800x Lanczos" }}
-        <source srcset="{{ $resized.Permalink }}">
+    {{ if gt $image.Width 711 -}}
+        {{ $resized := $image.Resize "711x Lanczos" }}
+        {{ $resized_2 := $image.Resize "1422x Lanczos" }}
+        {{ $resized_3 := $image.Resize "2133x Lanczos" }}
+        <source srcset="{{ $resized.Permalink }} 1x, {{ $resized_2.Permalink }} 2x, {{ $resized_3.Permalink }} 3x">
         <img src="{{ $resized.Permalink }}" {{ if isset .Params "alt" -}} alt="{{ .Get "alt"}}" {{- end }}>
     {{ else }}
         <source srcset="{{ $image.Permalink }}">
