@@ -19,7 +19,7 @@
           <img src="{{ $featured.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
         </picture>
         {{ with .Params.attribution -}}
-          <small>Picture by&nbsp;
+          <small>Image by&nbsp;
             {{- with .link }}<a href="{{ . }}" target="_blank" rel="noreferrer noopener">{{ end -}}
             {{- .name -}}
             {{- with .link }}</a>{{ end -}}
