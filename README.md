@@ -88,6 +88,9 @@ resources:
   src: "Filename of the post's featured image, used as the card image and the image at the top of the article"
   params:
     description: "Description for the featured image, used as the alt text"
+    attribution:
+      name: "Name of person to attribute image to"
+      link: "optional URL to persons site"
 ---
 ```
 
