@@ -11,11 +11,10 @@
         </header>
         {{ with .Resources.GetMatch "featuredImage" -}}
         <picture class="post-figure">
-          {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
-          <source srcset="{{ .Permalink }}" type="image/webp">
-          {{- end }}
-          {{ $featured := .Resize "800x Lanczos" }}
-          <source srcset="{{ $featured.Permalink }}">
+          {{ $featured := .Resize "711x Lanczos" }}
+          {{ $featured_2 := .Resize "1422x Lanczos" }}
+          {{ $featured_3 := .Resize "2133x Lanczos" }}
+          <source srcset="{{ $featured.Permalink }} 1x, {{ $featured_2.Permalink }} 2x, {{ $featured_3.Permalink }} 3x">
           <img src="{{ $featured.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
         </picture>
         {{ with .Params.attribution -}}

@@ -4,11 +4,11 @@
   <div class="card-img-container">
     <p class="card-img-overlay">Next Article</p>
     <picture>
-      {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
-      <source srcset="{{ .Permalink }}" type="image/webp">
-      {{- end }}
-      <source srcset="{{ .Permalink }}">
-      <img src="{{ .Permalink }}" class="card-img" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
+      {{ $thumbnail := .Resize "400x Lanczos" }}
+      {{ $thumbnail_2 := .Resize "800x Lanczos" }}
+      {{ $thumbnail_3 := .Resize "1200x Lanczos" }}
+      <source srcset="{{ $thumbnail.Permalink }} 1x, {{ $thumbnail_2.Permalink }} 2x, {{ $thumbnail_3.Permalink }} 3x">
+      <img src="{{ $thumbnail.Permalink }}" class="card-img" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
     </picture>
   </div>
   {{ end }}
