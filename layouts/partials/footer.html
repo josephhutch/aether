@@ -1,20 +1,20 @@
 <footer class="side-padding" style="background-image: url('{{ "img/home-blob-flip.svg" | absURL }}');">
     <a href="{{ $.Site.BaseURL }}" class="footer-link">
     {{ with resources.Get "icons/home-page.png" }}
-        <img class="footer-icon" src="{{ .Permalink }}">
+        <img class="footer-icon" src="{{ .Permalink }}" alt="Home">
     {{ end }}
     </a>
     {{ if isset $.Site.Params "github"}}
     <a href="{{ $.Site.Params.github }}" class="footer-link">
     {{ with resources.Get "icons/github.png" }}
-        <img class="footer-icon" src="{{ .Permalink }}" />
+        <img class="footer-icon" src="{{ .Permalink }}" alt="GitHub"/>
     {{ end }}
     </a>
     {{ end }}
     {{ if isset $.Site.Params "linkedin"}}
     <a href="{{ $.Site.Params.linkedin }}" class="footer-link">
     {{ with resources.Get "icons/linkedin.png" }}
-        <img class="footer-icon" src="{{ .Permalink }}" />
+        <img class="footer-icon" src="{{ .Permalink }}" alt="LinkedIn"/>
     {{ end }}
     </a>
     {{ end }}
