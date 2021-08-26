@@ -23,7 +23,8 @@
     {{ partial "meta-tags.html" . }}
   {{ end -}}
   {{ with resources.Get "css/katex.css" -}}
-  <link href="{{ .Permalink }}" rel="stylesheet">
+  {{ $katexcss := resources.Get "css/katex.css" | minify }}
+  <link href="{{ $katexcss.Permalink }}" rel="stylesheet">
   {{ end -}}
   {{ $normalizeStyle := resources.Get "css/normalize.css" }}
   {{ $mainStyle := resources.Get "css/style.css" }}

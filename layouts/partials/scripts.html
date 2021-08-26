@@ -1,8 +1,10 @@
 {{ with resources.Get "js/katex.js" }}
-  <script defer src="{{ .Permalink }}"></script>
+  {{ $katexjs := resources.Get "js/katex.js" | minify }}
+  <script defer src="{{ $katexjs.Permalink }}"></script>
 {{ end }}
 {{ with resources.Get "js/auto-render.js" }}
-  <script defer src="{{ .Permalink }}" onload="renderMathInElement(document.body);"></script>
+  {{ $autorenderjs := resources.Get "js/auto-render.js" | minify }}
+  <script defer src="{{ $autorenderjs.Permalink }}" onload="renderMathInElement(document.body);"></script>
 {{ end }}
 {{ $corejs := resources.Get "js/core.js" | minify }}
 <script src="{{ $corejs.Permalink }}"></script>
