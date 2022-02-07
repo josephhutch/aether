@@ -39,6 +39,7 @@ disqusShortname = "Your shortname for Disqus - optional"
   github = "URL to your Github account - link will be included in the footer"
   linkedin = "URL to your Linkedin account - link will be included in the footer"
 	bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
+	headshotimg = "Path, within the 'assets' folder, of the image used for the home page header - optional"
 	rssinmenu = whether you would like a RSS feed link to appear in the navigation menu (true, false) - optional
 
 [markup]
