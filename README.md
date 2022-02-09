@@ -25,7 +25,7 @@ git clone https://github.com/josephhutch/aether.git themes/aether
 ### Website Configuration
 Customize the look and feel of aether through the config.toml file. See how to fill in the config file below.
 
-```
+```toml
 baseURL = "https://yourwebsitenamegoeshere.com/"
 languageCode = "The language code for the language the website is written in"
 title = "The website title that is used in each page title, displayed in the browser tab and search results"
@@ -34,24 +34,24 @@ googleAnalytics = "Your google analytics tracking ID - optional"
 disqusShortname = "Your shortname for Disqus - optional"
 
 [params]
-  brand = "The name that is displayed in the top left of the website, consider it the website name"
+  brand = "The name that is displayed in the top left of the website - optional, title is fallback"
   description = "The website's description"
-  facebook = "URL to your Facebook account - link will be included in the footer"
-  flicker = "URL to your Flicker account - link will be included in the footer"
-  github = "URL to your GitHub account - link will be included in the footer"
-  instagram = "URL to your Instagram account - link will be included in the footer"
-  linkedin = "URL to your LinkedIn account - link will be included in the footer"
-  patreon = "URL to your Patreon account - link will be included in the footer"
-  soundcloud = "URL to your Soundcloud account - link will be included in the footer"
-  spotify = "URL to your Spotify account - link will be included in the footer"
-  tumblr = "URL to your Tumblr account - link will be included in the footer"
-  twitch = "URL to your Twitch account - link will be included in the footer"
-  twitter = "URL to your Twitter account - link will be included in the footer"
-  vimeo = "URL to your Vimeo account - link will be included in the footer"
-  youtube = "URL to your Youtube account - link will be included in the footer"
   bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
   headshotimg = "Path, within the 'assets' folder, of the image used for the home page header - optional"
-  rssinmenu = whether you would like a RSS feed link to appear in the navigation menu and footer (true, false) - optional
+  rssinmenu = whether you would like a RSS feed link to appear in the nav menu and footer (true, false) - optional
+  facebook = "URL to your Facebook account, icon link will be included in the footer - optional"
+  flicker = "URL to your Flicker account, icon link will be included in the footer - optional"
+  github = "URL to your GitHub account, icon link will be included in the footer - optional"
+  instagram = "URL to your Instagram account, icon link will be included in the footer - optional"
+  linkedin = "URL to your LinkedIn account, icon link will be included in the footer - optional"
+  patreon = "URL to your Patreon account, icon link will be included in the footer - optional"
+  soundcloud = "URL to your Soundcloud account, icon link will be included in the footer - optional"
+  spotify = "URL to your Spotify account, icon link will be included in the footer - optional"
+  tumblr = "URL to your Tumblr account, icon link will be included in the footer - optional"
+  twitch = "URL to your Twitch account, icon link will be included in the footer - optional"
+  twitter = "URL to your Twitter account, icon link will be included in the footer - optional"
+  vimeo = "URL to your Vimeo account, icon link will be included in the footer - optional"
+  youtube = "URL to your Youtube account, icon link will be included in the footer - optional"
 
 [markup]
   [markup.highlight]
