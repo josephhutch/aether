@@ -7,7 +7,7 @@
       {{ if or (not (eq .Description "")) (not (eq .Title "")) -}}
       <header class="home-header" style="background-image: url('{{ "img/home-blob.svg" | absURL }}');">
         <div class="home-blob-text-container">
-        {{ with .Title }}<h1 class="home-blob-title">{{ . }}</h1>{{ end }}
+        {{ with .Title }}<h1 class="home-blob-title">{{ . | markdownify }}</h1>{{ end }}
         {{ with .Description }}<p class="home-blob-text">{{ . }}</p>{{ end }}
         </div>
         {{ with resources.GetMatch .Site.Params.headshotimg -}}
