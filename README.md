@@ -34,8 +34,8 @@ googleAnalytics = "Your google analytics tracking ID - optional"
 disqusShortname = "Your shortname for Disqus - optional"
 
 [params]
-	brand = "The name that is displayed in the top left of the website, consider it the website name"
-	description = "The website's description"
+  brand = "The name that is displayed in the top left of the website, consider it the website name"
+  description = "The website's description"
   facebook = "URL to your Facebook account - link will be included in the footer"
   flicker = "URL to your Flicker account - link will be included in the footer"
   github = "URL to your GitHub account - link will be included in the footer"
@@ -49,9 +49,9 @@ disqusShortname = "Your shortname for Disqus - optional"
   twitter = "URL to your Twitter account - link will be included in the footer"
   vimeo = "URL to your Vimeo account - link will be included in the footer"
   youtube = "URL to your Youtube account - link will be included in the footer"
-	bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
-	headshotimg = "Path, within the 'assets' folder, of the image used for the home page header - optional"
-	rssinmenu = whether you would like a RSS feed link to appear in the navigation menu and footer (true, false) - optional
+  bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
+  headshotimg = "Path, within the 'assets' folder, of the image used for the home page header - optional"
+  rssinmenu = whether you would like a RSS feed link to appear in the navigation menu and footer (true, false) - optional
 
 [markup]
   [markup.highlight]
