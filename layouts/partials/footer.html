@@ -4,6 +4,48 @@
         <img class="footer-icon" src="{{ .Permalink }}" alt="Home">
     {{ end }}
     </a>
+    {{ if isset $.Site.Params "facebook"}}
+    <a href="{{ $.Site.Params.facebook }}" class="footer-link">
+    {{ with resources.Get "icons/facebook.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" alt="Facebook"/>
+    {{ end }}
+    </a>
+    {{ end }}
+    {{ if isset $.Site.Params "instagram"}}
+    <a href="{{ $.Site.Params.instagram }}" class="footer-link">
+    {{ with resources.Get "icons/instagram.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" alt="Instagram"/>
+    {{ end }}
+    </a>
+    {{ end }}
+    {{ if isset $.Site.Params "twitter"}}
+    <a href="{{ $.Site.Params.twitter }}" class="footer-link">
+    {{ with resources.Get "icons/twitter.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" alt="Twitter"/>
+    {{ end }}
+    </a>
+    {{ end }}
+    {{ if isset $.Site.Params "youtube"}}
+    <a href="{{ $.Site.Params.youtube }}" class="footer-link">
+    {{ with resources.Get "icons/youtube.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" alt="Youtube"/>
+    {{ end }}
+    </a>
+    {{ end }}
+    {{ if isset $.Site.Params "tiktok"}}
+    <a href="{{ $.Site.Params.tiktok }}" class="footer-link">
+    {{ with resources.Get "icons/tiktok.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" alt="Tiktok"/>
+    {{ end }}
+    </a>
+    {{ end }}
+    {{ if isset $.Site.Params "tumblr"}}
+    <a href="{{ $.Site.Params.tumblr }}" class="footer-link">
+    {{ with resources.Get "icons/tumblr.png" }}
+        <img class="footer-icon" src="{{ .Permalink }}" alt="Tumblr"/>
+    {{ end }}
+    </a>
+    {{ end }}
     {{ if isset $.Site.Params "github"}}
     <a href="{{ $.Site.Params.github }}" class="footer-link">
     {{ with resources.Get "icons/github.png" }}
