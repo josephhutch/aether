@@ -24,5 +24,11 @@ jobs:
           cd exampleSite/
           hugo --minify
 
+      - name: debug
+        run: pwd
+
+      - name: debug 2
+        run: ls
+
       - name: Validate Generated Files
         run: html5validator --root public/ --also-check-css --ignore katex
