@@ -1,4 +1,7 @@
 # aether
+
+[![Validate Generated Files](https://github.com/josephhutch/aether/actions/workflows/main.yml/badge.svg)](https://github.com/josephhutch/aether/actions/workflows/main.yml)
+
 Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as design elements.  Aether presents your content in a clean interface that highlights good photography and writing.
 
 ## Features
@@ -172,7 +175,7 @@ Refer to [/exampleSite/layouts/partials](/exampleSite/layouts/partials) for samp
 [Latex Math Documentation](https://en.wikibooks.org/wiki/LaTeX/Mathematics) - Learn math typesetting with LaTeX (powered by KaTeX)
 
 ## Contributing
-Aether is actively maintained and I welcome you to help make it better! Contributions in the way of new features, documentation improvements, bug fixes, and feature requests are appreciated. Please make an individual pull-request/issue for each suggestion.
+Aether is actively maintained and I welcome you to help make it better! Contributions in the way of new features, documentation improvements, bug fixes, and feature requests are appreciated. Please make an individual pull-request/issue for each suggestion.  PRs are tested in GitHub Actions to ensure the html and css generated from the example site are valid.
 
 ## License
 MIT © Joe Hutchinson
