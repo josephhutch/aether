@@ -10,7 +10,6 @@ body {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    word-break: break-word;
 }
 p {
     margin: 1.5em 0;
@@ -458,7 +457,7 @@ footer {
     margin: 0;
 }
 @media screen and (pointer: coarse) {
-    .card-hover {
+    .card:active {
         transform: scale(0.95);
         box-shadow: 0 0.4rem 2rem 0 rgba(0,0,0,0.2);
     }
