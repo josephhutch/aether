@@ -15,11 +15,12 @@ categories = [
     "Development",
     "golang",
 ]
-[[resources]]
-  name = "featuredImage"
-  src = "lucas-benjamin-565254-unsplash.jpg"
-  [resources.params]
-    description = "Alt description for the featured image"
+[resources]
+name = "featuredImage"
+src = "lucas-benjamin-565254-unsplash.jpg"
+
+[resources.params]
+description = "A jellyfish with neon colors with a dark background"
 +++
 
 Hugo uses the excellent [Go][] [html/template][gohtmltemplate] library for

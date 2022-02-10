@@ -38,6 +38,7 @@ disqusShortname = "Your shortname for Disqus - optional"
   description = "The website's description"
   bgimg = "Path, within the 'assets' folder, of the image used for the page background - optional"
   headshotimg = "Path, within the 'assets' folder, of the image used for the home page header - optional"
+  headshotalt = "Alt text for the headshotimg - should be used with headshotimg"
   rssinmenu = whether you would like a RSS feed link to appear in the nav menu and footer (true, false) - optional
   facebook = "URL to your Facebook account, icon link will be included in the footer - optional"
   flicker = "URL to your Flicker account, icon link will be included in the footer - optional"
