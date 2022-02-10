@@ -7,6 +7,8 @@ title: Migrate to Hugo from Jekyll
 resources:
 - name: featuredImage
   src: "yan-ots-257617-unsplash.jpg"
+  params:
+    description: "Colorful buildings alongside a body of water"
 ---
 
 ## Move static content to `static`

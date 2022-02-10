@@ -10,6 +10,8 @@ draft: false
 resources:
 - name: featuredImage
   src: "mdd-iphone.jpg"
+  params:
+    description: "An iphone with a website featuring the aether theme"
 ---
 
 Hugo combined with the Aether theme turns easy to write markdown into powerful web pages.  KaTeX, Highlight.js, and Hugo provides the ability to create mathmatical symobols, equations, highlighted code, tables, lists, and much more.

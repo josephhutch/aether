@@ -17,7 +17,7 @@
             {{ $faceshot_x2 := .Resize "544x Lanczos" }}
             {{ $faceshot_x3 := .Resize "816x Lanczos" }}
             <source srcset="{{ $faceshot.Permalink }} 1x, {{ $faceshot_x2.Permalink }} 2x, {{ $faceshot_x3.Permalink }} 3x">
-            <img class="home-faceshot" src="{{ $faceshot.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
+            <img class="home-faceshot" src="{{ $faceshot.Permalink }}" {{ with $.Site.Params.headshotalt -}} alt="{{ . }}" {{- end }}>
           </picture>
         </div>
         {{ end -}}

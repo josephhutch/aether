@@ -9,6 +9,8 @@ draft: false
 resources:
 - name: featuredImage
   src: "nyc.jpg"
+  params:
+    description: "The New York City skyline"
 ---
 
 

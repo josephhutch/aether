@@ -10,6 +10,7 @@ themesDir = "../../"
     brand = "aether"
     description = "aether Hugo theme for blogs"
     headshotimg = "img/faceshot.jpg"
+    headshotalt = "Generic grey headshot picture"
 
 [markup]
   [markup.highlight]

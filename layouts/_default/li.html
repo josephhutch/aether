@@ -1,5 +1,4 @@
-<a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="{{ .Permalink }}" class="card blog-card" rel="bookmark" >
+<a href="{{ .Permalink }}" class="card blog-card" rel="bookmark" >
   {{ with .Resources.GetMatch "featuredImage" }}
   <div class="card-img-container">
     <picture>
