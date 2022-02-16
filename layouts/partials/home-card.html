@@ -1,4 +1,0 @@
-<a 
-  href="{{ .Site.BaseURL }}" class="card home-card" style="background-image: url({{if isset .Site.Params "homeimg"}} {{ (resources.Get .Site.Params.homeimg).Permalink | safeCSS }} {{ else }} {{ (resources.Get "img/grey-cloud.jpg").Permalink | safeCSS }} {{ end }})" rel="bookmark" >
-  Home
-</a>

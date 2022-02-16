@@ -22,7 +22,7 @@
   {{ if (fileExists "layouts/partials/meta-tags.html") -}}
     {{ partial "meta-tags.html" . }}
   {{ end -}}
-  {{ with resources.Get "css/katex.css" -}}
+  {{ with resources.Get "css/katex.min.css" -}}
   <link href="{{ .Permalink }}" rel="stylesheet">
   {{ end -}}
   {{ $normalizeStyle := resources.Get "css/normalize.css" }}

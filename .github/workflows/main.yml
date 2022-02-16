@@ -25,4 +25,4 @@ jobs:
           hugo --minify
 
       - name: Validate Generated Files
-        run: html5validator --root exampleSite/public/ --also-check-css --ignore katex
+        run: html5validator --root exampleSite/public/ --also-check-css --ignore katex ontouch
