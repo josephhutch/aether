@@ -457,7 +457,7 @@ footer {
     margin: 0;
 }
 @media screen and (pointer: coarse) {
-    .card:active {
+    .card-hover {
         transform: scale(0.95);
         box-shadow: 0 0.4rem 2rem 0 rgba(0,0,0,0.2);
     }
