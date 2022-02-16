@@ -1,5 +1,3 @@
-
-
 function cardPressed() {
     this.classList.add('card-hover');
 }
