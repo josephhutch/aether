@@ -129,6 +129,21 @@ p {
     opacity: 0;
     transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
 }
+.hamburger-menu:hover .hamburger-menu-overlay-no-js { display: block; }
+.hamburger-menu-overlay-no-js {
+    display: none;
+    position: absolute;
+    top: 0.65em;
+    right: 0;
+    text-decoration: none;
+    list-style-type: none;
+    text-transform: uppercase;
+    line-height: 1.7;
+    padding: 1em 1.3em;
+    background-color: white;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.7rem 2.3rem 0 rgba(0,0,0,0.1);
+}
 .hamburger-menu-open .hamburger-menu-overlay {
     visibility: visible;
     opacity: 0.9;
