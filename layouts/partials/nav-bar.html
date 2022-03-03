@@ -7,10 +7,14 @@
     {{ end -}}
   </a></h1>
   <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+    <input class="hamburger-menu-button" type="checkbox"
+      onclick="hamburgerMenuPressed.call(this)"
+      aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu"
+    >
+    <div class="hamburger-menu-icon">
       <span></span>
       <span></span>
-    </button>
+    </div>
     <ul id="menu" class="hamburger-menu-overlay">
       <li><a href="{{ .Site.BaseURL }}" class="hamburger-menu-overlay-link">Home</a></li>
       {{ range where .Site.Pages "Params.displayinmenu" true -}}
@@ -25,21 +29,5 @@
       <li><a href="{{ "/index.xml" | absURL }}" class="hamburger-menu-overlay-link">rss</a></li>
       {{- end }}
     </ul>
-    <noscript>
-      <ul id="menu" class="hamburger-menu-overlay-no-js">
-        <li><a href="{{ .Site.BaseURL }}" class="">Home</a></li>
-        {{ range where .Site.Pages "Params.displayinmenu" true -}}
-          <li><a href="{{ .Permalink }}" class="">{{ .Title }}</a></li>
-        {{ end -}}
-        {{ range $key, $value := .Site.Taxonomies.categories -}}
-        {{ with $.Site.GetPage (printf "%s%s" "categories/" ($key | urlize)) }}
-        <li><a href="{{ .Permalink }}" class="">{{ .Title }}</a></li>
-        {{ end }}
-        {{- end }}
-        {{ if eq .Site.Params.rssinmenu true -}}
-        <li><a href="{{ "/index.xml" | absURL }}" class="">rss</a></li>
-        {{- end }}
-      </ul>
-    </noscript>
   </div>
 </nav>
