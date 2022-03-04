@@ -74,6 +74,8 @@ p {
     display: flex;
     align-items: center;
     position: relative;
+    width: 33px;
+    height: 33px;
     z-index: 105;
     -webkit-user-select: none;
     user-select: none;
@@ -89,6 +91,7 @@ p {
     opacity: 0;
 }
 .hamburger-menu-icon {
+    position: relative;
     z-index: 499;
 }
 .hamburger-menu-icon span {
