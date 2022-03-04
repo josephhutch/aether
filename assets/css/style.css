@@ -71,44 +71,53 @@ p {
     z-index: 105;
 }
 .hamburger-menu {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
+    width: 33px;
+    height: 33px;
     z-index: 105;
     -webkit-user-select: none;
     user-select: none;
 }
-.hamburger-menu button {
+.hamburger-menu-button {
     display: block;
-    position: relative;
+    position: absolute;
     width: 33px;
     height: 33px;
-    padding: 0px;
-    border: 0px;
-    outline: none;
-    background-color: transparent;
     z-index: 500; /* and place it over the hamburger */
     -webkit-touch-callout: none;
     cursor: pointer;
+    opacity: 0;
 }
-.hamburger-menu button span {
+.hamburger-menu-icon {
+    position: relative;
+    z-index: 499;
+}
+.hamburger-menu-icon span {
     display: block;
     width: 33px;
     height: 3px;
-    position: relative;
     background-color: #454545;
     border-radius: 3px;
     transform-origin: center;
     transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
                 background-color 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
-.hamburger-menu button span:first-of-type {
+.hamburger-menu-icon span:first-of-type {
     margin-bottom: 6px;
 }
-.hamburger-menu-open button span {
+.hamburger-menu-button:checked {
+    position: fixed;
+}
+.hamburger-menu-button:checked + .hamburger-menu-icon {
+    position: fixed;
+}
+.hamburger-menu-button:checked + .hamburger-menu-icon span {
     background-color: white;
     transform: rotate(45deg) translate(3.2px , 3.2px);
 }
-.hamburger-menu-open button span:last-of-type {
+.hamburger-menu-button:checked + .hamburger-menu-icon span:last-of-type {
     transform: rotate(-45deg) translate(3.2px , -3.2px);
 }
 .hamburger-menu-overlay {
@@ -129,7 +138,7 @@ p {
     opacity: 0;
     transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
 }
-.hamburger-menu-open .hamburger-menu-overlay {
+.hamburger-menu-button:checked ~ .hamburger-menu-overlay {
     visibility: visible;
     opacity: 0.9;
 }

@@ -7,10 +7,13 @@
     {{ end -}}
   </a></h1>
   <div class="hamburger-menu">
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+    <input class="hamburger-menu-button" type="checkbox"
+      onclick="hamburgerMenuPressed.call(this)"
+    >
+    <div class="hamburger-menu-icon">
       <span></span>
       <span></span>
-    </button>
+    </div>
     <ul id="menu" class="hamburger-menu-overlay">
       <li><a href="{{ .Site.BaseURL }}" class="hamburger-menu-overlay-link">Home</a></li>
       {{ range where .Site.Pages "Params.displayinmenu" true -}}
