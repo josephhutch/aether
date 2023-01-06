@@ -137,6 +137,7 @@ p {
     background-color: #000;
     opacity: 0;
     transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
+    list-style-type: none;
 }
 .hamburger-menu-button:checked ~ .hamburger-menu-overlay {
     visibility: visible;
