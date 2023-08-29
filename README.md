@@ -23,6 +23,11 @@ In the root directory of your Hugo Project, clone the aether repo into the theme
 ```shell session
 git clone https://github.com/josephhutch/aether.git themes/aether
 ```
+if you plan to host on Github Pages with github actions, install theme as submodule.
+
+```shell session
+git submodule add https://github.com/josephhutch/aether themes/aether
+```
 
 ## Usage
 ### Website Configuration
