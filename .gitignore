@@ -36,3 +36,8 @@ resources/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Project specific files #
+##########################
+exampleSite/public/
+.hugo_build.lock

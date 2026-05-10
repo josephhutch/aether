@@ -30,11 +30,18 @@ Customize the look and feel of aether through the config.toml file. See how to f
 
 ```
 baseURL = "https://yourwebsitenamegoeshere.com/"
-languageCode = "The language code for the language the website is written in"
+locale = "The language tag for the language the website is written in"
 title = "The website title that is used in each page title, displayed in the browser tab and search results"
 theme = "aether"
-googleAnalytics = "Your google analytics tracking ID - optional"
-disqusShortname = "Your shortname for Disqus - optional"
+
+[pagination]
+  pagerSize = 10
+
+[services]
+  [services.googleAnalytics]
+    id = "Your Google Analytics measurement ID - optional"
+  [services.disqus]
+    shortname = "Your shortname for Disqus - optional"
 
 [params]
   brand = "The name that is displayed in the top left of the website - optional, title is fallback"
@@ -57,6 +64,10 @@ disqusShortname = "Your shortname for Disqus - optional"
   vimeo = "URL to your Vimeo account, icon link will be included in the footer - optional"
   youtube = "URL to your Youtube account, icon link will be included in the footer - optional"
 
+  [params.author]
+    name = "Author name for RSS metadata - optional"
+    email = "Author email for RSS metadata - optional"
+
 [markup]
   [markup.highlight]
     style = "igor"
@@ -64,7 +75,7 @@ disqusShortname = "Your shortname for Disqus - optional"
 
 The `title` parameter is used for each page title, the title that search engines display in search results. If you would like the title shown in the top left of the page to be different from the page title, use the `brand` parameter. For instance, the title parameter for my site is `Joe Hutchinson` but the brand parameter is set to `joehutch`.
 
-Find your `language code` [here](https://www.metamodpro.com/browser-language-codes).
+Find your `locale` [here](https://www.metamodpro.com/browser-language-codes).
 
 The `bgimg` parameters give you the ability to customize the look of your site further. The homeimg should reside in the assets folder of your site. The homeimg parameter is the image used for the home button at the bottom of every page. Since the text used on the home button is white, a darker background image is preferred. If the homeimg parameter is not specified, a fallback image is used. Aether is designed to look best with a subtle tiling image for the background. If no background image is specified, the background will be a solid gray color.
 
@@ -133,19 +144,21 @@ Shortcodes extend markdown to make writing easier and more powerful.
 {{< /raw >}}
 ```
 
-`image` is how you add WebP images to your posts with a fallback in case WebP is not supported. Image just needs the src and alt parameters. WebP is a next-gen image format that was created to make the web fast. To use the image shortcode simply store a WebP image with the same name in the same directory as your normal image.  Keep in mind that the Hugo image processing pipeline does not support resizing webp.
+`image` adds a responsive, optimized image from the current page bundle. The shortcode creates resized source images, adds a WebP source, and includes intrinsic image dimensions to reduce layout shift. Image just needs the src and alt parameters.
 
 ```html
-<!--- Will display a WebP image on supported browsers if awesome.webp exists -->
+<!--- Will display optimized WebP on supported browsers with a source-format fallback -->
 {{< image src="awesome.jpg" alt="An awesome image that will use webp when possible. Much faster!" >}}
 ```
 
-`smallimg` allows you to add smaller images to your posts that aren't stretched to be as wide as the content area.  Smallimg takes the parameters src, alt, smartfloat (optional), width (optional, in pixels only), and clear (optional). The smartfloat parameter can be set to right or left, and it floats the image to the right or left on big enough screens. The clear parameter allows you to clear a previous float which is helpful if you are using multiple smallimgs close to each other.
+`smallimg` allows you to add smaller optimized images to your posts that aren't stretched to be as wide as the content area.  Smallimg takes the parameters src, alt, smartfloat (optional), width (optional, in pixels only), and clear (optional). The smartfloat parameter can be set to right or left, and it floats the image to the right or left on big enough screens. The clear parameter allows you to clear a previous float which is helpful if you are using multiple smallimgs close to each other.
 
 ```html
-<!--- smallimg will also display a WebP image on supported browsers if smile.webp exists -->
+<!--- smallimg also generates a WebP source and source-format fallback -->
 {{< smallimg src="smile.png" alt="A big beautiful smile" smartfloat="left" width="100px" clear="true" >}}
 ```
+
+Regular Markdown images that point to page-bundle or global assets are optimized with the same image pipeline through Hugo render hooks.
 
 ### Further Customization
 To change the heading and subtext at the top of list pages just add a \_index.md file in the folder that the list page is generated from.  For example, to change the heading at the top of the homepage, add an \_index.md file to the content folder with the following parameters.
@@ -162,8 +175,8 @@ To override CSS, you should create file `project_root/assets/css/override.css` a
 
 #### Custom Meta Tags
 
-You can add optional Open Graph, Twitter, or other meta tags by adding `project_root/layouts/partials/meta-tags.html`
-Refer to [/exampleSite/layouts/partials](/exampleSite/layouts/partials) for sample meta configs.
+Aether includes Hugo's embedded Open Graph, Twitter Card, and schema metadata partials by default. You can add optional custom tags by adding `project_root/layouts/_partials/meta-tags.html`.
+Refer to [/exampleSite/layouts/_partials](/exampleSite/layouts/_partials) for sample meta configs.
 
 ## Helpful Links
 [Aether Blog Post](https://www.joehutch.com/posts/aether-theme/) - See aether in action and learn more about the theme

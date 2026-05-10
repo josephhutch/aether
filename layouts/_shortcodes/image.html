@@ -1,0 +1,11 @@
+{{- $src := .Get "src" -}}
+{{- with $.Page.Resources.GetMatch $src -}}
+  {{- partial "responsive-image.html" (dict
+    "image" .
+    "alt" ($.Get "alt")
+    "widths" (slice 711 1422 2133)
+    "sizes" "(min-width: 711px) 711px, 100vw"
+  ) -}}
+{{- else -}}
+  {{- errorf "The image shortcode could not find page resource %q in %q" $src $.Page.File.Path -}}
+{{- end -}}

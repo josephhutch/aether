@@ -1,14 +1,14 @@
 <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="{{ .Permalink }}" class="card blog-card" rel="bookmark" >
+  href="{{ .RelPermalink }}" class="card blog-card" rel="bookmark" >
   {{ with .Resources.GetMatch "featuredImage" }}
   <div class="card-img-container">
-    <picture>
-      {{ $thumbnail := .Resize "400x Lanczos" }}
-      {{ $thumbnail_2 := .Resize "800x Lanczos" }}
-      {{ $thumbnail_3 := .Resize "1200x Lanczos" }}
-      <source srcset="{{ $thumbnail.Permalink }} 1x, {{ $thumbnail_2.Permalink }} 2x, {{ $thumbnail_3.Permalink }} 3x">
-      <img src="{{ $thumbnail.Permalink }}" class="card-img" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
-    </picture>
+    {{ partial "responsive-image.html" (dict
+      "image" .
+      "class" "card-img"
+      "alt" .Params.description
+      "widths" (slice 400 800 1200)
+      "sizes" "(min-width: 600px) 400px, 100vw"
+    ) }}
   </div>
   {{- end }}
   <article class="card-body">

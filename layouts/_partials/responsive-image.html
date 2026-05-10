@@ -1,0 +1,39 @@
+{{- $image := .image -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $pictureClass := .pictureClass | default "" -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $style := .style | default "" -}}
+{{- $title := .title | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $widths := .widths | default (slice 711 1422 2133) -}}
+{{- $images := slice -}}
+{{- if and $image (reflect.IsImageResourceProcessable $image) -}}
+  {{- range $widths -}}
+    {{- $width := int . -}}
+    {{- if le $width $image.Width -}}
+      {{- $images = $images | append ($image.Resize (printf "%dx Lanczos" $width)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if eq (len $images) 0 -}}
+    {{- $images = $images | append $image -}}
+  {{- end -}}
+  {{- $fallback := index $images 0 -}}
+  <picture{{ with $pictureClass }} class="{{ . }}"{{ end }}>
+    {{- $webpImages := slice -}}
+    {{- range $images -}}
+      {{- $webpImages = $webpImages | append (.Resize (printf "%dx webp Lanczos" .Width)) -}}
+    {{- end }}
+    <source type="image/webp" srcset="{{ range $index, $candidate := $webpImages }}{{ if $index }}, {{ end }}{{ $candidate.RelPermalink }} {{ $candidate.Width }}w{{ end }}" sizes="{{ $sizes }}">
+    <source srcset="{{ range $index, $candidate := $images }}{{ if $index }}, {{ end }}{{ $candidate.RelPermalink }} {{ $candidate.Width }}w{{ end }}" sizes="{{ $sizes }}">
+    <img src="{{ $fallback.RelPermalink }}" width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"{{ with $class }} class="{{ . }}"{{ end }} alt="{{ $alt }}" loading="{{ $loading }}" decoding="async"{{ with $title }} title="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}>
+  </picture>
+{{- else if and $image (reflect.IsImageResourceWithMeta $image) -}}
+  <picture{{ with $pictureClass }} class="{{ . }}"{{ end }}>
+    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"{{ with $class }} class="{{ . }}"{{ end }} alt="{{ $alt }}" loading="{{ $loading }}" decoding="async"{{ with $title }} title="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}>
+  </picture>
+{{- else if $image -}}
+  <picture{{ with $pictureClass }} class="{{ . }}"{{ end }}>
+    <img src="{{ $image.RelPermalink }}"{{ with $class }} class="{{ . }}"{{ end }} alt="{{ $alt }}" loading="{{ $loading }}" decoding="async"{{ with $title }} title="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}>
+  </picture>
+{{- end -}}

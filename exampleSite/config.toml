@@ -1,16 +1,21 @@
 baseurl = "https://example.com"
+locale = "en-US"
 title = "Hugo Themes - aether"
-author = "Joe Hutchinson"
 canonifyurls = true
-paginate = 3
 theme = "aether"
 themesDir = "../../" 
+
+[pagination]
+    pagerSize = 3
 
 [params]
     brand = "aether"
     description = "aether Hugo theme for blogs"
     headshotimg = "img/faceshot.jpg"
     headshotalt = "Generic grey headshot picture"
+
+    [params.author]
+        name = "Joe Hutchinson"
 
 [markup]
   [markup.highlight]

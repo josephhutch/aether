@@ -1,8 +1,0 @@
-{{ with resources.Get "js/katex.min.js" }}
-  <script defer src="{{ .Permalink }}"></script>
-{{ end }}
-{{ with resources.Get "js/auto-render.min.js" }}
-  <script defer src="{{ .Permalink }}" onload="renderMathInElement(document.body);"></script>
-{{ end }}
-{{ $corejs := resources.Get "js/core.js" | minify }}
-<script src="{{ $corejs.Permalink }}"></script>

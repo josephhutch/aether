@@ -33,11 +33,18 @@ Add the following parameters to your config file if they are not present already
 
 ```toml
 baseURL = "https://yourwebsitenamegoeshere.com/"
-languageCode = "The language code for the language the website is written in"
+locale = "The language tag for the language the website is written in"
 title = "The website title that is used in each page title, displayed in the browser tab and search results"
 theme = "aether"
-googleAnalytics = "Your google analytics tracking ID - optional"
-disqusShortname = "Your shortname for Disqus - optional"
+
+[pagination]
+  pagerSize = 10
+
+[services]
+  [services.googleAnalytics]
+    id = "Your Google Analytics measurement ID - optional"
+  [services.disqus]
+    shortname = "Your shortname for Disqus - optional"
 
 [params]
   brand = "The name that is displayed in the top left of the website - optional, title is fallback"
@@ -58,6 +65,10 @@ disqusShortname = "Your shortname for Disqus - optional"
   twitter = "URL to your Twitter account, icon link will be included in the footer - optional"
   vimeo = "URL to your Vimeo account, icon link will be included in the footer - optional"
   youtube = "URL to your Youtube account, icon link will be included in the footer - optional"
+
+  [params.author]
+    name = "Author name for RSS metadata - optional"
+    email = "Author email for RSS metadata - optional"
 
 [markup]
   [markup.highlight]

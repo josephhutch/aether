@@ -1,0 +1,22 @@
+{{- $user := "" -}}
+{{- $id := "" -}}
+{{- $file := "" -}}
+{{- if .IsNamedParams -}}
+  {{- $user = .Get "user" -}}
+  {{- $id = .Get "id" -}}
+  {{- $file = .Get "file" -}}
+{{- else -}}
+  {{- $user = .Get 0 -}}
+  {{- $id = .Get 1 -}}
+  {{- if ge (len .Params) 3 -}}
+    {{- $file = .Get 2 -}}
+  {{- end -}}
+{{- end -}}
+{{- if or (not $user) (not $id) -}}
+  {{- errorf "The gist shortcode requires a GitHub user and gist ID in %q" .Page.File.Path -}}
+{{- end -}}
+{{- $src := printf "https://gist.github.com/%s/%s.js" $user $id -}}
+{{- with $file -}}
+  {{- $src = printf "%s?file=%s" $src (. | urlquery) -}}
+{{- end -}}
+<script src="{{ $src | safeURL }}"></script>

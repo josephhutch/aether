@@ -1,0 +1,10 @@
+{{ with resources.Get "js/katex.min.js" }}
+  {{ $katex := . | fingerprint }}
+  <script defer src="{{ $katex.RelPermalink }}" integrity="{{ $katex.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ with resources.Get "js/auto-render.min.js" }}
+  {{ $autoRender := . | fingerprint }}
+  <script defer src="{{ $autoRender.RelPermalink }}" integrity="{{ $autoRender.Data.Integrity }}" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+{{ end }}
+{{ $corejs := resources.Get "js/core.js" | minify | fingerprint }}
+<script defer src="{{ $corejs.RelPermalink }}" integrity="{{ $corejs.Data.Integrity }}" crossorigin="anonymous"></script>

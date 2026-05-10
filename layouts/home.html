@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+<html lang="{{ .Site.Language.Locale }}" dir="{{ or .Site.Language.Direction "ltr" }}">
   {{ partial "head.html" . }}
   <body class="list-body">
     {{ partial "nav-bar.html" . }}
     <main class="card-container side-gutter">
       {{ if or (not (eq .Description "")) (not (eq .Title "")) -}}
-      <header class="list-header">
-        {{ with .Title | markdownify }}<h1 class="list-header-title">{{ . }}</h1>{{ end }}
-        {{ with .Description }}<p class="list-header-subtext">{{ . }}</p>{{ end }}
+      <header class="home-header" style="background-image: url('{{ "img/home-blob.svg" | absURL }}');">
+        <div class="home-blob-text-container">
+        {{ with .Title }}<h1 class="home-blob-title">{{ . | markdownify }}</h1>{{ end }}
+        {{ with .Description }}<p class="home-blob-text">{{ . }}</p>{{ end }}
+        </div>
+        {{ with resources.GetMatch .Site.Params.headshotimg -}}
+        <div class="home-faceshot-card">
+          {{ partial "responsive-image.html" (dict
+            "image" .
+            "class" "home-faceshot"
+            "alt" $.Site.Params.headshotalt
+            "widths" (slice 272 544 816)
+            "sizes" "272px"
+            "loading" "eager"
+          ) }}
+        </div>
+        {{ end -}}
       </header>
       {{- end }}
       {{ with .Content -}}

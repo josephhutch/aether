@@ -1,0 +1,34 @@
+{{- $src := .Get "src" -}}
+{{- $displayWidth := 711 -}}
+{{- with .Get "width" -}}
+  {{- $displayWidth = int (trim . "px") -}}
+{{- end -}}
+{{- $class := "small-img" -}}
+{{- with .Get "smartfloat" -}}
+  {{- if or (eq . "left") (eq . "right") -}}
+    {{- $class = printf "%s smartfloat-%s" $class . -}}
+  {{- end -}}
+{{- end -}}
+{{- $pictureClass := "small-pic" -}}
+{{- if eq (.Get "clear") "true" -}}
+  {{- $pictureClass = printf "%s clear" $pictureClass -}}
+{{- end -}}
+{{- $style := "" -}}
+{{- $sizes := "(min-width: 711px) 711px, 100vw" -}}
+{{- with .Get "width" -}}
+  {{- $style = printf "width: %s;" . -}}
+  {{- $sizes = . -}}
+{{- end -}}
+{{- with $.Page.Resources.GetMatch $src -}}
+  {{- partial "responsive-image.html" (dict
+    "image" .
+    "pictureClass" $pictureClass
+    "class" $class
+    "alt" ($.Get "alt")
+    "style" $style
+    "widths" (slice $displayWidth (mul $displayWidth 2) (mul $displayWidth 3))
+    "sizes" $sizes
+  ) -}}
+{{- else -}}
+  {{- errorf "The smallimg shortcode could not find page resource %q in %q" $src $.Page.File.Path -}}
+{{- end -}}

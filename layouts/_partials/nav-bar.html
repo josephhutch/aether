@@ -1,5 +1,5 @@
 <nav class="nav-bar side-padding">
-  <h1 class="nav-header"><a href="{{ .Site.BaseURL }}" class="nav-text">
+  <h1 class="nav-header"><a href="{{ .Site.Home.RelPermalink }}" class="nav-text">
     {{- if isset $.Site.Params "brand"}}
       {{- $.Site.Params.brand -}}
     {{ else }}
@@ -16,17 +16,17 @@
       <span></span>
     </div>
     <ul id="menu" class="hamburger-menu-overlay">
-      <li><a href="{{ .Site.BaseURL }}" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="{{ .Site.Home.RelPermalink }}" class="hamburger-menu-overlay-link">Home</a></li>
       {{ range where .Site.Pages "Params.displayinmenu" true -}}
-        <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
+        <li><a href="{{ .RelPermalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
       {{ end -}}
       {{ range $key, $value := .Site.Taxonomies.categories -}}
       {{ with $.Site.GetPage (printf "%s%s" "categories/" ($key | urlize)) }}
-      <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
+      <li><a href="{{ .RelPermalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
       {{ end }}
       {{- end }}
       {{ if eq .Site.Params.rssinmenu true -}}
-      <li><a href="{{ "/index.xml" | absURL }}" class="hamburger-menu-overlay-link">rss</a></li>
+      <li><a href="{{ "/index.xml" | relURL }}" class="hamburger-menu-overlay-link">rss</a></li>
       {{- end }}
     </ul>
   </div>

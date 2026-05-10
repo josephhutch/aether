@@ -19,25 +19,29 @@
   {{ if (fileExists "static/safari-pinned-tab.svg") -}}
     <link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | absURL }}" color="#5bbad5">
   {{ end -}}
-  {{ if (fileExists "layouts/partials/meta-tags.html") -}}
+  {{ partial "opengraph.html" . }}
+  {{ partial "twitter_cards.html" . }}
+  {{ partial "schema.html" . }}
+  {{ if (templates.Exists "_partials/meta-tags.html") -}}
     {{ partial "meta-tags.html" . }}
   {{ end -}}
   {{ with resources.Get "css/katex.min.css" -}}
-  <link href="{{ .Permalink }}" rel="stylesheet">
+  {{ $katexStyle := . | fingerprint }}
+  <link href="{{ $katexStyle.RelPermalink }}" rel="stylesheet" integrity="{{ $katexStyle.Data.Integrity }}" crossorigin="anonymous">
   {{ end -}}
   {{ $normalizeStyle := resources.Get "css/normalize.css" }}
   {{ $mainStyle := resources.Get "css/style.css" }}
   {{ $overrideStyle := resources.Get "css/override.css" }}
-  {{ $style := slice $normalizeStyle $mainStyle $overrideStyle | resources.Concat "css/concated.css" | minify }}
-  <link href="{{ $style.Permalink }}" rel="stylesheet">
+  {{ $style := slice $normalizeStyle $mainStyle $overrideStyle | resources.Concat "css/aether.css" | minify | fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
   {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
   {{ end -}}
-  {{ template "_internal/google_analytics.html" . }}
+  {{ partial "google_analytics.html" . }}
   {{ with resources.GetMatch .Site.Params.bgimg -}}
   <style>
     body {
-      background: #ecedef url("{{ .Permalink | safeCSS }}") repeat;
+      background: #ecedef url("{{ .RelPermalink | safeCSS }}") repeat;
     }
   </style>
   {{- end }}
