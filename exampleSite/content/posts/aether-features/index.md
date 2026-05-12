@@ -113,10 +113,10 @@ Here is `var s = "Hello World"` inline code
 ## Images
 
 ```md
-![NYC Skyline](/post/aether-features/mdd-iphone.jpg)
+![NYC Skyline](mdd-iphone.jpg)
 ```
 
-![NYC Skyline](/post/aether-features/mdd-iphone.jpg)
+![NYC Skyline](mdd-iphone.jpg)
 
 ## Small Images
 
