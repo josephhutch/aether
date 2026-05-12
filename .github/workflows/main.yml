@@ -7,22 +7,34 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
+  validate:
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v2
-      
-      - name: Install Dependencies
-        run: |
-          sudo snap install hugo
-          pip install html5validator
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
 
       - name: Build Example Site
-        run: |
-          cd exampleSite/
-          hugo --minify
+        working-directory: exampleSite
+        run: hugo --minify
 
       - name: Validate Generated Files
-        run: html5validator --root exampleSite/public/ --also-check-css --ignore katex ontouch
+        uses: anishathalye/proof-html@v2.2.3
+        with:
+          directory: ./exampleSite/public
+          check_css: true
+          validator_ignore: katex|ontouch
+          disable_external: true
+          enforce_https: false
+          check_favicon: false
+          check_opengraph: false
