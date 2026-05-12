@@ -26,14 +26,14 @@ jobs:
 
       - name: Build Example Site
         working-directory: exampleSite
-        run: hugo --minify
+        run: hugo --minify --baseURL /
 
       - name: Validate Generated Files
         uses: anishathalye/proof-html@v2.2.3
         with:
           directory: ./exampleSite/public
           check_css: true
-          validator_ignore: katex|ontouch
+          validator_ignore: .*text-rendering.*
           disable_external: true
           enforce_https: false
           check_favicon: false
